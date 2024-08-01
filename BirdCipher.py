@@ -1,10 +1,10 @@
 
 
 
-# --------------------------------------------------------------------- BIRDGUESS -------------------------------------------------------------------------
+# --------------------------------------------------------------------- BIRDCIPHER -------------------------------------------------------------------------
 
 
-#                BirdGuess (version 1) is a serious game developed by the Technical Team of the company BirdCode S.A.S., focused on the training 
+#                BirdCipher (version 1) is a serious game developed by the Technical Team of the company BirdCode S.A.S., focused on the training 
 #                of teachers and students of middle and high school for the construction of basic academic and work skills in software
 #                programming using the Python programming language. The workflow and algorithms of the Classroom Research Project
 #                contemplate the design, structuring and execution of a set of activities in which STEM conceptual and methodological
@@ -100,15 +100,15 @@ playsound('Milvago_chimachima.wav')
 
 match = False
 
-birdGuess = tk.Tk()
+birdCipher = tk.Tk()
 
-birdGuess.title("BirdGuess: A serious game for secret numbers guessing")
-birdGuess_frame = tk.Frame(birdGuess)
-birdGuess_frame.pack()
-birdGuess_image = tk.PhotoImage(file = "BirdGuess_logo2.png")
-birdGuessLabel = tk.Label(birdGuess_frame, image = birdGuess_image).pack()
+birdCipher.title("BirdGuess: A serious game for secret numbers guessing")
+birdCipher_frame = tk.Frame(birdCipher)
+birdCipher_frame.pack()
+birdCipher_image = tk.PhotoImage(file = "BirdCipher-logo.png")
+birdCipherLabel = tk.Label(birdCipher_frame, image = birdCipher_image).pack()
 
-birdGuess.mainloop()
+birdCipher.mainloop()
 
 
 print()
@@ -118,7 +118,7 @@ print(" ------------------------------------------------------------------------
 print()
 print()
 
-print("                                                       WELCOME TO BIRDGUESS                                                     ")
+print("                                                       WELCOME TO BIRDCIPHER                                                     ")
 print()
 print("                                           Numerical data guessing of bird biodiversity                                         ")
 print()
@@ -127,7 +127,7 @@ print(" ------------------------------------------------------------------------
 
 
 print()
-print("     BIRDGUESS - A PROGRAM TO GUESS THE SIZES OF FALCONS AND HUMMINGBIRDS THAT HAVE BEEN SEEN IN BOGOTÁ - COLOMBIA")
+print("     BIRDCIPHER - A PROGRAM TO GUESS THE SIZES OF FALCONS AND HUMMINGBIRDS THAT HAVE BEEN SEEN IN BOGOTÁ - COLOMBIA")
 
 print()
 playsound("welcome.mp3")
@@ -136,7 +136,7 @@ username = input("    Please enter your name: ")
 
 print()
 
-print("     Welcome to BirdCode. ", username,  "!!! Now we are going to learn how to develop serious games with Python about colombian biodiversity")
+print("     Welcome to BirdCipher. ", username,  "!!! Now we are going to learn how to develop serious games with Python about colombian biodiversity")
 
 print()
 
@@ -260,7 +260,7 @@ def GUI_Creation():
 
 	raiz = tk.Tk()
 
-	raiz.title(BirdCipher_english_k[5])
+	raiz.title(BirdCipher_english_k[10])
 
 	raiz.iconbitmap()
 
@@ -268,7 +268,7 @@ def GUI_Creation():
 
 	miFrame.pack()
 
-	miImagen = tk.PhotoImage(file = BirdCipher_list_k[8][0])
+	miImagen = tk.PhotoImage(file = BirdCipher_list_k[10][0])
 	bird_singing_logo = tk.PhotoImage(file="Singing-logo5.png")
 
 	imageLabel = tk.Label(miFrame, image=miImagen)
@@ -303,12 +303,12 @@ def GUI_Creation():
 		global index
 
 		playsound('cartoon130.mp3')
-		miImagen = tk.PhotoImage(file = BirdCipher_list_k[8][count + 1])
+		miImagen = tk.PhotoImage(file = BirdCipher_list_k[10][count + 1])
 		imageLabel.config(image = miImagen)
 		imageLabel.pack()
 		count = count + 1
 
-		if count == len(BirdCipher_list_k[8]) - 1:
+		if count == len(BirdCipher_list_k[10]) - 1:
 
 			count = -1
 
@@ -576,31 +576,31 @@ def info_display():
 	print("-------------------------- BIRD INFORMATION -----------------------------------")
 	print()
 	playsound("idea-1.mp3")
-	print("     * The scientific name of this bird is: ", BirdCipher_sci_k[8])
+	print("     * The scientific name of this bird is: ", BirdCipher_sci_k[10])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The english name of this bird is: ", BirdCipher_english_k[8])
+	print("     * The english name of this bird is: ", BirdCipher_english_k[10])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The spanish name of this bird is: ", BirdCipher_Spanish_k[8])
+	print("     * The spanish name of this bird is: ", BirdCipher_Spanish_k[10])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The french name of this bird is: ", BirdCipher_french_k[8])
+	print("     * The french name of this bird is: ", BirdCipher_french_k[10])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The german name of this bird is: ", BirdCipher_german_k[8])
+	print("     * The german name of this bird is: ", BirdCipher_german_k[10])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The chinese name of this bird is: ", BirdCipher_chinese_k[8]) 
+	print("     * The chinese name of this bird is: ", BirdCipher_chinese_k[10]) 
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The pinyin (chinese phonetic transcription system) is: ", BirdCipher_pinyin_k[8]) 
+	print("     * The pinyin (chinese phonetic transcription system) is: ", BirdCipher_pinyin_k[10]) 
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
@@ -688,7 +688,7 @@ print()
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-secretNumber = number_species_k[8]
+secretNumber = number_species_k[10]
 
 
 print()
@@ -700,7 +700,7 @@ time.sleep(3)
 playsound("WelcomeSecretNumbers.mp3")
 playsound("try_guess.mp3")
 
-print("   Guess the number of species of the group: ", BirdCipher_english_k[8])  # --- Trabaje en el RETO 2
+print("   Guess the number of species of the group: ", BirdCipher_english_k[10])  # --- Trabaje en el RETO 2
 
 print()
 
@@ -748,7 +748,7 @@ while End == False or lives > 0:
 		print()
 		print("------------------- BIRDGUESS - DATA GUESSING OF BIRD BIODIVERSITY. LETS PLAY NOW!!!----------------------")
 		print()
-		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[8])
+		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[10])
 		print()
 		playsound("try_guess.mp3")
 		guess = float(input("   Enter the number of species: "))
@@ -792,6 +792,7 @@ while End == False or lives > 0:
 		print("   Now you have: ", points, " points.")
 		#hit = True
 		playsound("Congratulations.mp3")
+		time.sleep(3)
 		print()
 		print()
 		print()
