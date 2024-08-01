@@ -62,10 +62,22 @@ BirdCipher_list = [["C:/BirdCipher/Bird_images/Struthioniformes1.png", "C:/BirdC
 "C:/BirdCipher/Bird_images/Mesitornithidae2.png", "C:/BirdCipher/Bird_images/Mesitornithidae3.png", "C:/BirdCipher/Bird_images/Mesitornithidae4.png",
 "C:/BirdCipher/Bird_images/Mesitornithidae5.png", "C:/BirdCipher/Bird_images/Mesitornithidae6.png", "C:/BirdCipher/Bird_images/Mesitornithidae7.png",
 "C:/BirdCipher/Bird_images/Mesitornithidae8.png", "C:/BirdCipher/Bird_images/Mesitornithidae9.png", "C:/BirdCipher/Bird_images/Mesitornithidae10.png",
-"C:/BirdCipher/Bird_images/Mesitornithidae11.png"
-]]
+"C:/BirdCipher/Bird_images/Mesitornithidae11.png"], ["C:/BirdCipher/Bird_images/Pterocliformes1.png", "C:/BirdCipher/Bird_images/Pterocliformes2.png",
+"C:/BirdCipher/Bird_images/Pterocliformes3.png", "C:/BirdCipher/Bird_images/Pterocliformes4.png", "C:/BirdCipher/Bird_images/Pterocliformes5.png",
+"C:/BirdCipher/Bird_images/Pterocliformes6.png", "C:/BirdCipher/Bird_images/Pterocliformes7.png", "C:/BirdCipher/Bird_images/Pterocliformes8.png",
+"C:/BirdCipher/Bird_images/Pterocliformes9.png", "C:/BirdCipher/Bird_images/Pterocliformes10.png", "C:/BirdCipher/Bird_images/Pterocliformes11.png",
+"C:/BirdCipher/Bird_images/Pterocliformes12.png", "C:/BirdCipher/Bird_images/Pterocliformes13.png", "C:/BirdCipher/Bird_images/Pterocliformes14.png",
+"C:/BirdCipher/Bird_images/Pterocliformes15.png", "C:/BirdCipher/Bird_images/Pterocliformes16.png", "C:/BirdCipher/Bird_images/Pterocliformes17.png",
+"C:/BirdCipher/Bird_images/Pterocliformes18.png"], ["C:/BirdCipher/Bird_images/Cuculiformes1.png", "C:/BirdCipher/Bird_images/Cuculiformes2.png",
+"C:/BirdCipher/Bird_images/Cuculiformes3.png", "C:/BirdCipher/Bird_images/Cuculiformes4.png", "C:/BirdCipher/Bird_images/Cuculiformes5.png",
+"C:/BirdCipher/Bird_images/Cuculiformes6.png", "C:/BirdCipher/Bird_images/Cuculiformes7.png", "C:/BirdCipher/Bird_images/Cuculiformes8.png",
+"C:/BirdCipher/Bird_images/Cuculiformes9.png", "C:/BirdCipher/Bird_images/Cuculiformes10.png", "C:/BirdCipher/Bird_images/Cuculiformes11.png",
+"C:/BirdCipher/Bird_images/Cuculiformes12.png", "C:/BirdCipher/Bird_images/Cuculiformes13.png", "C:/BirdCipher/Bird_images/Cuculiformes14.png",
+"C:/BirdCipher/Bird_images/Cuculiformes15.png", "C:/BirdCipher/Bird_images/Cuculiformes16.png", "C:/BirdCipher/Bird_images/Cuculiformes17.png",
+"C:/BirdCipher/Bird_images/Cuculiformes18.png", "C:/BirdCipher/Bird_images/Cuculiformes19.png", "C:/BirdCipher/Bird_images/Cuculiformes20.png",
+"C:/BirdCipher/Bird_images/Cuculiformes21.png"]]
 
-number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3]
+number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3, 20, 188]
 
 
 #print(len(BirdCipher_list))
