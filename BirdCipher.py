@@ -67,6 +67,16 @@ from secret_messages import *
 
 from cipher_prac1_caesar import *
 
+from BirdCipher_db import *
+
+import sqlite3
+
+import hashlib
+
+from hash import *
+
+
+
 
 # ------------------------------------------------------ 
 
@@ -88,6 +98,8 @@ BirdCipher_chinese_k = BirdCipher_chinese
 BirdCipher_pinyin_k = BirdCipher_pinyin
 
 number_species_k = number_species
+
+
 
 
 # ---------------------------------------------------------------- Welcome to BirdCode --------------------------------------------------------------------
@@ -132,7 +144,43 @@ print("     BIRDCIPHER - A PROGRAM TO GUESS THE SIZES OF FALCONS AND HUMMINGBIRD
 print()
 playsound("welcome.mp3")
 playsound("enter_name.mp3")
-username = input("    Please enter your name: ")
+
+username = input("     * Please enter your name: ")
+
+nickname = input("     * Please insert your nickname: ")
+
+password = input("     * Please enter your password: ")
+
+bdatos = bytes(password, 'utf-8')
+h = hashlib.new(algoritmo, bdatos)
+hash1 = HASH.generaHash(h)
+
+
+def updatePlayer():
+
+	global username
+	global nickname
+	global password
+
+	if nickname != "":
+
+		miConexion = sqlite3.connect("Players")
+
+		miCursor = miConexion.cursor()
+
+		sql = 'insert into players(name_player, nickname, password) values(?,?,?)'
+		data = (username, nickname, hash1)
+
+		miCursor.execute(sql, data)
+
+		miConexion.commit()
+
+		miConexion.close()
+
+
+updatePlayer()
+
+
 
 print()
 
