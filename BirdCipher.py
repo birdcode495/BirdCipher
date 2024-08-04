@@ -308,7 +308,7 @@ def GUI_Creation():
 
 	raiz = tk.Tk()
 
-	raiz.title(BirdCipher_english_k[24])
+	raiz.title(BirdCipher_english_k[26])
 
 	raiz.iconbitmap()
 
@@ -316,7 +316,7 @@ def GUI_Creation():
 
 	miFrame.pack()
 
-	miImagen = tk.PhotoImage(file = BirdCipher_list_k[24][0])
+	miImagen = tk.PhotoImage(file = BirdCipher_list_k[26][0])
 	bird_singing_logo = tk.PhotoImage(file="Singing-logo5.png")
 
 	imageLabel = tk.Label(miFrame, image=miImagen)
@@ -351,12 +351,12 @@ def GUI_Creation():
 		global index
 
 		playsound('cartoon130.mp3')
-		miImagen = tk.PhotoImage(file = BirdCipher_list_k[24][count + 1])
+		miImagen = tk.PhotoImage(file = BirdCipher_list_k[26][count + 1])
 		imageLabel.config(image = miImagen)
 		imageLabel.pack()
 		count = count + 1
 
-		if count == len(BirdCipher_list_k[24]) - 1:
+		if count == len(BirdCipher_list_k[26]) - 1:
 
 			count = -1
 
@@ -624,31 +624,31 @@ def info_display():
 	print("-------------------------- BIRD INFORMATION -----------------------------------")
 	print()
 	playsound("idea-1.mp3")
-	print("     * The scientific name of this bird is: ", BirdCipher_sci_k[24])
+	print("     * The scientific name of this bird is: ", BirdCipher_sci_k[26])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The english name of this bird is: ", BirdCipher_english_k[24])
+	print("     * The english name of this bird is: ", BirdCipher_english_k[26])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The spanish name of this bird is: ", BirdCipher_Spanish_k[24])
+	print("     * The spanish name of this bird is: ", BirdCipher_Spanish_k[26])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The french name of this bird is: ", BirdCipher_french_k[24])
+	print("     * The french name of this bird is: ", BirdCipher_french_k[26])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The german name of this bird is: ", BirdCipher_german_k[24])
+	print("     * The german name of this bird is: ", BirdCipher_german_k[26])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The chinese name of this bird is: ", BirdCipher_chinese_k[24]) 
+	print("     * The chinese name of this bird is: ", BirdCipher_chinese_k[26]) 
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The pinyin (chinese phonetic transcription system) is: ", BirdCipher_pinyin_k[24]) 
+	print("     * The pinyin (chinese phonetic transcription system) is: ", BirdCipher_pinyin_k[26]) 
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
@@ -736,7 +736,7 @@ print()
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-secretNumber = number_species_k[24]
+secretNumber = number_species_k[26]
 
 
 print()
@@ -748,7 +748,7 @@ time.sleep(3)
 playsound("WelcomeSecretNumbers.mp3")
 playsound("try_guess.mp3")
 
-print("   Guess the number of species of the group: ", BirdCipher_english_k[24])  # --- Trabaje en el RETO 2
+print("   Guess the number of species of the group: ", BirdCipher_english_k[26])  # --- Trabaje en el RETO 2
 
 print()
 
@@ -796,7 +796,7 @@ while End == False or lives > 0:
 		print()
 		print("------------------- BIRDGUESS - DATA GUESSING OF BIRD BIODIVERSITY. LETS PLAY NOW!!!----------------------")
 		print()
-		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[24])
+		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[26])
 		print()
 		playsound("try_guess.mp3")
 		guess = float(input("   Enter the number of species: "))
