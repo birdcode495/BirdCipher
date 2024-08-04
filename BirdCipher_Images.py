@@ -117,9 +117,16 @@ BirdCipher_list = [["C:/BirdCipher/Bird_images/Struthioniformes1.png", "C:/BirdC
 "C:/BirdCipher/Bird_images/Nyctibiiformes11.png", "C:/BirdCipher/Bird_images/Nyctibiiformes12.png"], ["C:/BirdCipher/Bird_images/Steatornithiformes1.png",
 "C:/BirdCipher/Bird_images/Steatornithiformes2.png", "C:/BirdCipher/Bird_images/Steatornithiformes3.png", "C:/BirdCipher/Bird_images/Steatornithiformes4.png",
 "C:/BirdCipher/Bird_images/Steatornithiformes5.png", "C:/BirdCipher/Bird_images/Steatornithiformes6.png", "C:/BirdCipher/Bird_images/Steatornithiformes7.png",
-"C:/BirdCipher/Bird_images/Steatornithiformes8.png", "C:/BirdCipher/Bird_images/Steatornithiformes9.png", "C:/BirdCipher/Bird_images/Steatornithiformes10.png"]]
+"C:/BirdCipher/Bird_images/Steatornithiformes8.png", "C:/BirdCipher/Bird_images/Steatornithiformes9.png", "C:/BirdCipher/Bird_images/Steatornithiformes10.png"],
+["C:/BirdCipher/Bird_images/Podargiformes1.png", "C:/BirdCipher/Bird_images/Podargiformes2.png", "C:/BirdCipher/Bird_images/Podargiformes3.png",
+"C:/BirdCipher/Bird_images/Podargiformes4.png", "C:/BirdCipher/Bird_images/Podargiformes5.png", "C:/BirdCipher/Bird_images/Podargiformes6.png",
+"C:/BirdCipher/Bird_images/Podargiformes7.png", "C:/BirdCipher/Bird_images/Podargiformes8.png", "C:/BirdCipher/Bird_images/Podargiformes9.png",
+"C:/BirdCipher/Bird_images/Podargiformes10.png", "C:/BirdCipher/Bird_images/Podargiformes11.png", "C:/BirdCipher/Bird_images/Podargiformes12.png",
+"C:/BirdCipher/Bird_images/Podargiformes13.png", "C:/BirdCipher/Bird_images/Podargiformes14.png", "C:/BirdCipher/Bird_images/Podargiformes15.png",
+"C:/BirdCipher/Bird_images/Podargiformes16.png", "C:/BirdCipher/Bird_images/Podargiformes17.png", "C:/BirdCipher/Bird_images/Podargiformes18.png",
+"C:/BirdCipher/Bird_images/Podargiformes19.png", "C:/BirdCipher/Bird_images/Podargiformes20.png"]]
 
-number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3, 20, 188, 39, 23, 4, 443, 622, 130, 8, 4]
+number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3, 20, 188, 39, 23, 4, 443, 622, 130, 8, 4, 20]
 
 
 #print(len(BirdCipher_list))
