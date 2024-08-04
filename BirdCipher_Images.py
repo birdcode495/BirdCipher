@@ -157,9 +157,23 @@ BirdCipher_list = [["C:/BirdCipher/Bird_images/Struthioniformes1.png", "C:/BirdC
 "C:/BirdCipher/Bird_images/Gaviiformes10.png", "C:/BirdCipher/Bird_images/Gaviiformes11.png", "C:/BirdCipher/Bird_images/Gaviiformes12.png",
 "C:/BirdCipher/Bird_images/Gaviiformes13.png", "C:/BirdCipher/Bird_images/Gaviiformes14.png", "C:/BirdCipher/Bird_images/Gaviiformes15.png",
 "C:/BirdCipher/Bird_images/Gaviiformes16.png", "C:/BirdCipher/Bird_images/Gaviiformes17.png", "C:/BirdCipher/Bird_images/Gaviiformes18.png",
-"C:/BirdCipher/Bird_images/Gaviiformes19.png", "C:/BirdCipher/Bird_images/Gaviiformes20.png"]]
+"C:/BirdCipher/Bird_images/Gaviiformes19.png", "C:/BirdCipher/Bird_images/Gaviiformes20.png"], ["C:/BirdCipher/Bird_images/Procellariiformes1.png",
+"C:/BirdCipher/Bird_images/Procellariiformes2.png", "C:/BirdCipher/Bird_images/Procellariiformes3.png", "C:/BirdCipher/Bird_images/Procellariiformes4.png",
+"C:/BirdCipher/Bird_images/Procellariiformes5.png", "C:/BirdCipher/Bird_images/Procellariiformes6.png", "C:/BirdCipher/Bird_images/Procellariiformes7.png",
+"C:/BirdCipher/Bird_images/Procellariiformes8.png", "C:/BirdCipher/Bird_images/Procellariiformes9.png", "C:/BirdCipher/Bird_images/Procellariiformes10.png",
+"C:/BirdCipher/Bird_images/Procellariiformes11.png", "C:/BirdCipher/Bird_images/Procellariiformes12.png", "C:/BirdCipher/Bird_images/Procellariiformes13.png",
+"C:/BirdCipher/Bird_images/Procellariiformes14.png", "C:/BirdCipher/Bird_images/Procellariiformes15.png", "C:/BirdCipher/Bird_images/Procellariiformes16.png",
+"C:/BirdCipher/Bird_images/Procellariiformes17.png", "C:/BirdCipher/Bird_images/Procellariiformes18.png", "C:/BirdCipher/Bird_images/Procellariiformes19.png",
+"C:/BirdCipher/Bird_images/Procellariiformes20.png"], ["C:/BirdCipher/Bird_images/Sphenisciformes1.png", "C:/BirdCipher/Bird_images/Sphenisciformes2.png",
+"C:/BirdCipher/Bird_images/Sphenisciformes3.png", "C:/BirdCipher/Bird_images/Sphenisciformes4.png", "C:/BirdCipher/Bird_images/Sphenisciformes5.png",
+"C:/BirdCipher/Bird_images/Sphenisciformes6.png", "C:/BirdCipher/Bird_images/Sphenisciformes7.png", "C:/BirdCipher/Bird_images/Sphenisciformes8.png",
+"C:/BirdCipher/Bird_images/Sphenisciformes9.png", "C:/BirdCipher/Bird_images/Sphenisciformes10.png", "C:/BirdCipher/Bird_images/Sphenisciformes11.png",
+"C:/BirdCipher/Bird_images/Sphenisciformes12.png", "C:/BirdCipher/Bird_images/Sphenisciformes13.png", "C:/BirdCipher/Bird_images/Sphenisciformes14.png",
+"C:/BirdCipher/Bird_images/Sphenisciformes15.png", "C:/BirdCipher/Bird_images/Sphenisciformes16.png", "C:/BirdCipher/Bird_images/Sphenisciformes17.png",
+"C:/BirdCipher/Bird_images/Sphenisciformes18.png", "C:/BirdCipher/Bird_images/Sphenisciformes19.png", "C:/BirdCipher/Bird_images/Sphenisciformes20.png"]]
 
-number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3, 20, 188, 39, 23, 4, 443, 622, 130, 8, 4, 20, 13, 541, 7, 3, 23]
+number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3, 20, 188, 39, 23, 4, 443, 622, 130, 8, 4, 20, 13, 541, 7, 3, 23, 218,
+97]
 
 
 #print(len(BirdCipher_list))
