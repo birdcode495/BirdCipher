@@ -200,12 +200,19 @@ BirdCipher_list = [["C:/BirdCipher/Bird_images/Struthioniformes1.png", "C:/BirdC
 "C:/BirdCipher/Bird_images/Strigiformes13.png", "C:/BirdCipher/Bird_images/Strigiformes14.png", "C:/BirdCipher/Bird_images/Strigiformes15.png",
 "C:/BirdCipher/Bird_images/Strigiformes16.png", "C:/BirdCipher/Bird_images/Strigiformes17.png", "C:/BirdCipher/Bird_images/Strigiformes18.png",
 "C:/BirdCipher/Bird_images/Strigiformes19.png", "C:/BirdCipher/Bird_images/Strigiformes20.png", "C:/BirdCipher/Bird_images/Strigiformes21.png",
-"C:/BirdCipher/Bird_images/Strigiformes22.png", "C:/BirdCipher/Bird_images/Strigiformes23.png", "C:/BirdCipher/Bird_images/Strigiformes24.png"]]
+"C:/BirdCipher/Bird_images/Strigiformes22.png", "C:/BirdCipher/Bird_images/Strigiformes23.png", "C:/BirdCipher/Bird_images/Strigiformes24.png"],
+["C:/BirdCipher/Bird_images/Cathartiformes1.png", "C:/BirdCipher/Bird_images/Cathartiformes2.png", "C:/BirdCipher/Bird_images/Cathartiformes3.png",
+"C:/BirdCipher/Bird_images/Cathartiformes4.png", "C:/BirdCipher/Bird_images/Cathartiformes5.png", "C:/BirdCipher/Bird_images/Cathartiformes6.png",
+"C:/BirdCipher/Bird_images/Cathartiformes7.png", "C:/BirdCipher/Bird_images/Cathartiformes8.png", "C:/BirdCipher/Bird_images/Cathartiformes9.png",
+"C:/BirdCipher/Bird_images/Cathartiformes10.png", "C:/BirdCipher/Bird_images/Cathartiformes11.png", "C:/BirdCipher/Bird_images/Cathartiformes12.png",
+"C:/BirdCipher/Bird_images/Cathartiformes13.png", "C:/BirdCipher/Bird_images/Cathartiformes14.png", "C:/BirdCipher/Bird_images/Cathartiformes15.png",
+"C:/BirdCipher/Bird_images/Cathartiformes16.png", "C:/BirdCipher/Bird_images/Cathartiformes17.png", "C:/BirdCipher/Bird_images/Cathartiformes18.png",
+"C:/BirdCipher/Bird_images/Cathartiformes19.png", "C:/BirdCipher/Bird_images/Cathartiformes20.png"]]
 
 
 
 number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3, 20, 188, 39, 23, 4, 443, 622, 130, 8, 4, 20, 13, 541, 7, 3, 23, 218,
-97, 73, 141, 240, 355]
+97, 73, 141, 240, 355, 42]
 
 
 #print(len(BirdCipher_list))
