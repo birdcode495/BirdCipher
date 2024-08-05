@@ -207,12 +207,21 @@ BirdCipher_list = [["C:/BirdCipher/Bird_images/Struthioniformes1.png", "C:/BirdC
 "C:/BirdCipher/Bird_images/Cathartiformes10.png", "C:/BirdCipher/Bird_images/Cathartiformes11.png", "C:/BirdCipher/Bird_images/Cathartiformes12.png",
 "C:/BirdCipher/Bird_images/Cathartiformes13.png", "C:/BirdCipher/Bird_images/Cathartiformes14.png", "C:/BirdCipher/Bird_images/Cathartiformes15.png",
 "C:/BirdCipher/Bird_images/Cathartiformes16.png", "C:/BirdCipher/Bird_images/Cathartiformes17.png", "C:/BirdCipher/Bird_images/Cathartiformes18.png",
-"C:/BirdCipher/Bird_images/Cathartiformes19.png", "C:/BirdCipher/Bird_images/Cathartiformes20.png"]]
+"C:/BirdCipher/Bird_images/Cathartiformes19.png", "C:/BirdCipher/Bird_images/Cathartiformes20.png"], ["C:/BirdCipher/Bird_images/Accipitriformes1.png",
+"C:/BirdCipher/Bird_images/Accipitriformes2.png", "C:/BirdCipher/Bird_images/Accipitriformes3.png", "C:/BirdCipher/Bird_images/Accipitriformes4.png",
+"C:/BirdCipher/Bird_images/Accipitriformes5.png", "C:/BirdCipher/Bird_images/Accipitriformes6.png", "C:/BirdCipher/Bird_images/Accipitriformes7.png",
+"C:/BirdCipher/Bird_images/Accipitriformes8.png", "C:/BirdCipher/Bird_images/Accipitriformes9.png", "C:/BirdCipher/Bird_images/Accipitriformes10.png",
+"C:/BirdCipher/Bird_images/Accipitriformes11.png", "C:/BirdCipher/Bird_images/Accipitriformes12.png", "C:/BirdCipher/Bird_images/Accipitriformes13.png",
+"C:/BirdCipher/Bird_images/Accipitriformes14.png", "C:/BirdCipher/Bird_images/Accipitriformes15.png", "C:/BirdCipher/Bird_images/Accipitriformes16.png",
+"C:/BirdCipher/Bird_images/Accipitriformes17.png", "C:/BirdCipher/Bird_images/Accipitriformes18.png", "C:/BirdCipher/Bird_images/Accipitriformes19.png",
+"C:/BirdCipher/Bird_images/Accipitriformes20.png", "C:/BirdCipher/Bird_images/Accipitriformes21.png", "C:/BirdCipher/Bird_images/Accipitriformes22.png",
+"C:/BirdCipher/Bird_images/Accipitriformes23.png", "C:/BirdCipher/Bird_images/Accipitriformes24.png", "C:/BirdCipher/Bird_images/Accipitriformes25.png",
+"C:/BirdCipher/Bird_images/Accipitriformes26.png"]]
 
 
 
 number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3, 20, 188, 39, 23, 4, 443, 622, 130, 8, 4, 20, 13, 541, 7, 3, 23, 218,
-97, 73, 141, 240, 355, 42]
+97, 73, 141, 240, 355, 42, 420]
 
 
 #print(len(BirdCipher_list))
