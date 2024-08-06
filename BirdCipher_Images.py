@@ -216,12 +216,17 @@ BirdCipher_list = [["C:/BirdCipher/Bird_images/Struthioniformes1.png", "C:/BirdC
 "C:/BirdCipher/Bird_images/Accipitriformes17.png", "C:/BirdCipher/Bird_images/Accipitriformes18.png", "C:/BirdCipher/Bird_images/Accipitriformes19.png",
 "C:/BirdCipher/Bird_images/Accipitriformes20.png", "C:/BirdCipher/Bird_images/Accipitriformes21.png", "C:/BirdCipher/Bird_images/Accipitriformes22.png",
 "C:/BirdCipher/Bird_images/Accipitriformes23.png", "C:/BirdCipher/Bird_images/Accipitriformes24.png", "C:/BirdCipher/Bird_images/Accipitriformes25.png",
-"C:/BirdCipher/Bird_images/Accipitriformes26.png"]]
+"C:/BirdCipher/Bird_images/Accipitriformes26.png"], ["C:/BirdCipher/Bird_images/Coliiformes1.png", "C:/BirdCipher/Bird_images/Coliiformes2.png",
+"C:/BirdCipher/Bird_images/Coliiformes3.png", "C:/BirdCipher/Bird_images/Coliiformes4.png", "C:/BirdCipher/Bird_images/Coliiformes5.png",
+"C:/BirdCipher/Bird_images/Coliiformes6.png", "C:/BirdCipher/Bird_images/Coliiformes7.png", "C:/BirdCipher/Bird_images/Coliiformes8.png",
+"C:/BirdCipher/Bird_images/Coliiformes9.png", "C:/BirdCipher/Bird_images/Coliiformes10.png", "C:/BirdCipher/Bird_images/Coliiformes11.png",
+"C:/BirdCipher/Bird_images/Coliiformes12.png", "C:/BirdCipher/Bird_images/Coliiformes13.png", "C:/BirdCipher/Bird_images/Coliiformes14.png",
+"C:/BirdCipher/Bird_images/Coliiformes15.png", "C:/BirdCipher/Bird_images/Coliiformes16.png"]]
 
 
 
 number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3, 20, 188, 39, 23, 4, 443, 622, 130, 8, 4, 20, 13, 541, 7, 3, 23, 218,
-97, 73, 141, 240, 355, 42, 420]
+97, 73, 141, 240, 355, 42, 420, 20]
 
 
 #print(len(BirdCipher_list))
