@@ -19,18 +19,18 @@ secret_messages = ['''   Fgehguvbavsbezrf vf na beqre bs oveqf jvgu bayl n fvaty
 		uljk-srkyv rj nvcc rj nrjy kyvdjvcmvj sp jkreuzex ze yvrmp irze. Kyvp riv yvriu dfiv 
 		fwkve kyre jvve, tfddleztrkzex nzky vrty fkyvi sp r mrizvkp fw wivhlvekcp xzmve, 
 		tyrirtkvizjkzt trccj, vjgvtzrccp ulizex kyv sivvuzex jvrjfe.''',
-		'''Esp czlodtop slhv (Cfazcytd xlrytczdectd) td l cpwletgpwj dxlww mtco zq acpj qzfyo 
-		ty esp Lxpctnld. Estd gznlw dapntpd td zqepy esp xzde nzxxzy claezc ty ted clyrp. Te 
-		sld xlyj dfmdapntpd lyo td yzh fdflwwj awlnpo ty esp xzyzejatn rpyfd Cfazcytd. Xlwpd 
-		lcp lmzfe 20% dxlwwpc esly qpxlwpd, mfe zespchtdp esp dpipd lcp dtxtwlc. Ty xzde 
-		dfmdapntpd, esp wzhpc mcplde lyo fyopcalced lcp mlccpo mczhy lyo hstep, lyo esp eltw 
-		sld qzfc zc qtgp rcpj mlcd. Ehpwgp dfmdapntpd lcp fdflwwj cpnzrytdpo lyo espcp td 
-		dtrytqtnlye awfxlrp glctletzy mpehppy espdp. Opapyotyr zy esp dfmdapntpd tygzwgpo, 
-		esp czlodtop slhv td xltywj mczhy zc rcpj. Esp czlodtop slhv td nzxxzy esczfrszfe ted 
-		clyrp: qczx Xpitnz esczfrs Npyeclw Lxpctnl ez xzde zq Dzfes Lxpctnl plde zq esp Lyopd 
-		Nzcotwwpcl. Glrclyed lcp znnldtzylwwj qzfyo ty Epild ty esp Fytepo Delepd. Esp czlodtop 
-		slhv'd otpe nzydtded xltywj zq tydpned, dbflxlepd, lyo dxlww xlxxlwd, dfns ld jzfyr 
-		nzxxzy xlcxzdped lyo dtxtwlc dxlww xzyvpjd hstns lcp sfyepo bftep zqepy.''',
+		'''Mczdajmhzn dn vi jmyzm ocvo xjiovdin ocz avhdgt ja mczvn. Do dn di ocz diamvxgvnn 
+		Kvgzjbivocvz, rcdxc xjiovdin vgg mvodozn. Zsovio hzhwzmn vmz ajpiy di Njpoc Vhzmdxv. 
+		Rcdgz ocz DJX Rjmgy Wdmy Gdno viy ocz Xgzhzion Xczxfgdno xvozbjmdnz Mczdajmhzn vn don 
+		jri jmyzm, ocz WdmyGdaz Yvov Ujiz dixgpyzn ocz mczvn, vgjib rdoc jnomdxczn, odivhjpn, 
+		xvnnjrvmdzn, zhp, viy fdrdn, di ocz jmyzm Nompocdjidajmhzn. V mvodoz dn vit ja v bmjpk 
+		ja hjnogt agdbcogznn wdmyn rdocdi ocz diamvxgvnn Kvgvzjbivocvz. Oczt vmz hjnogt gvmbz, 
+		gjib-izxfzy, viy gjib-gzbbzy. Pigdfz joczm agdbcogznn wdmyn, ocz mvodozn cvqz ij fzzg 
+		ji oczdm nozmiph, czixz oczdm ivhz. Rdocjpo ocdn oj vixcjm oczdm rdib hpnxgzn, oczt 
+		xjpgy ijo cvqz agjri zqzi da oczt cvy yzqzgjkzy npdovwgz rdibn. Ndhdgvmgt oj jnomdxczn 
+		viy zhpn, mczvn vmz avdmgt kjkpgvm gdqznojxf viy kzon, mzbpgvmgt fzko viy wmzy ji avmhn, 
+		mvixczn, kmdqvoz kvmfn viy wt vqdxpgopmdnon, hvdigt di Ijmoc viy Njpoc Vhzmdxv, viy 
+		Zpmjkz.''',
 		'''Qeb yixzh-zebpqba yrwwxoa-bxdib (Dboxklxbqrp jbixklibrzrp) fp x yfoa lc mobv lc qeb 
 		exth xka bxdib cxjfiv (Xzzfmfqofaxb). Fq ifsbp fk lmbk obdflkp lc Plrqe Xjbofzx. Qefp 
 		pmbzfbp fp xipl hkltk xp qeb yixzh yrwwxoa-bxdib, qeb doxv yrwwxoa-bxdib, lo xkxildlrpiv 
@@ -167,8 +167,10 @@ secret_messages = ['''   Fgehguvbavsbezrf vf na beqre bs oveqf jvgu bayl n fvaty
 ]
 
 
-keys = [13, 17, 11, 23, 8, 3, 13, 15, 21, 16, 13]
+keys = [13, 17, 21, 23, 8, 3, 13, 15, 21, 16, 13]
 
-key_audios = ['C:/BirdCipher/Audios/VoiceAudios/k13.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k17.mp3']
+key_audios = ['C:/BirdCipher/Audios/VoiceAudios/k13.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k17.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/k21.mp3']
 
-crypto_audios = ['C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_0.mp3']
+crypto_audios = ['C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_0.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_1.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_2.mp3']

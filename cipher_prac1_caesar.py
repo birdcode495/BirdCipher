@@ -35,7 +35,7 @@ def getMessage():
 
 	#message = cipherText_nbk1_jg[0]
 
-	message = secret_messages[0]
+	message = secret_messages[2]
 
 	return message
 
@@ -45,7 +45,14 @@ def getKey():
 	
 	while True:
 
+		print()
+		print(" ----------------------------------------- Secret key to decrypt this message -------------------------------------------")
+		print()
+
 		key = int(input('         Enter your key between 1 and 26: '))
+
+		print()
+		print(" ------------------------------------------------------------------------------------------------------------------------")
 
 		if (key >= 1 and key <= MAX_KEY_SIZE):
 			return key
