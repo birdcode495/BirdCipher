@@ -1,23 +1,24 @@
-secret_messages = ['''   Ftq itufq-fmuxqp wufq (Qxmzge xqgogdge) ue m eymxx dmbfad ragzp uz iqefqdz Zadft 
-		Myqduom mzp bmdfe ar Eagft Myqduom. Uf dqbxmoqe ftq dqxmfqp Axp Iadxp nxmow-iuzsqp 
-		wufq uz ufe zmfuhq dmzsq. Ftq oaxadmfuaz ar ftq itufq-fmuxqp wufq ue sgxx-xuwq, ngf 
-		ufe etmbq mzp rxustf ue rmxoaz-xuwq, iuft m dagzpqp fmux. Ymuzxk itufq gzpqdzqmft, 
-		uf tme nxmow iuzsfube mzp etagxpqde. Ftq itufq-fmuxqp wufq ime dqzpqdqp mxyaef 
-		qjfuzof uz Omxuradzum uz ftq 1930e mzp 1940e pgq fa etaafuzs mzp qss-oaxxqofuzs, 
-		ngf ftqk mdq zai oayyaz msmuz. Ftqud puefdungfuaz ue bmfotk, taiqhqd. Ftqk mdq 
-		mxea ragzp rday eagftqdz Fqjme mzp qmefqdz Yqjuoa fa ftq Nmvm Omxuradzum Bqzuzegxm 
-		mzp ftdagst Oqzfdmx mzp Eagft Myqduom fa oqzfdmx Mdsqzfuzm mzp Otuxq. Itufq-fmuxqp 
-		wufqe rqqp bduzoubmxxk az dapqzfe''',
-		'''Max ukhtw-pbgzxw atpd (Unmxh ietmrimxknl) bl t fxwbnf-lbsxw atpd hy max zxgnl 
-		Unmxh. Wnkbgz max lnffxk, lhfx lnulixvbxl tkx wblmkbunmxw hoxk xtlmxkg Ghkma Tfxkbvt, 
-		tl ytk pxlm tl Ukbmbla Vhenfubt tgw Mxqtl; maxr maxg fbzktmx lhnma mh pbgmxk bg max 
-		Gxhmkhibvl ykhf Fxqbvh lhnma mh lhnmaxkg Uktsbe. Hmaxk lnulixvbxl tkx tee-rxtk 
-		kxlbwxgml hg Vtkbuuxtg bletgwl. Tl bg fhlm ktimhkl, yxftexl tkx lebzamer etkzxk matg 
-		ftexl. Ukhtw-pbgzxw atpdl' pbgzl tkx kxetmboxer lahkm tgw ukhtw pbma t mtixkxw, 
-		lhfxpatm ihbgmxw tiixtktgvx. Max mph mrixl hy vhehktmbhg tkx t wtkd fhkia pbma yxpxk 
-		pabmx tkxtl tgw t ebzam fhkia matm bl fhkx itex hoxktee. Temahnza max ukhtw-pbgzxw 
-		atpd'l gnfuxkl tkx kxetmboxer lmtuex, ihinetmbhgl tkx wxvebgbgz bg lhfx itkml hy bml 
-		ukxxwbgz ktgzx uxvtnlx hy yhkxlm yktzfxgmtmbhg.''',
+secret_messages = ['''   Fgehguvbavsbezrf vf na beqre bs oveqf jvgu bayl n fvatyr rkgnag snzvyl, Fgehguvbavqnr, 
+		pbagnvavat gur bfgevpurf. Nyy xabja zrzoref bs gur tebhc ner gubhtug gb unir orra 
+		syvtugyrff. Fgehguvbavsbezrf jrer jvqryl qvfgevohgrq va gur Abegurea Urzvfcurer 
+		qhevat gur Rbprar, vapyhqvat Cnyrbgvqvqnr sebz Rhebcr, naq Trenabvqvqnr sebz Abegu 
+		Nzrevpn, naq Rbtehvqnr naq Retvybeavguvqnr va Nfvn. Bfgevpurf svefg nccrnerq va 
+		Nsevpn qhevat gur rneyl Zvbprar, nebhaq 21 zvyyvba lrnef ntb, orsber qvfcrefvat vagb 
+		Rhenfvn qhevat gur yngr Zvbprar, ortvaavat nebhaq 12 zvyyvba lrnef ntb.''',
+		'''Kzerdflj riv dvdsvij fw kyv fiuvi Kzerdzwfidvj, reu wrdzcp Kzerdzurv, uzmzuvu zekf 
+		knf uzjkzetk jlswrdzczvj, tfekrzezex 55 jgvtzvj wfleu ze Dvoztf, Tvekirc Rdviztr, reu 
+		Jflky Rdviztr. Kyv nfiu "kzerdfl" tfdvj wifd kyv Xrczsz kvid wfi kyvjv sziuj, kzerdl. 
+		Kyvp riv xvevirccp jvuvekrip, xifleu-unvcczex reu, kyflxy efk wczxykcvjj, nyve gfjjzscv 
+		rmfzu wczxyk ze wrmfli fw yzuzex fi ileezex rnrp wifd urexvi. Kyvp riv wfleu ze r 
+		mrizvkp fw yrszkrkj, irexzex wifd jvdz-rizu rcgzev xirjjcreuj kf kifgztrc irzewfivjkj. 
+		Rckyflxy jfdv jgvtzvj riv hlzkv tfddfe, kzerdflj riv jyp reu jvtivkzmv sziuj.Kyvp riv 
+		rtkzmv ulizex kyv urp, ivkzizex kf iffjkj rk ezxyk. Kyvp xvevirccp yrmv tipgkzt gcldrxv, 
+		nzky drcvj reu wvdrcvj jzdzcri ze rggvriretv, kyflxy kyv wvdrcvj riv ljlrccp crixvi. 
+		Kyvp riv fggfiklezjkzt reu fdezmfiflj wvvuvij, tfejldzex r nzuv mrizvkp fw gcrek reu 
+		rezdrc wffu wifd wilzkj reu jvvuj kf nfidj, zejvtkj reu jdrcc mvikvsirkvj. Kyvp nzcc 
+		uljk-srkyv rj nvcc rj nrjy kyvdjvcmvj sp jkreuzex ze yvrmp irze. Kyvp riv yvriu dfiv 
+		fwkve kyre jvve, tfddleztrkzex nzky vrty fkyvi sp r mrizvkp fw wivhlvekcp xzmve, 
+		tyrirtkvizjkzt trccj, vjgvtzrccp ulizex kyv sivvuzex jvrjfe.''',
 		'''Esp czlodtop slhv (Cfazcytd xlrytczdectd) td l cpwletgpwj dxlww mtco zq acpj qzfyo 
 		ty esp Lxpctnld. Estd gznlw dapntpd td zqepy esp xzde nzxxzy claezc ty ted clyrp. Te 
 		sld xlyj dfmdapntpd lyo td yzh fdflwwj awlnpo ty esp xzyzejatn rpyfd Cfazcytd. Xlwpd 
@@ -166,4 +167,8 @@ secret_messages = ['''   Ftq itufq-fmuxqp wufq (Qxmzge xqgogdge) ue m eymxx dmbf
 ]
 
 
-clues = [12, 19, 11, 23, 8, 3, 13, 15, 21, 16, 13]
+keys = [13, 17, 11, 23, 8, 3, 13, 15, 21, 16, 13]
+
+key_audios = ['C:/BirdCipher/Audios/VoiceAudios/k13.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k17.mp3']
+
+crypto_audios = ['C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_0.mp3']

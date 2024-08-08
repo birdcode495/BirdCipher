@@ -99,6 +99,12 @@ BirdCipher_pinyin_k = BirdCipher_pinyin
 
 number_species_k = number_species
 
+key_audios_k = key_audios
+keys_k = keys
+crypto_audios_k = crypto_audios
+
+bird_songs_k = bird_songs
+
 
 
 
@@ -126,7 +132,7 @@ birdCipher.mainloop()
 print()
 print()
 print()
-print(" -------------------------------------------------------------------------------------------------------------------------------")
+print(" ---------------------------------------------------------------------------------------------------------------------------------------")
 print()
 print()
 
@@ -135,21 +141,32 @@ print()
 print("                                           Numerical data guessing of bird biodiversity                                         ")
 print()
 print()
-print(" -------------------------------------------------------------------------------------------------------------------------------")
+print(" ---------------------------------------------------------------------------------------------------------------------------------------")
 
 
 print()
-print("     BIRDCIPHER - A PROGRAM TO GUESS THE SIZES OF FALCONS AND HUMMINGBIRDS THAT HAVE BEEN SEEN IN BOGOTÁ - COLOMBIA")
+print("  BIRDCIPHER - A SERIOUS GAME TO GUESS THE MAGICAL AND SECRETS NUMBERS ABOUT BIRDS WHICH HAVE BEEN SEEN IN SOME PLACES IN THE WORLD")
 
 print()
-playsound("welcome.mp3")
-playsound("enter_name.mp3")
+playsound("C:/BirdCipher/Audios/VoiceAudios/welcome.mp3")
+time.sleep(4)
+playsound("C:/BirdCipher/Audios/VoiceAudios/enter_name.mp3")
+
+print()
+print()
+print(" ----------------------------------------------- Enter your credentials ----------------------------------------------------------------")
+print()
+print()
 
 username = input("     * Please enter your name: ")
 
 nickname = input("     * Please insert your nickname: ")
 
 password = input("     * Please enter your password: ")
+
+print()
+print()
+print(" ---------------------------------------------------------------------------------------------------------------------------------------")
 
 bdatos = bytes(password, 'utf-8')
 h = hashlib.new(algoritmo, bdatos)
@@ -184,13 +201,13 @@ updatePlayer()
 
 print()
 
-print("     Welcome to BirdCipher. ", username,  "!!! Now we are going to learn how to develop serious games with Python about colombian biodiversity")
+print("     Welcome to BirdCipher ", username,  "!!! Now, let us learn more about the groups of birds in the world.")
 
-print()
+print("     so that we can identify them easier.")
 
 time.sleep(3)
 
-playsound("species_info.mp3")
+playsound("C:/BirdCipher/Audios/VoiceAudios/species_info.mp3")
 
 index = 890
 
@@ -308,7 +325,7 @@ def GUI_Creation():
 
 	raiz = tk.Tk()
 
-	raiz.title(BirdCipher_english_k[44])
+	raiz.title(BirdCipher_english_k[0])
 
 	raiz.iconbitmap()
 
@@ -316,7 +333,7 @@ def GUI_Creation():
 
 	miFrame.pack()
 
-	miImagen = tk.PhotoImage(file = BirdCipher_list_k[44][0])
+	miImagen = tk.PhotoImage(file = BirdCipher_list_k[0][0])
 	bird_singing_logo = tk.PhotoImage(file="Singing-logo5.png")
 
 	imageLabel = tk.Label(miFrame, image=miImagen)
@@ -338,11 +355,11 @@ def GUI_Creation():
 
 		if match == False:
 
-			playsound("ableHearSong.mp3")
+			playsound("C:/BirdCipher/Audios/VoiceAudios/ableHearSong.mp3")
 
 		elif match == True:
 
-			playsound("Singing_Rupornis_magnirostris.wav")
+			playsound(bird_songs_k[0])
 
 	def change_image_bird():
 
@@ -351,12 +368,12 @@ def GUI_Creation():
 		global index
 
 		playsound('cartoon130.mp3')
-		miImagen = tk.PhotoImage(file = BirdCipher_list_k[44][count + 1])
+		miImagen = tk.PhotoImage(file = BirdCipher_list_k[0][count + 1])
 		imageLabel.config(image = miImagen)
 		imageLabel.pack()
 		count = count + 1
 
-		if count == len(BirdCipher_list_k[44]) - 1:
+		if count == len(BirdCipher_list_k[0]) - 1:
 
 			count = -1
 
@@ -394,67 +411,68 @@ def GUI_Creation():
 # 	raiz_challng3.mainloop()
 
 
-# def caesarCipher():
+def caesarCipher():
 
-# 	def CaesarExplanat():
+	def CaesarExplanat():
 
-# 		playsound("CaesarCipherExplanation0A.mp3")
+		playsound("CaesarCipherExplanation0A.mp3")
 		
 	
-# 	def CaesarExplanat2():
+	def CaesarExplanat2():
 
-# 		playsound("CaesarCipherExplanation0B.mp3")
+		playsound("CaesarCipherExplanation0B.mp3")
 
-# 	def CaesarExplanat3():
+	def CaesarExplanat3():
 
-# 		playsound("CaesarCipherExplanation1.mp3")
+		playsound("CaesarCipherExplanation1.mp3")
 
-# 	def CaesarExplanat4():
+	def CaesarExplanat4():
 
-# 		playsound("CaesarCipherExplanation2.mp3")
+		playsound("CaesarCipherExplanation2.mp3")
 
-# 	def CaesarExplanat5():
+	def CaesarExplanat5():
 
-# 		playsound("CaesarCipherExplanation3.mp3")
+		playsound("CaesarCipherExplanation3.mp3")
 
-# 	def CaesarChallenge():
+	def CaesarChallenge():
 
-# 		playsound("CaesarChallenge.mp3")
+		playsound("CaesarChallenge.mp3")
 
 		
 
-# 	caesar_cipher = tk.Tk()
-# 	caesar_cipher.title("Caesar Cipher")
-# 	caesar_cipher_frame = Frame(caesar_cipher)
-# 	caesar_cipher_frame.pack()
-# 	caesar_cipher_image = PhotoImage(file = "ImplementTheCaesarCipherInPython.png")
-# 	Label(caesar_cipher_frame, image = caesar_cipher_image).pack()
+	caesar_cipher = tk.Tk()
+	caesar_cipher.title("Caesar Cipher")
+	caesar_cipher_frame = tk.Frame(caesar_cipher)
+	caesar_cipher_frame.pack()
+	caesar_cipher_image = tk.PhotoImage(file = "ImplementTheCaesarCipherInPython.png")
+	labelCaesarPhoto = tk.Label(caesar_cipher_frame, image = caesar_cipher_image)
+	labelCaesarPhoto.pack()
 
-# 	CaesarExplanation = tk.Button(caesar_cipher, text = "Introduction", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat())
-# 	CaesarExplanation.config(fg = "#a9a70a")
-# 	CaesarExplanation.place(x = 1100, y = 50)
+	CaesarExplanation = tk.Button(caesar_cipher, text = "Introduction", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat())
+	CaesarExplanation.config(fg = "#a9a70a")
+	CaesarExplanation.place(x = 1100, y = 50)
 
-# 	CaesarExplanation2 = tk.Button(caesar_cipher, text = "Presentation", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat2())
-# 	CaesarExplanation2.config(fg = "#a9a70a")
-# 	CaesarExplanation2.place(x = 1100, y = 100)
+	CaesarExplanation2 = tk.Button(caesar_cipher, text = "Presentation", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat2())
+	CaesarExplanation2.config(fg = "#a9a70a")
+	CaesarExplanation2.place(x = 1100, y = 100)
 
-# 	CaesarExplanation3 = tk.Button(caesar_cipher, text = "Justification", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat3())
-# 	CaesarExplanation3.config(fg = "#a9a70a")
-# 	CaesarExplanation3.place(x = 1100, y = 150)
+	CaesarExplanation3 = tk.Button(caesar_cipher, text = "Justification", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat3())
+	CaesarExplanation3.config(fg = "#a9a70a")
+	CaesarExplanation3.place(x = 1100, y = 150)
 
-# 	CaesarExplanation4 = tk.Button(caesar_cipher, text = "History and use", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat4())
-# 	CaesarExplanation4.config(fg = "#a9a70a")
-# 	CaesarExplanation4.place(x = 1090, y = 200)
+	CaesarExplanation4 = tk.Button(caesar_cipher, text = "History and use", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat4())
+	CaesarExplanation4.config(fg = "#a9a70a")
+	CaesarExplanation4.place(x = 1090, y = 200)
 
-# 	CaesarExplanation5 = tk.Button(caesar_cipher, text = "Applications", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat5())
-# 	CaesarExplanation5.config(fg = "#a9a70a")
-# 	CaesarExplanation5.place(x = 1100, y = 250)
+	CaesarExplanation5 = tk.Button(caesar_cipher, text = "Applications", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat5())
+	CaesarExplanation5.config(fg = "#a9a70a")
+	CaesarExplanation5.place(x = 1100, y = 250)
 
-# 	CaesarExplanation6 = tk.Button(caesar_cipher, text = "Challenges", font = ("Comic Sans MS", 13), command = lambda:CaesarChallenge())
-# 	CaesarExplanation6.config(fg = "#a9a70a")
-# 	CaesarExplanation6.place(x = 1100, y = 300)
+	CaesarExplanation6 = tk.Button(caesar_cipher, text = "Challenges", font = ("Comic Sans MS", 13), command = lambda:CaesarChallenge())
+	CaesarExplanation6.config(fg = "#a9a70a")
+	CaesarExplanation6.place(x = 1100, y = 300)
 
-# 	caesar_cipher.mainloop()
+	caesar_cipher.mainloop()
 
 
 # def Challenge_1():
@@ -620,41 +638,45 @@ migration = False
 
 def info_display():
 
+	playsound("C:/BirdCipher/Audios/VoiceAudios/vernacularNames.mp3")
+	time.sleep(4)
+
 	print()
-	print("-------------------------- BIRD INFORMATION -----------------------------------")
+	print("-------------------------------------------------- BIRDS INFORMATION --------------------------------------------------------------")
+	print()
 	print()
 	playsound("idea-1.mp3")
-	print("     * The scientific name of this bird is: ", BirdCipher_sci_k[44])
+	print("     * The scientific name of this order of birds is: ", BirdCipher_sci_k[0])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The english name of this bird is: ", BirdCipher_english_k[44])
+	print("     * The english name of this order of birds is: ", BirdCipher_english_k[0])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The spanish name of this bird is: ", BirdCipher_Spanish_k[44])
+	print("     * The spanish name of this order of birds is: ", BirdCipher_Spanish_k[0])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The french name of this bird is: ", BirdCipher_french_k[44])
+	print("     * The french name of this order of birds is: ", BirdCipher_french_k[0])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The german name of this bird is: ", BirdCipher_german_k[44])
+	print("     * The german name of this order of birds is: ", BirdCipher_german_k[0])
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The chinese name of this bird is: ", BirdCipher_chinese_k[44]) 
+	print("     * The chinese name of this order of birds is: ", BirdCipher_chinese_k[0]) 
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
-	print("     * The pinyin (chinese phonetic transcription system) is: ", BirdCipher_pinyin_k[44]) 
+	print("     * The pinyin (chinese phonetic transcription system) is: ", BirdCipher_pinyin_k[0]) 
 	print()
 	time.sleep(1)
 	playsound("idea-1.mp3")
 	print("     * The secret message about this species is: ")
 	print()
-	print("       ", secret_messages[10])
+	print("     ", secret_messages[0])
 	time.sleep(3)
 	
 info_display()
@@ -736,11 +758,11 @@ print()
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-secretNumber = number_species_k[44]
+secretNumber = number_species_k[0]
 
 
 print()
-print("---------------------- BIRDGUESS - BIRD BIODIVERSITY SECRET NUMBERS GUESSING. LETS PLAY NOW!!! ---------------------")
+print("---------------------- BIRDCIPHER - BIRD BIODIVERSITY SECRET NUMBERS GUESSING. LETS PLAY NOW!!! ---------------------------------------")
 print()
 time.sleep(3)
 
@@ -748,7 +770,7 @@ time.sleep(3)
 playsound("WelcomeSecretNumbers.mp3")
 playsound("try_guess.mp3")
 
-print("   Guess the number of species of the group: ", BirdCipher_english_k[44])  # --- Trabaje en el RETO 2
+print("   Guess the number of species of the group: ", BirdCipher_english_k[0])  # --- Trabaje en el RETO 2
 
 print()
 
@@ -778,7 +800,7 @@ while End == False or lives > 0:
 	if guess != secretNumber and attempts == 7 and lives > 1:
 
 		print()
-		print("------------------------------------- RESULTS ----------------------------------------------------")
+		print("------------------------------------------------- RESULTS --------------------------------------------------------")
 		print()
 		playsound("Lost_a_life.mp3")
 		print("   You have tried 7 times and have not been able to guess the size of this bird. You lost a life.")
@@ -794,9 +816,9 @@ while End == False or lives > 0:
 		GUI_Creation()
 		info_display()
 		print()
-		print("------------------- BIRDGUESS - DATA GUESSING OF BIRD BIODIVERSITY. LETS PLAY NOW!!!----------------------")
+		print("-------------------------- BIRDGUESS - DATA GUESSING OF BIRD BIODIVERSITY. LETS PLAY NOW!!!----------------------")
 		print()
-		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[44])
+		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[0])
 		print()
 		playsound("try_guess.mp3")
 		guess = float(input("   Enter the number of species: "))
@@ -806,7 +828,7 @@ while End == False or lives > 0:
 	elif guess != secretNumber and attempts == 7 and lives == 1:
 
 		print()
-		print("------------------------------------------- RESULTS ------------------------------------------------------")
+		print("-------------------------------------------------- RESULTS ------------------------------------------------------")
 		print()
 		print("   Now you have no lives. Game over")
 		lives = lives - 1
@@ -833,7 +855,7 @@ while End == False or lives > 0:
 
 		points = points + 10
 		print()
-		print("-------------------------------------------- RESULTS ----------------------------------------------------")
+		print("---------------------------------------------------- RESULTS -----------------------------------------------------")
 		print()
 		print("   Congratulations!!! You guessed the total number of species of this group. You have earned 10 points!!!")
 		print()
@@ -844,7 +866,7 @@ while End == False or lives > 0:
 		print()
 		print()
 		print()
-		print("------------------------ DECIPHER THE SECRET MESSAGE ABOUT THIS BIRD!!!! -------------------------------")
+		print("-------------------------------- DECRYPT THE SECRET MESSAGE ABOUT THIS BIRD!!!! ----------------------------------")
 		print()
 		print()
 		playsound("radar-ufo.mp3")
@@ -852,14 +874,16 @@ while End == False or lives > 0:
 		time.sleep(3)
 		caesarCipher()
 		playsound("DecipherMessage.mp3")
-		print("       ", secret_messages[10])
+		print("     ", secret_messages[0])
 		message = getMessage()
 		print()
 		playsound('MessageClueObtained.mp3')
-		playsound('SecretClue.mp3')
+		playsound(key_audios_k[0])
+		time.sleep(2)
 		playsound('WriteTheClue.mp3')
 		key = getKey()
-		if key == 13:
+		
+		if key == keys_k[0]:
 
 			match = True
 			playsound("rightDecrypt.mp3")
@@ -878,8 +902,10 @@ while End == False or lives > 0:
 		print('        Your translated text is: ')
 		print()
 		print("       ", getTranslatedMessage(message, key))
+		time.sleep(5)
+		playsound(crypto_audios_k[0])
 		
-		time.sleep(70)
+		time.sleep(40)
 
 		
 		print()
@@ -901,7 +927,7 @@ while End == False or lives > 0:
 		info_display()
 		print()
 		print()
-		print("----------------------- BIRDGUESS - DATA GUESSING OF BIRD BIODIVERSITY. LETS PLAY NOW!!! ---------------------")
+		print("------------------------------- BIRDGUESS - DATA GUESSING OF BIRD BIODIVERSITY. LETS PLAY NOW!!! ---------------------")
 		print()
 		print("   Guess the size in centimeters of: ", BirdCipher_english_k[index])
 		attempts = 0
@@ -914,7 +940,8 @@ while End == False or lives > 0:
 	elif guess == secretNumber and attempts <= 7 and len(BirdCipher_list_k) == 1:
 
 		
-		print("-------------------------------------------- RESULTS ----------------------------------------------------")
+		print("------------------------------------------------- RESULTS -----------------------------------------------------------")
+		print()
 		print()
 		print("   Congratulations!!! You guessed the size of the bird I was thinking of. You have earned 10 points!!!")
 		playsound("Congratulations.mp3")
@@ -926,6 +953,9 @@ while End == False or lives > 0:
 		del BirdCipher_list_k[0]
 		print()
 		print("Congratulations!!! You have guessed all the sizes of the birds on the list. End of the game.")
+		print()
+		print()
+		print(" -------------------------------------------------------------------------------------------------------------------")
 		End = True
 		break
 

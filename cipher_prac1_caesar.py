@@ -35,7 +35,7 @@ def getMessage():
 
 	#message = cipherText_nbk1_jg[0]
 
-	message = secret_messages[10]
+	message = secret_messages[0]
 
 	return message
 
