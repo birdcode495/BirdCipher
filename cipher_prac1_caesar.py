@@ -49,8 +49,9 @@ def getKey():
 	print(" ----------------------------------------- Secret key to decrypt this message -------------------------------------------")
 	print()
 
+	key = input('         Enter your key between 1 and 26: ')
+
 	try:
-		key = input('         Enter your key between 1 and 26: ')
 		key = int(key)
 
 		if (key >= 1 and key <= MAX_KEY_SIZE):

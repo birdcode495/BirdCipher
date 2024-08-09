@@ -18,4 +18,9 @@ def questions():
 
 
 
-print(questions())
+a = 'vf'
+
+if isinstance(a, str):
+
+	print(questions())
+	print(a)

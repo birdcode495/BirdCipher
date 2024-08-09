@@ -907,7 +907,11 @@ while End == False or lives > 0:
 		playsound('WriteTheClue.mp3')
 		key = getKey()
 
-		if key == keys_k[2]:
+		if isinstance(key, str):
+
+			print("        Incorrect data type")
+
+		elif key == keys_k[2]:
 
 			match = True
 			playsound("rightDecrypt.mp3")
@@ -944,11 +948,7 @@ while End == False or lives > 0:
 
 			print("        Incorrect value")
 
-		elif isinstance(key, str):
-
-			print("        Incorrect data type")
-
-		
+				
 		
 		match = False
 		del BirdCipher_list_k[index]
