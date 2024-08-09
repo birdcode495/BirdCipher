@@ -43,19 +43,31 @@ def getKey():
 
 	key = 0
 	
-	while True:
+	
 
-		print()
-		print(" ----------------------------------------- Secret key to decrypt this message -------------------------------------------")
-		print()
+	print()
+	print(" ----------------------------------------- Secret key to decrypt this message -------------------------------------------")
+	print()
 
-		key = int(input('         Enter your key between 1 and 26: '))
-
-		print()
-		print(" ------------------------------------------------------------------------------------------------------------------------")
+	try:
+		key = input('         Enter your key between 1 and 26: ')
+		key = int(key)
 
 		if (key >= 1 and key <= MAX_KEY_SIZE):
-			return key
+			print("         Secret key saved.")
+
+		else:
+			print("         The key you have entered is not between 1 and 26. You failed.")
+
+	except ValueError:
+		print("         You entered an invalid key. You failed.")
+
+	print()
+	print(" ------------------------------------------------------------------------------------------------------------------------")
+
+	return key
+
+		
 
 
 

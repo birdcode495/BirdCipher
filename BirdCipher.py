@@ -774,7 +774,26 @@ print("   Guess the number of species of the group: ", BirdCipher_english_k[2]) 
 
 print()
 
-guess = float(input("   Enter the number of species: "))
+guess = 0
+
+def question():
+
+	global guess
+
+	while True:
+
+		try:
+			guess = input("   * Enter the number of species: ")
+			guess = int(guess)
+			break
+
+		except ValueError:
+
+			print("   * You must enter a valid value. Try again.")
+			print()
+
+
+
 print()
 
 attempts = 1
@@ -788,6 +807,8 @@ points = 0
 coins = 0
 
 win_challenge2_info = 0
+
+question()
 
 
 while End == False or lives > 0:
@@ -821,7 +842,8 @@ while End == False or lives > 0:
 		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[2])
 		print()
 		playsound("try_guess.mp3")
-		guess = float(input("   Enter the number of species: "))
+		#guess = float(input("   Enter the number of species: "))
+		question()
 		print()
 		attempts = attempts + 1
 
@@ -838,7 +860,8 @@ while End == False or lives > 0:
 	elif guess < secretNumber:
 
 		playsound("larger.mp3")
-		guess = float(input("    * There are more species in this group (order) of birds. Try again: "))
+		print("    * There are more species in this group (order) of birds. Try again.")
+		question()
 		print()
 		attempts = attempts + 1
 		
@@ -846,7 +869,8 @@ while End == False or lives > 0:
 	elif guess > secretNumber:
 
 		playsound("smaller.mp3")
-		guess = float(input("    * There are fewer species in this group (order) of birds. Try again: "))
+		print("    * There are fewer species in this group (order) of birds. Try again: ")
+		question()
 		print()
 		attempts = attempts + 1
 		
@@ -882,7 +906,7 @@ while End == False or lives > 0:
 		time.sleep(2)
 		playsound('WriteTheClue.mp3')
 		key = getKey()
-		
+
 		if key == keys_k[2]:
 
 			match = True
@@ -891,24 +915,40 @@ while End == False or lives > 0:
 			time.sleep(2)
 			playsound("seePictureAgain.mp3")
 			GUI_Creation()
+			print()
+			playsound("secretMessageSpecies.mp3")
+			time.sleep(2)
+			print('        Your translated text is: ')
+			print()
+			print("       ", getTranslatedMessage(message, key))
+			time.sleep(5)
+			playsound(crypto_audios_k[2])
+			time.sleep(40)
+			print()
 
-		else:
+		elif key != keys_k[2] and key >= 1 and key <= 26:
 
 			playsound("wrongPassword.mp3")
+			print()
+			#playsound("secretMessageSpecies.mp3")
+			time.sleep(2)
+			print('        Your translated text is: ')
+			print()
+			print("       ", getTranslatedMessage(message, key))
+			time.sleep(5)
+			#playsound(crypto_audios_k[2])
+			time.sleep(20)
+			print()
 
-		print()
-		playsound("secretMessageSpecies.mp3")
-		time.sleep(2)
-		print('        Your translated text is: ')
-		print()
-		print("       ", getTranslatedMessage(message, key))
-		time.sleep(5)
-		playsound(crypto_audios_k[2])
-		
-		time.sleep(40)
+		elif key < 1 or key > 26:
+
+			print("        Incorrect value")
+
+		elif isinstance(key, str):
+
+			print("        Incorrect data type")
 
 		
-		print()
 		
 		match = False
 		del BirdCipher_list_k[index]
@@ -933,7 +973,7 @@ while End == False or lives > 0:
 		attempts = 0
 		print()
 		playsound("try_guess.mp3")
-		guess = float(input("   Enter the size of the bird: "))
+		question()
 		print()
 		attempts = attempts + 1
 
