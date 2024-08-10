@@ -19,7 +19,7 @@ secret_messages = ['''   Fgehguvbavsbezrf vf na beqre bs oveqf jvgu bayl n fvaty
 		uljk-srkyv rj nvcc rj nrjy kyvdjvcmvj sp jkreuzex ze yvrmp irze. Kyvp riv yvriu dfiv 
 		fwkve kyre jvve, tfddleztrkzex nzky vrty fkyvi sp r mrizvkp fw wivhlvekcp xzmve, 
 		tyrirtkvizjkzt trccj, vjgvtzrccp ulizex kyv sivvuzex jvrjfe.''',
-		'''Mczdajmhzn dn vi jmyzm ocvo xjiovdin ocz avhdgt ja mczvn. Do dn di ocz diamvxgvnn 
+		'''  Mczdajmhzn dn vi jmyzm ocvo xjiovdin ocz avhdgt ja mczvn. Do dn di ocz diamvxgvnn 
 		Kvgzjbivocvz, rcdxc xjiovdin vgg mvodozn. Zsovio hzhwzmn vmz ajpiy di Njpoc Vhzmdxv. 
 		Rcdgz ocz DJX Rjmgy Wdmy Gdno viy ocz Xgzhzion Xczxfgdno xvozbjmdnz Mczdajmhzn vn don 
 		jri jmyzm, ocz WdmyGdaz Yvov Ujiz dixgpyzn ocz mczvn, vgjib rdoc jnomdxczn, odivhjpn, 
