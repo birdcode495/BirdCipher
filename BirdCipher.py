@@ -891,7 +891,7 @@ def GUI_BirdCipher_Machine():
 		if chances_decrypt <= 3 and key == keys[2]:
 
 			cipher_text.config(text = getTranslatedMessage(message, key))
-			cipher_text.config(bg = '#050005', fg = '#1af017')
+			cipher_text.config(bg = '#050005', fg = '#7e086c')
 			chances_decrypt = chances_decrypt + 1
 			playsound('C:/BirdCipher/Audios/VoiceAudios/CorrectKey.mp3')
 
@@ -899,7 +899,7 @@ def GUI_BirdCipher_Machine():
 
 			playsound('C:/BirdCipher/Audios/VoiceAudios/WrongKey.mp3')
 			cipher_text.config(text = getTranslatedMessage(message, key))
-			cipher_text.config(bg = '#050005', fg = '#1af017')
+			cipher_text.config(bg = '#050005', fg = '#7e086c')
 			chances_decrypt = chances_decrypt + 1
 
 		else:
@@ -932,8 +932,8 @@ def GUI_BirdCipher_Machine():
 
 	decrypt = tk.Tk()
 
-	decrypt.title("Decrypt the message")
-	decrypt.geometry('850x850')
+	decrypt.title("BirdCipher Decryption Machine")
+	decrypt.geometry('900x450')
 
 	#raiz.iconbitmap()
 
@@ -946,33 +946,36 @@ def GUI_BirdCipher_Machine():
 	#miImagen = tk.PhotoImage(file = BirdCipher_list_k[2][0])
 	#bird_singing_logo = tk.PhotoImage(file="Singing-logo5.png")
 
+	decrypt_buttonImg = tk.PhotoImage(file = "Decrypt Message-logo1.png")
+	listen_buttonImg = tk.PhotoImage(file = "Listen to the message-logo1.png")
+
 	#imageLabel = tk.Label(miFrame, image=miImagen)
 	#imageLabel.pack()
 
-	cipher_text = tk.Label(decrypt, text = secret_messages[2], justify = 'center')
+	cipher_text = tk.Label(decrypt, text = secret_messages[2], justify = 'left')
 	#cipher_text.place(x = 30, y = 30)
 	#cipher_text.pack(pady = 30)
-	cipher_text.config(bg = '#050005', fg = '#1af017')
-	cipher_text.place(x = 30, y = 30)
+	cipher_text.config(bg = '#050005', fg = '#7e086c')
+	cipher_text.place(x = 30, y = 60)
 
 
 	nicknameCuad = tk.Entry(decrypt, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
 	#nicknameCuad.config(bg="black", fg="green")
 	#nicknameCuad.place(x=50, y=55)
 	#nicknameCuad.pack(padx = 30, pady = 30)
-	nicknameCuad.config(bg = '#050005', fg = '#1af017')
-	nicknameCuad.place(x = 100, y = 250)
+	nicknameCuad.config(bg = '#050005', fg = '#7e086c')
+	nicknameCuad.place(x = 700, y = 100)
 	
 
-	decrypt_button = tk.Button(decrypt, text = "Decrypt text", font = ("Comic Sans MS", 8), command = lambda:comd_decrypt())
+	decrypt_button = tk.Button(decrypt, image = decrypt_buttonImg, font = ("Comic Sans MS", 8), command = lambda:comd_decrypt())
 	decrypt_button.config(fg = '#1af017')
-	decrypt_button.place(x = 200, y = 350)
+	decrypt_button.place(x = 700, y = 150)
 	
 	#decrypt_button.pack()
 
-	decrypt_listen = tk.Button(decrypt, text = 'Listen', font = ("Comic Sans MS", 8), command = lambda:listen_decrypt_text())
+	decrypt_listen = tk.Button(decrypt, image = listen_buttonImg, font = ("Comic Sans MS", 8), command = lambda:listen_decrypt_text())
 	decrypt_listen.config(fg = '#1af017')
-	decrypt_listen.place(x = 250, y = 350)
+	decrypt_listen.place(x = 800, y = 150)
 	
 	#decrypt_listen.pack()
 
@@ -981,8 +984,11 @@ def GUI_BirdCipher_Machine():
 
 	imagen_caesar_cipher_lab = tk.Label(decrypt, image = imagen_caesar_cipher)
 	imagen_caesar_cipher_lab.config(bg = '#FFFFFF')
-	imagen_caesar_cipher_lab.place(x = 30, y = 400)
+	imagen_caesar_cipher_lab.place(x = 50, y = 300)
 
+	titleBirdCipherMachine = tk.Label(decrypt, text = "BirdCipher message encrypted with the Caesar Cipher algorithm", font = ("Comic Sans MS", 13))
+	titleBirdCipherMachine.config(fg = "#7e086c")
+	titleBirdCipherMachine.place(x = 130, y = 25)
 
 
 	decrypt.mainloop()
