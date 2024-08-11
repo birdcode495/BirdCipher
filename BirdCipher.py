@@ -867,33 +867,79 @@ def question():
 			print()
 
 
+chances_decrypt = 1
 
 def GUI_BirdCipher_Machine():
 
 	global key
 	global message
+	global keys
+	global chances_decrypt
+	global crypto_audios_k
 
 	def comd_decrypt():
 
 		global key
+		global keys
 		global message
+		global chances_decrypt
 
 		message = secret_messages[2]
 		key = player_answer_decrypt.get()
+		
 
-		cipher_text.config(text = getTranslatedMessage(message, key))
+		if chances_decrypt <= 3 and key == keys[2]:
+
+			cipher_text.config(text = getTranslatedMessage(message, key))
+			cipher_text.config(bg = '#050005', fg = '#1af017')
+			chances_decrypt = chances_decrypt + 1
+			playsound('C:/BirdCipher/Audios/VoiceAudios/CorrectKey.mp3')
+
+		elif chances_decrypt <= 3 and key!= keys[2]:
+
+			playsound('C:/BirdCipher/Audios/VoiceAudios/WrongKey.mp3')
+			cipher_text.config(text = getTranslatedMessage(message, key))
+			cipher_text.config(bg = '#050005', fg = '#1af017')
+			chances_decrypt = chances_decrypt + 1
+
+		else:
+			playsound('C:/BirdCipher/Audios/VoiceAudios/chances_decrypt.mp3')
+
+
+	def listen_decrypt_text():
+
+		global key
+		global keys
+		global chances_decrypt
+		global crypto_audios_k
+
+		key = player_answer_decrypt.get()
+
+		if key == keys[2] and chances_decrypt <= 3:
+
+			playsound(crypto_audios_k[2])
+
+		elif key != keys[2] and chances_decrypt <= 3:
+			
+			playsound('C:/BirdCipher/Audios/VoiceAudios/WrongKey.mp3')
+
+		elif chances_decrypt > 3:
+
+			playsound('C:/BirdCipher/Audios/VoiceAudios/chances_decrypt.mp3')
+
 
 
 
 	decrypt = tk.Tk()
 
 	decrypt.title("Decrypt the message")
+	decrypt.geometry('850x850')
 
 	#raiz.iconbitmap()
 
-	decrypt_frame = tk.Frame(decrypt)
+	#decrypt_frame = tk.Frame(decrypt)
 
-	decrypt_frame.pack()
+	#decrypt_frame.pack()
 
 	player_answer_decrypt = tk.IntVar()
 
@@ -903,30 +949,43 @@ def GUI_BirdCipher_Machine():
 	#imageLabel = tk.Label(miFrame, image=miImagen)
 	#imageLabel.pack()
 
-	cipher_text = tk.Label(decrypt_frame, text = secret_messages[2])
+	cipher_text = tk.Label(decrypt, text = secret_messages[2], justify = 'center')
 	#cipher_text.place(x = 30, y = 30)
-	cipher_text.pack(pady = 30)
+	#cipher_text.pack(pady = 30)
+	cipher_text.config(bg = '#050005', fg = '#1af017')
+	cipher_text.place(x = 30, y = 30)
 
 
-	nicknameCuad = tk.Entry(decrypt_frame, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
+	nicknameCuad = tk.Entry(decrypt, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
 	#nicknameCuad.config(bg="black", fg="green")
 	#nicknameCuad.place(x=50, y=55)
-	nicknameCuad.pack(padx = 30, pady = 30)
+	#nicknameCuad.pack(padx = 30, pady = 30)
+	nicknameCuad.config(bg = '#050005', fg = '#1af017')
+	nicknameCuad.place(x = 100, y = 250)
 	
 
-	decrypt_button = tk.Button(decrypt_frame, text = "Decrypt text", font = ("Comic Sans MS", 8), command = lambda:comd_decrypt())
-	#decrypt_button.config(fg = "#fa7704")
-	#decrypt_button.place(x = 20, y = 115)
-	decrypt_button.pack(pady = 30)
-
+	decrypt_button = tk.Button(decrypt, text = "Decrypt text", font = ("Comic Sans MS", 8), command = lambda:comd_decrypt())
+	decrypt_button.config(fg = '#1af017')
+	decrypt_button.place(x = 200, y = 350)
 	
+	#decrypt_button.pack()
+
+	decrypt_listen = tk.Button(decrypt, text = 'Listen', font = ("Comic Sans MS", 8), command = lambda:listen_decrypt_text())
+	decrypt_listen.config(fg = '#1af017')
+	decrypt_listen.place(x = 250, y = 350)
+	
+	#decrypt_listen.pack()
+
+
+	imagen_caesar_cipher = tk.PhotoImage(file = 'Imagen_caesar.png')
+
+	imagen_caesar_cipher_lab = tk.Label(decrypt, image = imagen_caesar_cipher)
+	imagen_caesar_cipher_lab.config(bg = '#FFFFFF')
+	imagen_caesar_cipher_lab.place(x = 30, y = 400)
+
+
 
 	decrypt.mainloop()
-
-	
-
-
-
 
 
 print()
