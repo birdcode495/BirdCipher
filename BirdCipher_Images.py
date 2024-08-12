@@ -284,7 +284,11 @@ BirdCipher_list = [["C:/BirdCipher/Bird_images/Struthioniformes1.png", "C:/BirdC
 number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3, 20, 188, 39, 23, 4, 443, 622, 130, 8, 4, 20, 13, 541, 7, 3, 23, 218,
 97, 73, 141, 240, 355, 42, 420, 20, 1, 52, 83, 248, 541, 8, 119, 502, 7715]
 
-bird_songs = ['C:/BirdCipher/Audios/BirdSongs/BirdSong_0.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_1.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_2.wav']
+bird_songs = ['C:/BirdCipher/Audios/BirdSongs/BirdSong_0.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_1.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_2.wav',
+'', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_34.wav']
 
 
-#print(len(BirdCipher_list))
+# print(len(BirdCipher_list))
+# print(len(number_species))
+# print(len(bird_songs))

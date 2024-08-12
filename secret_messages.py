@@ -30,14 +30,32 @@ ji oczdm nozmiph, czixz oczdm ivhz. Rdocjpo ocdn oj vixcjm oczdm rdib hpnxgzn, o
 xjpgy ijo cvqz agjri zqzi da oczt cvy yzqzgjkzy npdovwgz rdibn. Ndhdgvmgt oj jnomdxczn 
 viy zhpn, mczvn vmz avdmgt kjkpgvm gdqznojxf viy kzon, mzbpgvmgt fzko viy wmzy ji avmhn, 
 mvixczn, kmdqvoz kvmfn viy wt vqdxpgopmdnon, hvdigt di Ijmoc viy Njpoc Vhzmdxv, viy 
-Zpmjkz.''',
+Zpmjkz.''', "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 
+'''Jxu Qssyfyjhyvehcui qhu qd ehtuh ev ryhti jxqj ydsbktui ceij ev jxu tykhdqb ryhti ev 
+fhuo, ydsbktydw xqmai, uqwbui, lkbjkhui, qdt ayjui, rkj dej vqbsedi. Jxu Qssyfyjhyvehcui 
+qhu ademd vhec jxu Cyttbu Uesudu qdt jofysqbbo xqlu q ixqhfbo xeeaut ruqa myjx q ievj 
+suhu xekiydw jxu deijhybi. Jxuyh mydwi qhu bedw qdt vqyhbo rheqt, ikyjqrbu veh ieqhydw 
+vbywxj, myjx jxu ekjuh vekh je iyn fhycqho vuqjxuhi ucqhwydqjut. Jxuo xqlu ijhedw buwi 
+qdt vuuj myjx hqfjehyqb sbqmi qdt effeiqrbu xydt sbqmi. Qbceij qbb Qssyfyjhyvehcui qhu 
+sqhdyleheki, xkdjydw ro iywxj tkhydw jxu tqo eh qj jmybywxj. Jxuo qhu unsufjyedqbbo 
+bedw-bylut, qdt ceij xqlu bem hufhetksjylu hqjui. Jxu oekdw xqlu q bedw, luho vqij-whemydw 
+vbutwbydw ijqwu, vebbemut ro 3–8 muuai ev duij sqhu qvjuh vyhij vbywxj, qdt 1 je 3 ouqhi 
+qi iunkqbbo yccqjkhu qtkbji. Jxu iunui xqlu sedifyskekibo tyvvuhudj iypui qdt iecujycui 
+q vucqbu yi cehu jxqd jmysu qi xuqlo qi xuh cqju.'''
 ]
 
 
-keys = [13, 17, 21, 23, 8, 3, 13, 15, 21, 16, 13]
+keys = [13, 17, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16]
 
 key_audios = ['C:/BirdCipher/Audios/VoiceAudios/k13.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k17.mp3',
-'C:/BirdCipher/Audios/VoiceAudios/k21.mp3']
+'C:/BirdCipher/Audios/VoiceAudios/k21.mp3', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 
+'', '', '', '', '', '', '', '', '', '', '', '', 'C:/BirdCipher/Audios/VoiceAudios/k16.mp3']
 
 crypto_audios = ['C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_0.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_1.mp3',
-'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_2.mp3']
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_2.mp3', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+'', '', '', '', '', '', '', '', '', '', '', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_34.mp3']
+
+# print(len(keys))
+# print(len(key_audios))
+# print(len(crypto_audios))
+# print(len(secret_messages))

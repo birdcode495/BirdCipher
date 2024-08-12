@@ -120,7 +120,7 @@ playsound('Milvago_chimachima.wav')
 
 match = False
 
-prueba_list_present = [0, 2]
+prueba_list_present = [0, 1, 2, 34]
 
 
 print()
@@ -130,20 +130,20 @@ print(" ------------------------------------------------------------------------
 print()
 print()
 
-print("                                                       WELCOME TO BIRDCIPHER                                                     ")
+print("                                                              WELCOME TO BIRDCIPHER                                             ")
 print()
-print("                                           Numerical data guessing of bird biodiversity                                         ")
+print("                                                  Numerical data guessing of bird biodiversity                                  ")
 print()
 print()
 print(" ---------------------------------------------------------------------------------------------------------------------------------------")
 
 
 print()
-print("  BIRDCIPHER - A SERIOUS GAME TO GUESS THE MAGICAL AND SECRETS NUMBERS ABOUT BIRDS WHICH HAVE BEEN SEEN IN SOME PLACES IN THE WORLD")
+print("  BIRDCIPHER - A SERIOUS GAME TO GUESS THE MAGICAL NUMBERS RELATED TO BIRDS WHICH HAVE BEEN SEEN IN SOME PLACES IN THE WORLD")
 
 print()
 playsound("C:/BirdCipher/Audios/VoiceAudios/welcome.mp3")
-#time.sleep(4)
+time.sleep(4)
 playsound("C:/BirdCipher/Audios/VoiceAudios/enter_name.mp3")
 
 print()
@@ -151,12 +151,16 @@ print()
 print(" ----------------------------------------------- Enter your credentials ----------------------------------------------------------------")
 print()
 print()
+print()
 
 username = input("     * Please enter your name: ")
+print()
 
 nickname = input("     * Please insert your nickname: ")
+print()
 
 password = input("     * Please enter your password: ")
+print()
 
 print()
 print()
@@ -275,11 +279,9 @@ birdCipher.mainloop()
 
 print()
 
-print("     Welcome to BirdCipher ", username,  "!!! Now, let us learn more about the groups of birds in the world.")
+print("     Welcome to BirdCipher ", username,  "!!! Now, let us learn more about the groups of birds in the world, so that we can identify them easier.")
 
-print("     so that we can identify them easier.")
-
-#time.sleep(3)
+time.sleep(3)
 
 playsound("C:/BirdCipher/Audios/VoiceAudios/species_info.mp3")
 
@@ -749,11 +751,11 @@ def info_display():
 	print("     * The pinyin (chinese phonetic transcription system) is: ", BirdCipher_pinyin_k[index]) 
 	print()
 	time.sleep(1)
-	playsound("idea-1.mp3")
-	print("     * The secret message about this species is: ")
-	print()
-	print("     ", secret_messages[index])
-	time.sleep(3)
+	# playsound("idea-1.mp3")
+	# print("     * The secret message about this species is: ")
+	# print()
+	# print("     ", secret_messages[index])
+	# time.sleep(3)
 	
 info_display()
 
@@ -848,8 +850,6 @@ playsound("try_guess.mp3")
 
 print("   Guess the number of species of the group: ", BirdCipher_english_k[index])  # --- Trabaje en el RETO 2
 
-print()
-
 guess = 0
 
 def question():
@@ -866,7 +866,6 @@ def question():
 
 		except ValueError:
 
-			print()
 			print("   * You must enter a valid value. Try again.")
 			
 
@@ -883,6 +882,7 @@ def GUI_BirdCipher_Machine():
 	global points
 	global nickname
 	global BirdCipher_sci_k
+	global match
 
 	def comd_decrypt():
 
@@ -890,6 +890,7 @@ def GUI_BirdCipher_Machine():
 		global keys
 		global message
 		global chances_decrypt
+		global match
 
 		message = secret_messages[index]
 		key = player_answer_decrypt.get()
@@ -900,7 +901,7 @@ def GUI_BirdCipher_Machine():
 			playsound('C:/BirdCipher/Audios/VoiceAudios/CorrectKey.mp3')
 			cipher_text.config(text = getTranslatedMessage(message, key), font = ("Comic Sans MS", 10))
 			cipher_text.config(bg = '#050005', fg = '#7e086c')
-			chances_decrypt = chances_decrypt + 1
+			match = True
 			
 
 		elif chances_decrypt <= 3 and key!= keys[index]:
@@ -910,7 +911,8 @@ def GUI_BirdCipher_Machine():
 			cipher_text.config(bg = '#050005', fg = '#FFFFFF')
 			chances_decrypt = chances_decrypt + 1
 
-		else:
+		elif chances_decrypt > 3:
+
 			playsound('C:/BirdCipher/Audios/VoiceAudios/chances_decrypt.mp3')
 
 
@@ -920,14 +922,15 @@ def GUI_BirdCipher_Machine():
 		global keys
 		global chances_decrypt
 		global crypto_audios_k
+		global match
 
 		key = player_answer_decrypt.get()
 
-		if key == keys[index] and chances_decrypt <= 3:
+		if match == True and chances_decrypt <= 3:
 
 			playsound(crypto_audios_k[index])
 
-		elif key != keys[index] and chances_decrypt <= 3:
+		elif match == False and chances_decrypt <= 3:
 			
 			playsound('C:/BirdCipher/Audios/VoiceAudios/WrongKey.mp3')
 
@@ -950,6 +953,16 @@ def GUI_BirdCipher_Machine():
 	def diamondsAudio():
 
 		playsound()
+
+	def closeMachine():
+
+		global chances_decrypt
+		global match
+
+		chances_decrypt = 0
+		
+		decrypt.destroy()
+		
 
 
 	decrypt = tk.Tk()
@@ -1057,9 +1070,11 @@ def GUI_BirdCipher_Machine():
 	imageCryptographicMachine = tk.Label(decrypt, image = cryptoMachineImage)
 	imageCryptographicMachine.place(x = 750, y = 260)
 
-	closeMachineButton = tk.Button(decrypt, text = "Close the BirdCipher Cryptographic Machine", font = ("Comic Sans MS", 12), command = lambda:decrypt.destroy())
+	closeMachineButton = tk.Button(decrypt, text = "Close the BirdCipher Cryptographic Machine", font = ("Comic Sans MS", 12), command = lambda:closeMachine())
 	closeMachineButton.place(x = 250, y = 460)
 	closeMachineButton.config(fg = "#7e086c")
+
+	decrypt.protocol("WM_DELETE_WINDOW", lambda: None)
 
 
 	decrypt.mainloop()
@@ -1161,21 +1176,34 @@ while End == False or lives > 0:
 		print()
 		print()
 		print()
-		print("---------------------------------- DECRYPT THE SECRET MESSAGE ABOUT THIS GROUP OF BIRDS!!!! ----------------------------------")
+		print("---------------------------------- DECRYPT THE SECRET MESSAGE ABOUT THIS GROUP OF BIRDS!!!! -----------------------------")
 		print()
 		print()
+		time.sleep(3)
+		print(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 		playsound("radar-ufo.mp3")
 		playsound("sonar-radar.mp3")
 		time.sleep(3)
 		caesarCipher()
 		playsound("DecipherMessage.mp3")
+		print()
+		print("                                                 ", BirdCipher_sci_k[index], "                                          ")
+		print()
+		time.sleep(3)
+		print("                                             ", BirdCipher_english_k[index], "                                          ")
+		print()
+		time.sleep(3)
 		print("                                                 Caesar Cipher Algorithm                                                ")
 		time.sleep(3)
 		print()
 		print("                                                 Simetrical cryptography                                                ")
 		time.sleep(3)
 		print()
-		print("                                      Here comes de BirdCipher Cryptographic Machine                                    ")
+		print("                                      Here comes the BirdCipher Cryptographic Machine                                    ")
+		print()
+		print()
+		print(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+
 		playsound('MessageClueObtained.mp3')
 		playsound(key_audios_k[index])
 		time.sleep(2)
@@ -1197,7 +1225,7 @@ while End == False or lives > 0:
 			playsound("GoldCoin.mp3")
 			time.sleep(2)
 			playsound("seePictureAgain.mp3")
-			match = True
+			
 			GUI_Creation()
 
 			
@@ -1235,7 +1263,7 @@ while End == False or lives > 0:
 
 				
 		
-		match = False
+		
 		# del BirdCipher_list_k[index]
 		# del BirdCipher_sci_k[index]
 		# del BirdCipher_Spanish_k[index]
@@ -1245,15 +1273,17 @@ while End == False or lives > 0:
 		# del BirdCipher_chinese_k[index]
 		# del BirdCipher_pinyin_k[index]
 		prueba_list_present.remove(index)
+		
 		IndexCreation()
 		secretNumber = number_species_k[index]
+		match = False
 		
 		#Challenge3()
 		GUI_Creation()
 		info_display()
 		print()
 		print()
-		print("------------------------------- BIRDGUESS - DATA GUESSING OF BIRD BIODIVERSITY. LETS PLAY NOW!!! ---------------------")
+		print("--------------------- BIRDCIPHER - NUMERICAL DATA GUESSING OF BIRD BIODIVERSITY. LETS PLAY NOW!!! ---------------------")
 		print()
 		print("   Guess the size in centimeters of: ", BirdCipher_english_k[index])
 		attempts = 0
@@ -1266,7 +1296,7 @@ while End == False or lives > 0:
 	elif guess == secretNumber and attempts <= 7 and len(BirdCipher_list_k) == 1:
 
 		
-		print("------------------------------------------------- RESULTS -----------------------------------------------------------")
+		print("--------------------------------------------------- RESULTS -----------------------------------------------------------")
 		print()
 		print()
 		print("   Congratulations!!! You guessed the size of the bird I was thinking of. You have earned 10 points!!!")
