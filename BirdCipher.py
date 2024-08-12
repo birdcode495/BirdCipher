@@ -859,7 +859,7 @@ def question():
 	while True:
 
 		try:
-			
+			print()
 			guess = input("   * Enter the number of species: ")
 			guess = int(guess)
 			break
@@ -1080,8 +1080,6 @@ def GUI_BirdCipher_Machine():
 	decrypt.mainloop()
 
 
-print()
-
 attempts = 1
 
 lives = 4
@@ -1123,7 +1121,7 @@ while End == False or lives > 0:
 		GUI_Creation()
 		info_display()
 		print()
-		print("-------------------------- BIRDGUESS - DATA GUESSING OF BIRD BIODIVERSITY. LETS PLAY NOW!!!----------------------")
+		print("-------------------------- BIRDCIPHER - DATA GUESSING OF BIRDS BIODIVERSITY. LET US PLAY NOW!!!----------------------")
 		print()
 		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[index])
 		print()
@@ -1148,7 +1146,6 @@ while End == False or lives > 0:
 		playsound("larger.mp3")
 		print("   * There are more species in this group (order) of birds. Try again.")
 		question()
-		print()
 		attempts = attempts + 1
 		
 
@@ -1157,7 +1154,6 @@ while End == False or lives > 0:
 		playsound("smaller.mp3")
 		print("   * There are fewer species in this group (order) of birds. Try again: ")
 		question()
-		print()
 		attempts = attempts + 1
 		
 
