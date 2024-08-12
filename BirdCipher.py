@@ -859,7 +859,7 @@ def question():
 	while True:
 
 		try:
-			print()
+			
 			guess = input("   * Enter the number of species: ")
 			guess = int(guess)
 			break
