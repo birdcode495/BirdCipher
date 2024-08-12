@@ -408,6 +408,7 @@ def GUI_Creation():
 	miFrame.pack()
 
 	miImagen = tk.PhotoImage(file = BirdCipher_list_k[2][0])
+	arrow = tk.PhotoImage(file = "arrow1.png")
 	bird_singing_logo = tk.PhotoImage(file="Singing-logo5.png")
 
 	imageLabel = tk.Label(miFrame, image=miImagen)
@@ -416,13 +417,13 @@ def GUI_Creation():
 
 	Button = tk.Button(raiz, text = "Close Window", font = ("Comic Sans MS", 8), command = raiz.destroy)
 	Button.config(fg = "#fa7704")
-	Button.place(x = 20, y = 115)
+	Button.place(x = 20, y = 200)
 
 	Button_song = tk.Button(raiz, image = bird_singing_logo, command = lambda:bird_singing())
 	Button_song.place(x = 20, y = 20)
 
-	change_image = tk.Button(raiz, text = 'Change', command = lambda:change_image_bird())
-	change_image.place(x = 20, y = 250)
+	change_image = tk.Button(raiz, image = arrow, command = lambda:change_image_bird())
+	change_image.place(x = 20, y = 115)
 
 
 	def bird_singing():
@@ -447,7 +448,7 @@ def GUI_Creation():
 		imageLabel.pack()
 		count = count + 1
 
-		if count == len(BirdCipher_list_k[0]) - 1:
+		if count == len(BirdCipher_list_k[2]) - 1:
 
 			count = -1
 
