@@ -118,82 +118,208 @@ bird_songs_k = bird_songs
 
 playsound('Milvago_chimachima.wav')
 
+username_db = ''
+nickname_db = ''
+password_db = ''
+
+
+
+points = 0
+coins = 0
+feathers = 0
+diamonds = 0
+lifes = 3
+
+
+
+
+
+login = tk.Tk()
+login.title("BirdCipher welcome and login")
+login.resizable(0, 0)
+login.geometry('900x900')
+
+username = tk.StringVar()
+nickname = tk.StringVar()
+password = tk.StringVar()
+
+
+def createPlayer():
+
+	global points
+	global coins
+	global feathers
+	global diamonds
+	global lifes
+	global username
+	global nickname
+	global password
+	global username_db
+	global nickname_db
+	global password_db
+
+	bdatos = bytes(password.get(), 'utf-8')
+	h = hashlib.new(algoritmo, bdatos)
+	hash1 = HASH.generaHash(h)
+
+	miConexion = sqlite3.connect("BirdCipher_DataBase")
+
+	miCursor = miConexion.cursor()
+
+	#miCursor.execute("CREATE TABLE Players(id integer PRIMARY KEY ASC, username varchar(30), nickname varchar(30), password varchar(256), points integer NOT NULL DEFAULT 0, coins integer NOT NULL DEFAULT 0, feathers integer NOT NULL DEFAULT 0, diamonds integer NOT NULL DEFAULT 0)")
+
+	#miCursor.execute("CREATE TABLE encryptedMessages(id integer PRIMARY KEY ASC, nickname varchar(30), password varchar(256), server varchar(30), actual_message varchar(256))")
+
+	#miCursor.execute("ALTER TABLE Players ADD COLUMN lifes integer NOT NULL DEFAULT 3")
+
+	sql = 'insert into Players(username, nickname, password, points, coins, feathers, diamonds, lifes) values(?,?,?,?,?,?,?,?)'
+	data = (username.get(), nickname.get(), hash1, 0, 0, 0, 0, 3)
+
+	sql2 = 'insert into encryptedMessages(nickname, password) values(?,?)'
+	data2 = (nickname.get(), hash1)
+
+	sql3 = 'select * from Players where nickname = (?)'
+	data3 = (nickname.get(),)
+
+	miCursor.execute(sql3, data3)
+	dt = miCursor.fetchall()
+
+	if len(dt) == 0:
+
+		miCursor.execute(sql, data)
+		miCursor.execute(sql2, data2)
+		miCursor.execute(sql3, data3)
+		records = miCursor.fetchall()
+		username_db = records[0][1]
+		nickname_db = records[0][2]
+		password_db = records[0][3]
+		points = records[0][4]
+		coins = records[0][5]
+		feathers = records[0][6]
+		diamonds = records[0][7]
+		lifes = records[0][8]
+
+		#playsound()
+
+	elif dt[0][8] > 0 and hash1 == dt[0][3]:
+
+		username_db = dt[0][1]
+		nickname_db = dt[0][2]
+		password_db = dt[0][3]
+		points = dt[0][4]
+		coins = dt[0][5]
+		feathers = dt[0][6]
+		diamonds = dt[0][7]
+		lifes = dt[0][8]
+
+		#playsound()
+
+	# elif dt[0][8] > 0 and hash1 != dt[0][3]:
+
+	# 	#playsound(wrongPass)
+
+	# elif dt[0][8] <= 0:
+
+	# 	#playsound()
+
+
+	miConexion.commit()
+
+	miConexion.close()
+
+birdCipher_image_login = tk.PhotoImage(file = "BirdCipher-logo1.png")
+login_logo_image = tk.PhotoImage(file = "Login-logo1.png")
+birdCipherLabel_login = tk.Label(login, image = birdCipher_image_login)
+birdCipherLabel_login.place(x = 50, y = 20)
+
+label_username_login = tk.Label(login, text = "Enter your username", font = ("Comic Sans MS", 13))
+label_username_login.config(fg = '#7e086c')
+label_username_login.place(x = 40, y = 10)
+
+login_username = tk.Entry(login, textvariable = username, font = ("Comic Sans MS", 13), justify = "center", width = 20)
+login_username.config(bg = '#050005', fg = '#7e086c')
+login_username.place(x = 20, y = 50)
+
+label_nickname_login = tk.Label(login, text = "Enter your nickname", font = ("Comic Sans MS", 13))
+label_nickname_login.config(fg = '#7e086c')
+label_nickname_login.place(x = 40, y = 100)
+
+login_nickname = tk.Entry(login, textvariable = nickname, font = ("Comic Sans MS", 13), justify = "center", width = 20)
+login_nickname.config(bg = '#050005', fg = '#7e086c')
+login_nickname.place(x = 20, y = 140)
+
+label_password_login = tk.Label(login, text = "Enter your password", font = ("Comic Sans MS", 13))
+label_password_login.config(fg = '#7e086c')
+label_password_login.place(x = 40, y = 190)
+
+login_password = tk.Entry(login, textvariable = password, font = ("Comic Sans MS", 13), justify = "center", width = 20)
+login_password.config(bg = '#050005', fg = '#7e086c', show = '*')
+login_password.place(x = 20, y = 230)
+
+login_button = tk.Button(login, image = login_logo_image, command = lambda:createPlayer())
+login_button.place(x = 90, y = 270)
+
+#login.protocol("WM_DELETE_WINDOW", lambda: None)
+
+login.mainloop()
+
+
+
+
 match = False
 
 prueba_list_present = [0, 1, 2, 34]
 
+fg = input("ws: ")
+
 
 print()
 print()
 print()
 print(" ---------------------------------------------------------------------------------------------------------------------------------------")
 print()
+print("              ****************************************************************************************************************  ")
 print()
-
 print("                                                              WELCOME TO BIRDCIPHER                                             ")
 print()
-print("                                                  Numerical data guessing of bird biodiversity                                  ")
+print("                                   A cryptographic serious game for Numerical data guessing of bird biodiversity                ")
 print()
+print("              ****************************************************************************************************************  ")
 print()
 print(" ---------------------------------------------------------------------------------------------------------------------------------------")
 
 
 print()
-print("  BIRDCIPHER - A SERIOUS GAME TO GUESS THE MAGICAL NUMBERS RELATED TO BIRDS WHICH HAVE BEEN SEEN IN SOME PLACES IN THE WORLD")
+print("       BIRDCIPHER - A SERIOUS GAME TO GUESS THE MAGICAL NUMBERS RELATED TO BIRDS WHICH HAVE BEEN SEEN IN SOME PLACES IN THE WORLD")
 
 print()
 playsound("C:/BirdCipher/Audios/VoiceAudios/welcome.mp3")
 time.sleep(4)
 playsound("C:/BirdCipher/Audios/VoiceAudios/enter_name.mp3")
 
-print()
-print()
-print(" ----------------------------------------------- Enter your credentials ----------------------------------------------------------------")
-print()
-print()
-print()
+# print()
+# print()
+# print(" ----------------------------------------------- Enter your credentials ----------------------------------------------------------------")
+# print()
+# print()
+# print()
 
-username = input("     * Please enter your name: ")
-print()
+# username = input("     * Please enter your name: ")
+# print()
 
-nickname = input("     * Please insert your nickname: ")
-print()
+# nickname = input("     * Please insert your nickname: ")
+# print()
 
-password = input("     * Please enter your password: ")
-print()
+# password = input("     * Please enter your password: ")
+# print()
 
-print()
-print()
-print(" ---------------------------------------------------------------------------------------------------------------------------------------")
-
-bdatos = bytes(password, 'utf-8')
-h = hashlib.new(algoritmo, bdatos)
-hash1 = HASH.generaHash(h)
+# print()
+# print()
+# print(" ---------------------------------------------------------------------------------------------------------------------------------------")
 
 
-def updatePlayer():
-
-	global username
-	global nickname
-	global password
-
-	if nickname != "":
-
-		miConexion = sqlite3.connect("Players")
-
-		miCursor = miConexion.cursor()
-
-		sql = 'insert into players(name_player, nickname, password) values(?,?,?)'
-		data = (username, nickname, hash1)
-
-		miCursor.execute(sql, data)
-
-		miConexion.commit()
-
-		miConexion.close()
 
 
-updatePlayer()
 
 
 birdCipher = tk.Tk()
@@ -257,11 +383,11 @@ birdCipher_graphic.config(fg = '#320fec')
 close_window = tk.Button(birdCipher_frame, image = close_window_image, command = lambda:birdCipher.destroy())
 close_window.place(x = 20, y = 605)
 
-name_player = tk.Label(birdCipher_frame, text = "Welcome to BirdCipher, {} ".format(nickname), font = ("Comic Sans MS", 13))
+name_player = tk.Label(birdCipher_frame, text = "Welcome to BirdCipher, {} ".format(nickname_db), font = ("Comic Sans MS", 13))
 name_player.place(x = 530, y = 20)
 name_player.config(fg = '#ec40e1', bg = '#050505')
 
-hash_player = tk.Label(birdCipher_frame, text = hash1, font = ("Comic Sans MS", 11))
+hash_player = tk.Label(birdCipher_frame, text = password_db, font = ("Comic Sans MS", 11))
 hash_player.config(bg = '#050505', fg = '#ec40e1')
 hash_player.place(x = 180, y = 650)
 
@@ -272,6 +398,8 @@ hash_copy.config(fg = '#5f0659')
 label_hash = tk.Label(birdCipher_frame, text ="Your password hash (SHA 256)", font = ("Comic Sans MS", 13))
 label_hash.place(x = 180, y = 607)
 label_hash.config(fg = '#5f0659')
+
+birdCipher.protocol("WM_DELETE_WINDOW", lambda: None)
 
 birdCipher.mainloop()
 
@@ -1063,7 +1191,7 @@ def GUI_BirdCipher_Machine():
 	labelQuestionKey.config(fg = "#7e086c")
 	labelQuestionKey.place(x = 805, y = 60)
 
-	labelPlayerBCM = tk.Label(decrypt, text = "Welcome, {} ".format(nickname), font = ("Comic Sans MS", 11))
+	labelPlayerBCM = tk.Label(decrypt, text = "Welcome, {} ".format(nickname_db), font = ("Comic Sans MS", 11))
 	labelPlayerBCM.config(fg = "#7e086c", bg = "#050005")
 	labelPlayerBCM.place(x = 830, y = 20)
 
@@ -1086,9 +1214,7 @@ lives = 4
 
 End = False
 
-points = 0
 
-coins = 0
 
 win_challenge2_info = 0
 
