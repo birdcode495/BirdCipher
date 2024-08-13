@@ -165,7 +165,7 @@ def createPlayer():
 	h = hashlib.new(algoritmo, bdatos)
 	hash1 = HASH.generaHash(h)
 
-	miConexion = sqlite3.connect("BirdCipher_DataBase")
+	miConexion = sqlite3.connect("BirdCipher_DB.db")
 
 	miCursor = miConexion.cursor()
 
@@ -285,12 +285,22 @@ login_button.place(x = 90, y = 270)
 close_window_login = tk.Button(login, image = close_window_log, command = lambda:confirmPlayer())
 close_window_login.place(x = 90, y = 380)
 
-login.protocol("WM_DELETE_WINDOW", lambda: None)
+#login.protocol("WM_DELETE_WINDOW", lambda: None)
 
 login.mainloop()
 
 
+def updatePlayer():
 
+	conexion2 = sqlite3.connect("BirdCipher_DB.db")
+	cursor2 = conexion2.cursor()
+
+	sql4 = "update Players set (points) = (?) where nickname = (?)"
+	datsActs = (points, nickname_db)
+
+	cursor2.execute(sql4, datsActs)
+	conexion2.commit()
+	conexion2.close()
 
 match = False
 
@@ -1318,6 +1328,7 @@ while End == False or lives > 0:
 	elif guess == secretNumber and attempts <= 7 and len(BirdCipher_list_k) > 1:
 
 		points = points + 10
+		updatePlayer()
 		print()
 		print("---------------------------------------------------- RESULTS -----------------------------------------------------")
 		print()
