@@ -143,6 +143,8 @@ username = tk.StringVar()
 nickname = tk.StringVar()
 password = tk.StringVar()
 
+confirmPlyr = False
+
 
 def createPlayer():
 
@@ -157,6 +159,7 @@ def createPlayer():
 	global username_db
 	global nickname_db
 	global password_db
+	global confirmPlyr
 
 	bdatos = bytes(password.get(), 'utf-8')
 	h = hashlib.new(algoritmo, bdatos)
@@ -198,8 +201,9 @@ def createPlayer():
 		feathers = records[0][6]
 		diamonds = records[0][7]
 		lifes = records[0][8]
+		confirmPlyr = True
 
-		#playsound()
+		playsound('PlayerCreated.mp3')
 
 	elif dt[0][8] > 0 and hash1 == dt[0][3]:
 
@@ -211,24 +215,43 @@ def createPlayer():
 		feathers = dt[0][6]
 		diamonds = dt[0][7]
 		lifes = dt[0][8]
+		confirmPlyr = True
 
-		#playsound()
+		playsound('PlayerActivated.mp3')
 
-	# elif dt[0][8] > 0 and hash1 != dt[0][3]:
+	elif dt[0][8] > 0 and hash1 != dt[0][3]:
 
-	# 	#playsound(wrongPass)
+		playsound('IncorrectPassword.mp3')
 
-	# elif dt[0][8] <= 0:
 
-	# 	#playsound()
+	elif dt[0][8] <= 0:
+
+		playsound('GameOver.mp3')
 
 
 	miConexion.commit()
 
 	miConexion.close()
 
+
+def confirmPlayer():
+
+	global confirmPlyr
+
+	if confirmPlyr == True:
+
+		playsound('completedAuthentication.mp3')
+		login.destroy()
+
+	else:
+
+		playsound('completeAuth.mp3')
+
+
+
 birdCipher_image_login = tk.PhotoImage(file = "BirdCipher-logo1.png")
 login_logo_image = tk.PhotoImage(file = "Login-logo1.png")
+close_window_log = tk.PhotoImage(file = "Close-logo1.png")
 birdCipherLabel_login = tk.Label(login, image = birdCipher_image_login)
 birdCipherLabel_login.place(x = 50, y = 20)
 
@@ -259,7 +282,10 @@ login_password.place(x = 20, y = 230)
 login_button = tk.Button(login, image = login_logo_image, command = lambda:createPlayer())
 login_button.place(x = 90, y = 270)
 
-#login.protocol("WM_DELETE_WINDOW", lambda: None)
+close_window_login = tk.Button(login, image = close_window_log, command = lambda:confirmPlayer())
+close_window_login.place(x = 90, y = 380)
+
+login.protocol("WM_DELETE_WINDOW", lambda: None)
 
 login.mainloop()
 
@@ -293,6 +319,7 @@ print()
 print("       BIRDCIPHER - A SERIOUS GAME TO GUESS THE MAGICAL NUMBERS RELATED TO BIRDS WHICH HAVE BEEN SEEN IN SOME PLACES IN THE WORLD")
 
 print()
+time.sleep(5)
 playsound("C:/BirdCipher/Audios/VoiceAudios/welcome.mp3")
 time.sleep(4)
 playsound("C:/BirdCipher/Audios/VoiceAudios/enter_name.mp3")
@@ -350,6 +377,7 @@ close_window_image = tk.PhotoImage(file = "Close window-logo1.png")
 
 birdCipher.title("BirdGuess: A serious game for secret numbers guessing")
 birdCipher_frame = tk.Frame(birdCipher)
+birdCipher.resizable(0, 0)
 birdCipher_frame.pack()
 birdCipher_image = tk.PhotoImage(file = "BirdCipher-logo1.png")
 birdCipherLabel = tk.Label(birdCipher_frame, image = birdCipher_image)
@@ -534,6 +562,8 @@ def GUI_Creation():
 
 	raiz.iconbitmap()
 
+	raiz.resizable(0, 0)
+
 	miFrame = tk.Frame(raiz)
 
 	miFrame.pack()
@@ -583,7 +613,7 @@ def GUI_Creation():
 
 			count = -1
 
-	
+	raiz.protocol("WM_DELETE_WINDOW", lambda: None)	
 
 	raiz.mainloop()
 
@@ -648,6 +678,7 @@ def caesarCipher():
 
 	caesar_cipher = tk.Tk()
 	caesar_cipher.title("Caesar Cipher")
+	caesar_cipher.resizable(0, 0)
 	caesar_cipher_frame = tk.Frame(caesar_cipher)
 	caesar_cipher_frame.pack()
 	caesar_cipher_image = tk.PhotoImage(file = "ImplementTheCaesarCipherInPython.png")
@@ -677,6 +708,7 @@ def caesarCipher():
 	CaesarExplanation6 = tk.Button(caesar_cipher, text = "Challenges", font = ("Comic Sans MS", 13), command = lambda:CaesarChallenge())
 	CaesarExplanation6.config(fg = "#a9a70a")
 	CaesarExplanation6.place(x = 1100, y = 300)
+
 
 	caesar_cipher.mainloop()
 
@@ -1097,6 +1129,7 @@ def GUI_BirdCipher_Machine():
 
 	decrypt.title("BirdCipher Cryptographic Machine")
 	decrypt.geometry('1050x520')
+	decrypt.resizable(0, 0)
 
 	#raiz.iconbitmap()
 
@@ -1203,7 +1236,6 @@ def GUI_BirdCipher_Machine():
 	closeMachineButton.config(fg = "#7e086c")
 
 	decrypt.protocol("WM_DELETE_WINDOW", lambda: None)
-
 
 	decrypt.mainloop()
 
