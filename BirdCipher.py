@@ -270,7 +270,7 @@ match = False
 
 prueba_list_present = [0, 1, 2, 34]
 
-fg = input("ws: ")
+#fg = input("ws: ")
 
 
 print()
@@ -407,7 +407,7 @@ birdCipher.mainloop()
 
 print()
 
-print("     Welcome to BirdCipher ", username,  "!!! Now, let us learn more about the groups of birds in the world, so that we can identify them easier.")
+print("     Welcome to BirdCipher ", username_db,  "!!! Now, let us learn more about the groups of birds in the world, so that we can identify them easier.")
 
 time.sleep(3)
 
