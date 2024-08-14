@@ -145,6 +145,7 @@ password = tk.StringVar()
 
 confirmPlyr = False
 
+hash1 = ''
 
 def createPlayer():
 
@@ -160,6 +161,7 @@ def createPlayer():
 	global nickname_db
 	global password_db
 	global confirmPlyr
+	global hash1
 
 	bdatos = bytes(password.get(), 'utf-8')
 	h = hashlib.new(algoritmo, bdatos)
@@ -290,7 +292,7 @@ close_window_login.place(x = 90, y = 380)
 login.mainloop()
 
 
-def updatePlayer():
+def updatePlayer_points():
 
 	conexion2 = sqlite3.connect("BirdCipher_DB.db")
 	cursor2 = conexion2.cursor()
@@ -301,6 +303,22 @@ def updatePlayer():
 	cursor2.execute(sql4, datsActs)
 	conexion2.commit()
 	conexion2.close()
+
+
+def updatePlayer_coins():
+
+	conexion3 = sqlite3.connect("BirdCipher_DB.db")
+	cursor3 = conexion3.cursor()
+
+	sql5 = "update Players set (coins) = (?) where nickname = (?)"
+	datsActs2 = (coins, nickname_db)
+
+	cursor3.execute(sql5, datsActs2)
+	conexion3.commit()
+	conexion3.close()
+
+
+
 
 match = False
 
@@ -362,6 +380,8 @@ playsound("C:/BirdCipher/Audios/VoiceAudios/enter_name.mp3")
 birdCipher = tk.Tk()
 
 def copy_hash():
+
+	global hash1
 
 	clipboard.copy(hash1)
 	playsound('C:/BirdCipher/Audios/VoiceAudios/hash_copied.mp3')
@@ -1053,6 +1073,10 @@ def GUI_BirdCipher_Machine():
 	global nickname
 	global BirdCipher_sci_k
 	global match
+	global coins
+	global feathers
+	global diamonds
+	global lives
 
 	def comd_decrypt():
 
@@ -1061,6 +1085,7 @@ def GUI_BirdCipher_Machine():
 		global message
 		global chances_decrypt
 		global match
+		global coins
 
 		message = secret_messages[index]
 		key = player_answer_decrypt.get()
@@ -1069,8 +1094,13 @@ def GUI_BirdCipher_Machine():
 		if chances_decrypt <= 3 and key == keys[index]:
 
 			playsound('C:/BirdCipher/Audios/VoiceAudios/CorrectKey.mp3')
+			time.sleep(2)
 			cipher_text.config(text = getTranslatedMessage(message, key), font = ("Comic Sans MS", 10))
 			cipher_text.config(bg = '#050005', fg = '#7e086c')
+			coins = coins + 1
+			playsound("rightDecrypt.mp3")
+			playsound("GoldCoin.mp3")
+			labelCoins.config(text = coins)
 			match = True
 			
 
@@ -1130,7 +1160,6 @@ def GUI_BirdCipher_Machine():
 		global match
 
 		chances_decrypt = 0
-		
 		decrypt.destroy()
 		
 
@@ -1191,6 +1220,7 @@ def GUI_BirdCipher_Machine():
 	imageCoins = tk.PhotoImage(file = "Gold Coins-logo1.png")
 	imageFeathers = tk.PhotoImage(file = "Feather-logo1.png")
 	imageDiamonds = tk.PhotoImage(file = "Diamond-logo1.png")
+	imageLives = tk.PhotoImage(file = "Lives-logo1.png")
 	cryptoMachineImage = tk.PhotoImage(file = "Cryptographic Machine-logo1.png")
 
 	imagen_caesar_cipher_lab = tk.Label(decrypt, image = imagen_caesar_cipher)
@@ -1213,22 +1243,28 @@ def GUI_BirdCipher_Machine():
 	buttonDiamonds = tk.Button(decrypt, image = imageDiamonds, command = lambda:diamondsAudio())
 	buttonDiamonds.place(x= 500, y = 300)
 
+	buttonLives = tk.Button(decrypt, image = imageLives, command = lambda:livesAudio())
+	buttonLives.place(x = 615, y = 300)
+
 	labelPoints = tk.Label(decrypt, text = points, font = ("Comic Sans MS", 13), justify = "center", width = 6)
 	labelPoints.config(bg = "#050005", fg = "#7e086c")
-	labelPoints.place(x = 210, y = 410)
+	labelPoints.place(x = 212, y = 410)
 
-	labelCoins = tk.Label(decrypt, text = "", font = ("Comic Sans MS", 13), justify = "center")
-	labelCoins.config(bg = "#7e086c")
+	labelCoins = tk.Label(decrypt, text = coins, font = ("Comic Sans MS", 13), justify = "center", width = 8)
+	labelCoins.config(bg = "#050005", fg = "#7e086c")
 	labelCoins.place(x = 300, y = 410)
 
-	labelFeathers = tk.Label(decrypt, text = "", font = ("Comic Sans MS", 13), justify = "center")
-	labelFeathers.config(bg = "#7e086c")
+	labelFeathers = tk.Label(decrypt, text = feathers, font = ("Comic Sans MS", 13), justify = "center", width = 8)
+	labelFeathers.config(bg = "#050005", fg = "#7e086c")
 	labelFeathers.place(x = 400, y = 410)
 
-
-	labelDiamonds = tk.Label(decrypt, text = "", font = ("Comic Sans MS", 13), justify = "center")
-	labelDiamonds.config(bg = "#7e086c")
+	labelDiamonds = tk.Label(decrypt, text = diamonds, font = ("Comic Sans MS", 13), justify = "center", width = 8)
+	labelDiamonds.config(bg = "#050005", fg = "#7e086c")
 	labelDiamonds.place(x = 500, y = 410)
+
+	labelLives = tk.Label(decrypt, text = lifes, font = ("Comic Sans MS", 13), justify = "center", width = 7)
+	labelLives.config(bg = "#050005", fg = "#7e086c")
+	labelLives.place(x = 617, y = 410)
 
 	labelQuestionKey = tk.Label(decrypt, text = "Enter the secret key", font = ("Comic Sans MS", 13))
 	labelQuestionKey.config(fg = "#7e086c")
@@ -1328,7 +1364,7 @@ while End == False or lives > 0:
 	elif guess == secretNumber and attempts <= 7 and len(BirdCipher_list_k) > 1:
 
 		points = points + 10
-		updatePlayer()
+		updatePlayer_points()
 		print()
 		print("---------------------------------------------------- RESULTS -----------------------------------------------------")
 		print()
@@ -1386,6 +1422,7 @@ while End == False or lives > 0:
 
 		if key == keys_k[index]:
 
+			updatePlayer_coins()
 			playsound("rightDecrypt.mp3")
 			playsound("GoldCoin.mp3")
 			time.sleep(2)

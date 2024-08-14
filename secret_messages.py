@@ -1,10 +1,15 @@
 secret_messages = ['''Fgehguvbavsbezrf vf na beqre bs oveqf jvgu bayl n fvatyr rkgnag snzvyl, Fgehguvbavqnr, 
 pbagnvavat gur bfgevpurf. Nyy xabja zrzoref bs gur tebhc ner gubhtug gb unir orra 
-syvtugyrff. Fgehguvbavsbezrf jrer jvqryl qvfgevohgrq va gur Abegurea Urzvfcurer 
-qhevat gur Rbprar, vapyhqvat Cnyrbgvqvqnr sebz Rhebcr, naq Trenabvqvqnr sebz Abegu 
-Nzrevpn, naq Rbtehvqnr naq Retvybeavguvqnr va Nfvn. Bfgevpurf svefg nccrnerq va 
-Nsevpn qhevat gur rneyl Zvbprar, nebhaq 21 zvyyvba lrnef ntb, orsber qvfcrefvat vagb 
-Rhenfvn qhevat gur yngr Zvbprar, ortvaavat nebhaq 12 zvyyvba lrnef ntb.''',
+syvtugyrff. Fgehguvbavsbezrf jrer jvqryl qvfgevohgrq va gur Abegurea Urzvfcurer qhevat 
+gur Rbprar, vapyhqvat Cnyrbgvqvqnr sebz Rhebcr, naq Trenabvqvqnr sebz Abegu Nzrevpn, 
+naq Rbtehvqnr naq Retvybeavguvqnr va Nfvn. Bfgevpurf svefg nccrnerq va Nsevpn qhevat 
+gur rneyl Zvbprar, nebhaq 21 zvyyvba lrnef ntb, orsber qvfcrefvat vagb Rhenfvn qhevat 
+gur yngr Zvbprar, ortvaavat nebhaq 12 zvyyvba lrnef ntb. Gbqnl bfgevpurf ner bayl sbhaq 
+angviryl va gur jvyq va Nsevpn, jurer gurl bpphe va n enatr bs bcra nevq naq frzv-nevq 
+unovgngf fhpu nf fninaanf naq gur Fnury, obgu abegu naq fbhgu bs gur rdhngbevny sberfg 
+mbar. Gur Nenovna bfgevpurf va Nfvn Zvabe naq Nenovn jrer uhagrq gb rkgvapgvba ol gur 
+zvqqyr bs gur 20gu praghel, naq va Vfenry nggrzcgf gb vagebqhpr Abegu Nsevpna bfgevpurf 
+gb svyy gurve rpbybtvpny ebyr unir snvyrq.''',
 '''Kzerdflj riv dvdsvij fw kyv fiuvi Kzerdzwfidvj, reu wrdzcp Kzerdzurv, uzmzuvu zekf 
 knf uzjkzetk jlswrdzczvj, tfekrzezex 55 jgvtzvj wfleu ze Dvoztf, Tvekirc Rdviztr, reu 
 Jflky Rdviztr. Kyv nfiu "kzerdfl" tfdvj wifd kyv Xrczsz kvid wfi kyvjv sziuj, kzerdl. 
