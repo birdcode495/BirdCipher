@@ -1167,7 +1167,7 @@ def GUI_BirdCipher_Machine():
 	decrypt = tk.Tk()
 
 	decrypt.title("BirdCipher Cryptographic Machine")
-	decrypt.geometry('1050x520')
+	decrypt.geometry('1050x540')
 	decrypt.resizable(0, 0)
 
 	#raiz.iconbitmap()
@@ -1184,17 +1184,33 @@ def GUI_BirdCipher_Machine():
 	decrypt_buttonImg = tk.PhotoImage(file = "Decrypt Message-logo1.png")
 	listen_buttonImg = tk.PhotoImage(file = "Listen to the message-logo1.png")
 
+	notebk = ttk.Notebook(decrypt)
+	notebk.pack(expand=True)
+		
+	fr = ttk.Frame(notebk, width = 1050, height=540)
+	fr.configure(style = "BW.TLabel")
+	fr.pack(fill='both', expand=True)
+	notebk.add(fr, text = "      BirdCipher Decrypt Machine")
+
+	fr2 = ttk.Frame(notebk, width = 1050, height=540)
+	fr2.pack(fill='both', expand=True)
+	notebk.add(fr2, text = "      BirdCipher Personal Encryption Machine")
+
+	fr3 = ttk.Frame(notebk, width = 1050, height=540)
+	fr3.pack(fill='both', expand=True)
+	notebk.add(fr3, text = "      BirdCipher Personal Decryption Machine")
+
 	#imageLabel = tk.Label(miFrame, image=miImagen)
 	#imageLabel.pack()
 
-	cipher_text = tk.Label(decrypt, text = secret_messages[index], font = ("Comic Sans MS", 10), justify = 'center')
+	cipher_text = tk.Label(fr, text = secret_messages[index], font = ("Comic Sans MS", 10), justify = 'center')
 	#cipher_text.place(x = 30, y = 30)
 	#cipher_text.pack(pady = 30)
 	cipher_text.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
 	cipher_text.place(x = 60, y = 40)
 
 
-	nicknameCuad = tk.Entry(decrypt, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
+	nicknameCuad = tk.Entry(fr, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
 	#nicknameCuad.config(bg="black", fg="green")
 	#nicknameCuad.place(x=50, y=55)
 	#nicknameCuad.pack(padx = 30, pady = 30)
@@ -1202,13 +1218,13 @@ def GUI_BirdCipher_Machine():
 	nicknameCuad.place(x = 790, y = 100)
 	
 
-	decrypt_button = tk.Button(decrypt, image = decrypt_buttonImg, font = ("Comic Sans MS", 8), command = lambda:comd_decrypt())
+	decrypt_button = tk.Button(fr, image = decrypt_buttonImg, font = ("Comic Sans MS", 8), command = lambda:comd_decrypt())
 	decrypt_button.config(fg = '#1af017')
 	decrypt_button.place(x = 800, y = 150)
 	
 	#decrypt_button.pack()
 
-	decrypt_listen = tk.Button(decrypt, image = listen_buttonImg, font = ("Comic Sans MS", 8), command = lambda:listen_decrypt_text())
+	decrypt_listen = tk.Button(fr, image = listen_buttonImg, font = ("Comic Sans MS", 8), command = lambda:listen_decrypt_text())
 	decrypt_listen.config(fg = '#1af017')
 	decrypt_listen.place(x = 900, y = 150)
 	
@@ -1223,61 +1239,61 @@ def GUI_BirdCipher_Machine():
 	imageLives = tk.PhotoImage(file = "Lives-logo1.png")
 	cryptoMachineImage = tk.PhotoImage(file = "Cryptographic Machine-logo1.png")
 
-	imagen_caesar_cipher_lab = tk.Label(decrypt, image = imagen_caesar_cipher)
+	imagen_caesar_cipher_lab = tk.Label(fr, image = imagen_caesar_cipher)
 	#imagen_caesar_cipher_lab.config(bg = '#FFFFFF')
 	imagen_caesar_cipher_lab.place(x = 30, y = 300)
 
-	titleBirdCipherMachine = tk.Label(decrypt, text = "BirdCipher message about {} encrypted with the Caesar Cipher algorithm".format(BirdCipher_sci_k[index]), font = ("Comic Sans MS", 12))
+	titleBirdCipherMachine = tk.Label(fr, text = "BirdCipher message about {} encrypted with the Caesar Cipher algorithm".format(BirdCipher_sci_k[index]), font = ("Comic Sans MS", 12))
 	titleBirdCipherMachine.config(fg = "#7e086c")
 	titleBirdCipherMachine.place(x = 70, y = 8)
 
-	buttonPoints = tk.Button(decrypt, image = imagePoints, command = lambda:pointsAudio())
+	buttonPoints = tk.Button(fr, image = imagePoints, command = lambda:pointsAudio())
 	buttonPoints.place(x = 210, y = 300)
 
-	buttonCoins = tk.Button(decrypt, image = imageCoins, command = lambda:coinsAudio())
+	buttonCoins = tk.Button(fr, image = imageCoins, command = lambda:coinsAudio())
 	buttonCoins.place(x = 300, y = 300)
 
-	buttonFeathers = tk.Button(decrypt, image =imageFeathers, command = lambda:feathersAudio())
+	buttonFeathers = tk.Button(fr, image =imageFeathers, command = lambda:feathersAudio())
 	buttonFeathers.place(x = 400, y = 300)
 
-	buttonDiamonds = tk.Button(decrypt, image = imageDiamonds, command = lambda:diamondsAudio())
+	buttonDiamonds = tk.Button(fr, image = imageDiamonds, command = lambda:diamondsAudio())
 	buttonDiamonds.place(x= 500, y = 300)
 
-	buttonLives = tk.Button(decrypt, image = imageLives, command = lambda:livesAudio())
+	buttonLives = tk.Button(fr, image = imageLives, command = lambda:livesAudio())
 	buttonLives.place(x = 615, y = 300)
 
-	labelPoints = tk.Label(decrypt, text = points, font = ("Comic Sans MS", 13), justify = "center", width = 6)
+	labelPoints = tk.Label(fr, text = points, font = ("Comic Sans MS", 13), justify = "center", width = 6)
 	labelPoints.config(bg = "#050005", fg = "#7e086c")
 	labelPoints.place(x = 212, y = 410)
 
-	labelCoins = tk.Label(decrypt, text = coins, font = ("Comic Sans MS", 13), justify = "center", width = 8)
+	labelCoins = tk.Label(fr, text = coins, font = ("Comic Sans MS", 13), justify = "center", width = 8)
 	labelCoins.config(bg = "#050005", fg = "#7e086c")
 	labelCoins.place(x = 300, y = 410)
 
-	labelFeathers = tk.Label(decrypt, text = feathers, font = ("Comic Sans MS", 13), justify = "center", width = 8)
+	labelFeathers = tk.Label(fr, text = feathers, font = ("Comic Sans MS", 13), justify = "center", width = 8)
 	labelFeathers.config(bg = "#050005", fg = "#7e086c")
 	labelFeathers.place(x = 400, y = 410)
 
-	labelDiamonds = tk.Label(decrypt, text = diamonds, font = ("Comic Sans MS", 13), justify = "center", width = 8)
+	labelDiamonds = tk.Label(fr, text = diamonds, font = ("Comic Sans MS", 13), justify = "center", width = 8)
 	labelDiamonds.config(bg = "#050005", fg = "#7e086c")
 	labelDiamonds.place(x = 500, y = 410)
 
-	labelLives = tk.Label(decrypt, text = lifes, font = ("Comic Sans MS", 13), justify = "center", width = 7)
+	labelLives = tk.Label(fr, text = lifes, font = ("Comic Sans MS", 13), justify = "center", width = 7)
 	labelLives.config(bg = "#050005", fg = "#7e086c")
 	labelLives.place(x = 617, y = 410)
 
-	labelQuestionKey = tk.Label(decrypt, text = "Enter the secret key", font = ("Comic Sans MS", 13))
+	labelQuestionKey = tk.Label(fr, text = "Enter the secret key", font = ("Comic Sans MS", 13))
 	labelQuestionKey.config(fg = "#7e086c")
 	labelQuestionKey.place(x = 805, y = 60)
 
-	labelPlayerBCM = tk.Label(decrypt, text = "Welcome, {} ".format(nickname_db), font = ("Comic Sans MS", 11))
+	labelPlayerBCM = tk.Label(fr, text = "Welcome, {} ".format(nickname_db), font = ("Comic Sans MS", 11))
 	labelPlayerBCM.config(fg = "#7e086c", bg = "#050005")
 	labelPlayerBCM.place(x = 830, y = 20)
 
-	imageCryptographicMachine = tk.Label(decrypt, image = cryptoMachineImage)
+	imageCryptographicMachine = tk.Label(fr, image = cryptoMachineImage)
 	imageCryptographicMachine.place(x = 750, y = 260)
 
-	closeMachineButton = tk.Button(decrypt, text = "Close the BirdCipher Cryptographic Machine", font = ("Comic Sans MS", 12), command = lambda:closeMachine())
+	closeMachineButton = tk.Button(fr, text = "Close the BirdCipher Cryptographic Machine", font = ("Comic Sans MS", 12), command = lambda:closeMachine())
 	closeMachineButton.place(x = 250, y = 460)
 	closeMachineButton.config(fg = "#7e086c")
 

@@ -21,9 +21,7 @@ rtkzmv ulizex kyv urp, ivkzizex kf iffjkj rk ezxyk. Kyvp xvevirccp yrmv tipgkzt 
 nzky drcvj reu wvdrcvj jzdzcri ze rggvriretv, kyflxy kyv wvdrcvj riv ljlrccp crixvi. 
 Kyvp riv fggfiklezjkzt reu fdezmfiflj wvvuvij, tfejldzex r nzuv mrizvkp fw gcrek reu 
 rezdrc wffu wifd wilzkj reu jvvuj kf nfidj, zejvtkj reu jdrcc mvikvsirkvj. Kyvp nzcc 
-uljk-srkyv rj nvcc rj nrjy kyvdjvcmvj sp jkreuzex ze yvrmp irze. Kyvp riv yvriu dfiv 
-fwkve kyre jvve, tfddleztrkzex nzky vrty fkyvi sp r mrizvkp fw wivhlvekcp xzmve, 
-tyrirtkvizjkzt trccj, vjgvtzrccp ulizex kyv sivvuzex jvrjfe.''',
+uljk-srkyv rj nvcc rj nrjy kyvdjvcmvj sp jkreuzex ze yvrmp irze.''',
 '''Mczdajmhzn dn vi jmyzm ocvo xjiovdin ocz avhdgt ja mczvn. Do dn di ocz diamvxgvnn 
 Kvgzjbivocvz, rcdxc xjiovdin vgg mvodozn. Zsovio hzhwzmn vmz ajpiy di Njpoc Vhzmdxv. 
 Rcdgz ocz DJX Rjmgy Wdmy Gdno viy ocz Xgzhzion Xczxfgdno xvozbjmdnz Mczdajmhzn vn don 
