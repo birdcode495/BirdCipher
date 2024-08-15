@@ -118,6 +118,8 @@ bird_songs_k = bird_songs
 
 playsound('Milvago_chimachima.wav')
 
+
+
 username_db = ''
 nickname_db = ''
 password_db = ''
@@ -343,14 +345,16 @@ print()
 print(" ---------------------------------------------------------------------------------------------------------------------------------------")
 
 
-print()
-print("       BIRDCIPHER - A SERIOUS GAME TO GUESS THE MAGICAL NUMBERS RELATED TO BIRDS WHICH HAVE BEEN SEEN IN SOME PLACES IN THE WORLD")
-
-print()
 time.sleep(5)
 playsound("C:/BirdCipher/Audios/VoiceAudios/welcome.mp3")
 time.sleep(4)
 playsound("C:/BirdCipher/Audios/VoiceAudios/enter_name.mp3")
+
+print()
+print("       BIRDCIPHER - A SERIOUS GAME TO GUESS THE MAGICAL NUMBERS RELATED TO BIRDS WHICH HAVE BEEN SEEN IN SOME PLACES IN THE WORLD")
+
+print()
+
 
 # print()
 # print()
@@ -1030,12 +1034,12 @@ secretNumber = number_species_k[index]
 
 
 print()
-print("---------------------- BIRDCIPHER - BIRD BIODIVERSITY SECRET NUMBERS GUESSING. LETS PLAY NOW!!! ---------------------------------------")
+print("---------------------- BIRDCIPHER - BIRD BIODIVERSITY SECRET NUMBERS GUESSING. LET US PLAY NOW!!! ---------------------------------------")
 print()
 #time.sleep(3)
 
 
-playsound("WelcomeSecretNumbers.mp3")
+#playsound("WelcomeSecretNumbers.mp3")
 playsound("try_guess.mp3")
 
 print("   Guess the number of species of the group: ", BirdCipher_english_k[index])  # --- Trabaje en el RETO 2
@@ -1056,7 +1060,8 @@ def question():
 
 		except ValueError:
 
-			print("   * You must enter a valid value. Try again.")
+			playsound('integerNumber.mp3')
+			print("   * You must enter an integer number. Try again.")
 			
 
 
