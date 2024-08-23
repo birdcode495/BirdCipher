@@ -113,7 +113,7 @@ bird_songs_k = bird_songs
 # ---------------------------------------------------------------- Welcome to BirdCode --------------------------------------------------------------------
 
 
-# ----------------------------- Temas tratados: Función print(), función time.sleep(), función input() y reproducción de audio ----------------------------
+# ----------------------------- Temas tratados: Función print(""), función time.sleep(), función input() y reproducción de audio ----------------------------
 
 
 playsound('Milvago_chimachima.wav')
