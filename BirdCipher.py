@@ -73,6 +73,8 @@ import sqlite3
 
 import hashlib
 
+from cryptography.fernet import Fernet
+
 from hash import *
 
 import pyperclip as clipboard
@@ -1093,6 +1095,8 @@ def GUI_BirdCipher_Machine():
 	global diamonds
 	global lives
 
+	key_encryption = ""
+
 	def comd_decrypt():
 
 		global key
@@ -1129,6 +1133,31 @@ def GUI_BirdCipher_Machine():
 		# elif chances_decrypt > 3:
 
 		# 	playsound('C:/BirdCipher/Audios/VoiceAudios/chances_decrypt.mp3')
+
+
+	def fernet_key_gen():
+
+		global key_encryption
+
+		# message_to_encrypt = cipher_text2.get("1.0", "end-1c")
+		# message_to_encrypt = message_to_encrypt.encode()
+		key_encryption = Fernet.generate_key()
+		#f = Fernet(key)
+		key_fernet_text.config(text = key_encryption.decode())
+		clipboard.copy(key_encryption)
+
+
+	def fernet_encryption_function():
+
+		global key_encryption
+
+		message_to_encrypt = cipher_text2.get("1.0", "end-1c")
+		message_to_encrypt = message_to_encrypt.encode()
+		f = Fernet(key_encryption)
+		token = f.encrypt(message_to_encrypt)
+		token = token.decode()
+		cipher_text2_encrp.config(text = token, justify = "left", wraplength = 500)
+		clipboard.copy(token)
 
 
 	def listen_decrypt_text():
@@ -1332,11 +1361,11 @@ def GUI_BirdCipher_Machine():
 
 	encrypted_label = tk.Label(fr2, text = "Your encrypted message is: ")
 	encrypted_label.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
-	encrypted_label.place(x = 65, y = 205)
+	encrypted_label.place(x = 65, y = 180)
 
 	cipher_text2_encrp = tk.Label(fr2, text = "", font = ("Comic Sans MS", 10), width = 80)
 	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF')
-	cipher_text2_encrp.place(x = 60, y = 230, height = 50)
+	cipher_text2_encrp.place(x = 60, y = 210, height = 80)
 
 
 	nicknameCuad2 = tk.Entry(fr2, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
@@ -1344,15 +1373,15 @@ def GUI_BirdCipher_Machine():
 	nicknameCuad2.place(x = 790, y = 100)
 	
 
-	decrypt_button2 = tk.Button(fr2, image = decrypt_buttonImg, font = ("Comic Sans MS", 8), command = lambda:comd_decrypt())
-	decrypt_button2.config(fg = '#1af017')
-	decrypt_button2.place(x = 800, y = 150)
+	fernet_key_button = tk.Button(fr2, image = decrypt_buttonImg, font = ("Comic Sans MS", 8), command = lambda:fernet_key_gen())
+	fernet_key_button.config(fg = '#1af017')
+	fernet_key_button.place(x = 800, y = 150)
 	
 	#decrypt_button.pack()
 
-	decrypt_listen2 = tk.Button(fr2, image = listen_buttonImg, font = ("Comic Sans MS", 8), command = lambda:listen_decrypt_text())
-	decrypt_listen2.config(fg = '#1af017')
-	decrypt_listen2.place(x = 900, y = 150)
+	fernet_encryption_message = tk.Button(fr2, image = listen_buttonImg, font = ("Comic Sans MS", 8), command = lambda:fernet_encryption_function())
+	fernet_encryption_message.config(fg = '#1af017')
+	fernet_encryption_message.place(x = 900, y = 150)
 
 	imagen_caesar_cipher_lab2 = tk.Label(fr2, image = imagen_caesar_cipher)
 	imagen_caesar_cipher_lab2.place(x = 30, y = 300)
