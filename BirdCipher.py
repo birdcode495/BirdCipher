@@ -713,33 +713,43 @@ def caesarCipher():
 	caesar_cipher = tk.Tk()
 	caesar_cipher.title("Caesar Cipher")
 	caesar_cipher.resizable(0, 0)
-	caesar_cipher_frame = tk.Frame(caesar_cipher)
-	caesar_cipher_frame.pack()
+
+	notebk_caesar = ttk.Notebook(caesar_cipher)
+	notebk_caesar.pack(expand=True)
+
+	vr = ttk.Frame(notebk_caesar, width = 1050, height=540)
+	vr.pack(fill='both', expand=True)
+	notebk_caesar.add(vr, text = "      Caesar Cipher Implementation")
+
+	vr2 = ttk.Frame(notebk_caesar, width = 1050, height=540)
+	vr2.pack(fill='both', expand=True)
+	notebk_caesar.add(vr2, text = "      Fernet Cipher Implementation")
+
 	caesar_cipher_image = tk.PhotoImage(file = "ImplementTheCaesarCipherInPython.png")
-	labelCaesarPhoto = tk.Label(caesar_cipher_frame, image = caesar_cipher_image)
+	labelCaesarPhoto = tk.Label(vr, image = caesar_cipher_image)
 	labelCaesarPhoto.pack()
 
-	CaesarExplanation = tk.Button(caesar_cipher, text = "Introduction", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat())
+	CaesarExplanation = tk.Button(vr, text = "Introduction", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat())
 	CaesarExplanation.config(fg = "#a9a70a")
 	CaesarExplanation.place(x = 1100, y = 50)
 
-	CaesarExplanation2 = tk.Button(caesar_cipher, text = "Presentation", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat2())
+	CaesarExplanation2 = tk.Button(vr, text = "Presentation", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat2())
 	CaesarExplanation2.config(fg = "#a9a70a")
 	CaesarExplanation2.place(x = 1100, y = 100)
 
-	CaesarExplanation3 = tk.Button(caesar_cipher, text = "Justification", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat3())
+	CaesarExplanation3 = tk.Button(vr, text = "Justification", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat3())
 	CaesarExplanation3.config(fg = "#a9a70a")
 	CaesarExplanation3.place(x = 1100, y = 150)
 
-	CaesarExplanation4 = tk.Button(caesar_cipher, text = "History and use", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat4())
+	CaesarExplanation4 = tk.Button(vr, text = "History and use", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat4())
 	CaesarExplanation4.config(fg = "#a9a70a")
 	CaesarExplanation4.place(x = 1090, y = 200)
 
-	CaesarExplanation5 = tk.Button(caesar_cipher, text = "Applications", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat5())
+	CaesarExplanation5 = tk.Button(vr, text = "Applications", font = ("Comic Sans MS", 13), command = lambda:CaesarExplanat5())
 	CaesarExplanation5.config(fg = "#a9a70a")
 	CaesarExplanation5.place(x = 1100, y = 250)
 
-	CaesarExplanation6 = tk.Button(caesar_cipher, text = "Challenges", font = ("Comic Sans MS", 13), command = lambda:CaesarChallenge())
+	CaesarExplanation6 = tk.Button(vr, text = "Challenges", font = ("Comic Sans MS", 13), command = lambda:CaesarChallenge())
 	CaesarExplanation6.config(fg = "#a9a70a")
 	CaesarExplanation6.place(x = 1100, y = 300)
 
