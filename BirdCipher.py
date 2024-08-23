@@ -116,7 +116,7 @@ bird_songs_k = bird_songs
 # ----------------------------- Temas tratados: Función print(""), función time.sleep(), función input() y reproducción de audio ----------------------------
 
 
-playsound('Milvago_chimachima.wav')
+#playsound('Milvago_chimachima.wav')
 
 
 
@@ -131,10 +131,6 @@ coins = 0
 feathers = 0
 diamonds = 0
 lifes = 3
-
-
-
-
 
 login = tk.Tk()
 login.title("BirdCipher welcome and login")
@@ -207,7 +203,7 @@ def createPlayer():
 		lifes = records[0][8]
 		confirmPlyr = True
 
-		playsound('PlayerCreated.mp3')
+		#playsound('PlayerCreated.mp3')
 
 	elif dt[0][8] > 0 and hash1 == dt[0][3]:
 
@@ -221,16 +217,16 @@ def createPlayer():
 		lifes = dt[0][8]
 		confirmPlyr = True
 
-		playsound('PlayerActivated.mp3')
+		#playsound('PlayerActivated.mp3')
 
-	elif dt[0][8] > 0 and hash1 != dt[0][3]:
+	#elif dt[0][8] > 0 and hash1 != dt[0][3]:
 
-		playsound('IncorrectPassword.mp3')
+		#playsound('IncorrectPassword.mp3')
 
 
-	elif dt[0][8] <= 0:
+	#elif dt[0][8] <= 0:
 
-		playsound('GameOver.mp3')
+		#playsound('GameOver.mp3')
 
 
 	miConexion.commit()
@@ -244,12 +240,12 @@ def confirmPlayer():
 
 	if confirmPlyr == True:
 
-		playsound('completedAuthentication.mp3')
+		#playsound('completedAuthentication.mp3')
 		login.destroy()
 
-	else:
+	# else:
 
-		playsound('completeAuth.mp3')
+	# 	playsound('completeAuth.mp3')
 
 
 
@@ -346,9 +342,9 @@ print(" ------------------------------------------------------------------------
 
 
 time.sleep(5)
-playsound("C:/BirdCipher/Audios/VoiceAudios/welcome.mp3")
+#playsound("C:/BirdCipher/Audios/VoiceAudios/welcome.mp3")
 time.sleep(4)
-playsound("C:/BirdCipher/Audios/VoiceAudios/enter_name.mp3")
+#playsound("C:/BirdCipher/Audios/VoiceAudios/enter_name.mp3")
 
 print()
 print("       BIRDCIPHER - A SERIOUS GAME TO GUESS THE MAGICAL NUMBERS RELATED TO BIRDS WHICH HAVE BEEN SEEN IN SOME PLACES IN THE WORLD")
@@ -388,15 +384,15 @@ def copy_hash():
 	global hash1
 
 	clipboard.copy(hash1)
-	playsound('C:/BirdCipher/Audios/VoiceAudios/hash_copied.mp3')
+	#playsound('C:/BirdCipher/Audios/VoiceAudios/hash_copied.mp3')
 
-def confidentiality_audio():
+#def confidentiality_audio():
 
-	playsound('C:/BirdCipher/Audios/VoiceAudios/confidentiality.mp3')
+	#playsound('C:/BirdCipher/Audios/VoiceAudios/confidentiality.mp3')
 
-def integrity_audio():
+#def integrity_audio():
 
-	playsound('C:/BirdCipher/Audios/VoiceAudios/integrity.mp3')
+	#playsound('C:/BirdCipher/Audios/VoiceAudios/integrity.mp3')
 
 
 
@@ -473,7 +469,7 @@ print("     Welcome to BirdCipher ", username_db,  "!!! Now, let us learn more a
 
 time.sleep(3)
 
-playsound("C:/BirdCipher/Audios/VoiceAudios/species_info.mp3")
+#playsound("C:/BirdCipher/Audios/VoiceAudios/species_info.mp3")
 
 index = 890
 
@@ -621,15 +617,15 @@ def GUI_Creation():
 	change_image.place(x = 20, y = 115)
 
 
-	def bird_singing():
+	#def bird_singing():
 
-		if match == False:
+		#if match == False:
 
-			playsound("C:/BirdCipher/Audios/VoiceAudios/ableHearSong.mp3")
+			#playsound("C:/BirdCipher/Audios/VoiceAudios/ableHearSong.mp3")
 
-		elif match == True:
+		#elif match == True:
 
-			playsound(bird_songs_k[index])
+			#playsound(bird_songs_k[index])
 
 	def change_image_bird():
 
@@ -637,7 +633,7 @@ def GUI_Creation():
 		global miImagen
 		global index
 
-		playsound('cartoon130.mp3')
+		#playsound('cartoon130.mp3')
 		miImagen = tk.PhotoImage(file = BirdCipher_list_k[index][count + 1])
 		imageLabel.config(image = miImagen)
 		imageLabel.pack()
@@ -683,30 +679,30 @@ def GUI_Creation():
 
 def caesarCipher():
 
-	def CaesarExplanat():
+# 	def CaesarExplanat():
 
-		playsound("CaesarCipherExplanation0A.mp3")
+# 		#playsound("CaesarCipherExplanation0A.mp3")
 		
 	
-	def CaesarExplanat2():
+# 	def CaesarExplanat2():
 
-		playsound("CaesarCipherExplanation0B.mp3")
+# 		#playsound("CaesarCipherExplanation0B.mp3")
 
-	def CaesarExplanat3():
+# 	def CaesarExplanat3():
 
-		playsound("CaesarCipherExplanation1.mp3")
+# 		#playsound("CaesarCipherExplanation1.mp3")
 
-	def CaesarExplanat4():
+# 	def CaesarExplanat4():
 
-		playsound("CaesarCipherExplanation2.mp3")
+# 		#playsound("CaesarCipherExplanation2.mp3")
 
-	def CaesarExplanat5():
+# 	def CaesarExplanat5():
 
-		playsound("CaesarCipherExplanation3.mp3")
+# 		#playsound("CaesarCipherExplanation3.mp3")
 
-	def CaesarChallenge():
+# 	def CaesarChallenge():
 
-		playsound("CaesarChallenge.mp3")
+# 		#playsound("CaesarChallenge.mp3")
 
 		
 
@@ -717,15 +713,16 @@ def caesarCipher():
 	notebk_caesar = ttk.Notebook(caesar_cipher)
 	notebk_caesar.pack(expand=True)
 
-	vr = ttk.Frame(notebk_caesar, width = 1050, height=540)
+	vr = ttk.Frame(notebk_caesar, width = 1300, height=900)
 	vr.pack(fill='both', expand=True)
 	notebk_caesar.add(vr, text = "      Caesar Cipher Implementation")
 
-	vr2 = ttk.Frame(notebk_caesar, width = 1050, height=540)
+	vr2 = ttk.Frame(notebk_caesar, width = 1300, height=900)
 	vr2.pack(fill='both', expand=True)
 	notebk_caesar.add(vr2, text = "      Fernet Cipher Implementation")
 
 	caesar_cipher_image = tk.PhotoImage(file = "ImplementTheCaesarCipherInPython.png")
+	fernet_cipher_image = tk.PhotoImage(file = "fernet.png")
 	labelCaesarPhoto = tk.Label(vr, image = caesar_cipher_image)
 	labelCaesarPhoto.pack()
 
@@ -752,6 +749,9 @@ def caesarCipher():
 	CaesarExplanation6 = tk.Button(vr, text = "Challenges", font = ("Comic Sans MS", 13), command = lambda:CaesarChallenge())
 	CaesarExplanation6.config(fg = "#a9a70a")
 	CaesarExplanation6.place(x = 1100, y = 300)
+
+	labelFernetPhoto = tk.Label(vr2, image = fernet_cipher_image)
+	labelFernetPhoto.pack()
 
 
 	caesar_cipher.mainloop()
@@ -920,38 +920,38 @@ migration = False
 
 def info_display():
 
-	playsound("C:/BirdCipher/Audios/VoiceAudios/vernacularNames.mp3")
+	#playsound("C:/BirdCipher/Audios/VoiceAudios/vernacularNames.mp3")
 	time.sleep(4)
 
 	print()
 	print("-------------------------------------------------- BIRDS INFORMATION --------------------------------------------------------------")
 	print()
 	print()
-	playsound("idea-1.mp3")
+	#playsound("idea-1.mp3")
 	print("     * The scientific name of this order of birds is: ", BirdCipher_sci_k[index])
 	print()
 	time.sleep(1)
-	playsound("idea-1.mp3")
+	#playsound("idea-1.mp3")
 	print("     * The english name of this order of birds is: ", BirdCipher_english_k[index])
 	print()
 	time.sleep(1)
-	playsound("idea-1.mp3")
+	#playsound("idea-1.mp3")
 	print("     * The spanish name of this order of birds is: ", BirdCipher_Spanish_k[index])
 	print()
 	time.sleep(1)
-	playsound("idea-1.mp3")
+	#playsound("idea-1.mp3")
 	print("     * The french name of this order of birds is: ", BirdCipher_french_k[index])
 	print()
 	time.sleep(1)
-	playsound("idea-1.mp3")
+	#playsound("idea-1.mp3")
 	print("     * The german name of this order of birds is: ", BirdCipher_german_k[index])
 	print()
 	time.sleep(1)
-	playsound("idea-1.mp3")
+	#playsound("idea-1.mp3")
 	print("     * The chinese name of this order of birds is: ", BirdCipher_chinese_k[index]) 
 	print()
 	time.sleep(1)
-	playsound("idea-1.mp3")
+	#playsound("idea-1.mp3")
 	print("     * The pinyin (chinese phonetic transcription system) is: ", BirdCipher_pinyin_k[index]) 
 	print()
 	time.sleep(1)
@@ -1050,7 +1050,7 @@ print()
 
 
 #playsound("WelcomeSecretNumbers.mp3")
-playsound("try_guess.mp3")
+#playsound("try_guess.mp3")
 
 print("   Guess the number of species of the group: ", BirdCipher_english_k[index])  # --- Trabaje en el RETO 2
 
@@ -1070,7 +1070,7 @@ def question():
 
 		except ValueError:
 
-			playsound('integerNumber.mp3')
+			#playsound('integerNumber.mp3')
 			print("   * You must enter an integer number. Try again.")
 			
 
@@ -1108,27 +1108,27 @@ def GUI_BirdCipher_Machine():
 
 		if chances_decrypt <= 3 and key == keys[index]:
 
-			playsound('C:/BirdCipher/Audios/VoiceAudios/CorrectKey.mp3')
+			#playsound('C:/BirdCipher/Audios/VoiceAudios/CorrectKey.mp3')
 			time.sleep(2)
 			cipher_text.config(text = getTranslatedMessage(message, key), font = ("Comic Sans MS", 10))
 			cipher_text.config(bg = '#050005', fg = '#7e086c')
 			coins = coins + 1
-			playsound("rightDecrypt.mp3")
-			playsound("GoldCoin.mp3")
+			#playsound("rightDecrypt.mp3")
+			#playsound("GoldCoin.mp3")
 			labelCoins.config(text = coins)
 			match = True
 			
 
 		elif chances_decrypt <= 3 and key!= keys[index]:
 
-			playsound('C:/BirdCipher/Audios/VoiceAudios/WrongKey.mp3')
+			#playsound('C:/BirdCipher/Audios/VoiceAudios/WrongKey.mp3')
 			cipher_text.config(text = getTranslatedMessage(message, key), font = ("Comic Sans MS", 10))
 			cipher_text.config(bg = '#050005', fg = '#FFFFFF')
 			chances_decrypt = chances_decrypt + 1
 
-		elif chances_decrypt > 3:
+		# elif chances_decrypt > 3:
 
-			playsound('C:/BirdCipher/Audios/VoiceAudios/chances_decrypt.mp3')
+		# 	playsound('C:/BirdCipher/Audios/VoiceAudios/chances_decrypt.mp3')
 
 
 	def listen_decrypt_text():
@@ -1192,6 +1192,7 @@ def GUI_BirdCipher_Machine():
 	#decrypt_frame.pack()
 
 	player_answer_decrypt = tk.IntVar()
+	player_message_encrypt = tk.StringVar()
 
 	#miImagen = tk.PhotoImage(file = BirdCipher_list_k[2][0])
 	#bird_singing_logo = tk.PhotoImage(file="Singing-logo5.png")
@@ -1207,7 +1208,7 @@ def GUI_BirdCipher_Machine():
 	fr.pack(fill='both', expand=True)
 	notebk.add(fr, text = "      BirdCipher Decrypt Machine")
 
-	fr2 = ttk.Frame(notebk, width = 1050, height=540)
+	fr2 = ttk.Frame(notebk, width = 1150, height=540)
 	fr2.pack(fill='both', expand=True)
 	notebk.add(fr2, text = "      BirdCipher Personal Encryption Machine")
 
@@ -1315,9 +1316,27 @@ def GUI_BirdCipher_Machine():
 
 	# ---------------
 
-	cipher_text2 = tk.Label(fr2, text = secret_messages[index], font = ("Comic Sans MS", 10), justify = 'center')
-	cipher_text2.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
-	cipher_text2.place(x = 60, y = 40)
+	encryption_machine_logo = tk.PhotoImage(file = "Encryption Machine-logo.png")
+
+	cipher_text2 = tk.Text(fr2, font = ("Comic Sans MS", 10), width = 80)
+	cipher_text2.config(bg = '#050005', fg = '#FFFFFF')
+	cipher_text2.place(x = 60, y = 40, height = 70)
+
+	key_fernet_label = tk.Label(fr2, text = "Key for Fernet algorithm")
+	key_fernet_label.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
+	key_fernet_label.place(x = 65, y = 120)
+
+	key_fernet_text = tk.Label(fr2, text = "", font = ("Comic Sans MS", 10), width = 80)
+	key_fernet_text.config(bg = "#050005", fg = "#FFFFFF")
+	key_fernet_text.place(x = 60, y = 150)
+
+	encrypted_label = tk.Label(fr2, text = "Your encrypted message is: ")
+	encrypted_label.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
+	encrypted_label.place(x = 65, y = 205)
+
+	cipher_text2_encrp = tk.Label(fr2, text = "", font = ("Comic Sans MS", 10), width = 80)
+	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF')
+	cipher_text2_encrp.place(x = 60, y = 230, height = 50)
 
 
 	nicknameCuad2 = tk.Entry(fr2, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
@@ -1338,7 +1357,7 @@ def GUI_BirdCipher_Machine():
 	imagen_caesar_cipher_lab2 = tk.Label(fr2, image = imagen_caesar_cipher)
 	imagen_caesar_cipher_lab2.place(x = 30, y = 300)
 
-	titleBirdCipherMachine2 = tk.Label(fr2, text = "BirdCipher message about {} encrypted with the Caesar Cipher algorithm".format(BirdCipher_sci_k[index]), font = ("Comic Sans MS", 12))
+	titleBirdCipherMachine2 = tk.Label(fr2, text = "BirdCipher Encryption Machine: a tool to guarantee the confidentiality of your messages", font = ("Comic Sans MS", 12))
 	titleBirdCipherMachine2.config(fg = "#7e086c")
 	titleBirdCipherMachine2.place(x = 70, y = 8)
 
@@ -1385,8 +1404,9 @@ def GUI_BirdCipher_Machine():
 	labelPlayerBCM2.config(fg = "#7e086c", bg = "#050005")
 	labelPlayerBCM2.place(x = 830, y = 20)
 
-	imageCryptographicMachine2 = tk.Label(fr2, image = cryptoMachineImage)
-	imageCryptographicMachine2.place(x = 750, y = 260)
+	imageCryptographicMachine2 = tk.Label(fr2, image = encryption_machine_logo)
+	imageCryptographicMachine2.place(x = 740, y = 280)
+	imageCryptographicMachine2.config(bg = "black")
 
 	closeMachineButton2 = tk.Button(fr2, text = "Close the BirdCipher Cryptographic Machine", font = ("Comic Sans MS", 12), command = lambda:closeMachine())
 	closeMachineButton2.place(x = 250, y = 460)
@@ -1503,7 +1523,7 @@ while End == False or lives > 0:
 		print()
 		print("------------------------------------------------- RESULTS --------------------------------------------------------")
 		print()
-		playsound("Lost_a_life.mp3")
+		#playsound("Lost_a_life.mp3")
 		print("   You have tried 7 times and have not been able to guess the size of this bird. You lost a life.")
 		print()
 		lives = lives - 1
@@ -1521,7 +1541,7 @@ while End == False or lives > 0:
 		print()
 		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[index])
 		print()
-		playsound("try_guess.mp3")
+		#playsound("try_guess.mp3")
 		#guess = float(input("   Enter the number of species: "))
 		question()
 		print()
@@ -1539,7 +1559,7 @@ while End == False or lives > 0:
 
 	elif guess < secretNumber:
 
-		playsound("larger.mp3")
+		#playsound("larger.mp3")
 		print("   * There are more species in this group (order) of birds. Try again.")
 		question()
 		attempts = attempts + 1
@@ -1547,7 +1567,7 @@ while End == False or lives > 0:
 
 	elif guess > secretNumber:
 
-		playsound("smaller.mp3")
+		#playsound("smaller.mp3")
 		print("   * There are fewer species in this group (order) of birds. Try again: ")
 		question()
 		attempts = attempts + 1
@@ -1564,7 +1584,7 @@ while End == False or lives > 0:
 		print()
 		print("   Now you have: ", points, " points.")
 		#hit = True
-		playsound("Congratulations.mp3")
+		#playsound("Congratulations.mp3")
 		time.sleep(8)
 		print()
 		print()
@@ -1574,11 +1594,11 @@ while End == False or lives > 0:
 		print()
 		time.sleep(3)
 		print(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-		playsound("radar-ufo.mp3")
-		playsound("sonar-radar.mp3")
+		#playsound("radar-ufo.mp3")
+		#playsound("sonar-radar.mp3")
 		time.sleep(3)
 		caesarCipher()
-		playsound("DecipherMessage.mp3")
+		#playsound("DecipherMessage.mp3")
 		print()
 		print("                                                     ", BirdCipher_sci_k[index], "                                      ")
 		print()
@@ -1597,10 +1617,10 @@ while End == False or lives > 0:
 		print()
 		print(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 
-		playsound('MessageClueObtained.mp3')
-		playsound(key_audios_k[index])
+		#playsound('MessageClueObtained.mp3')
+		#playsound(key_audios_k[index])
 		time.sleep(2)
-		playsound('WriteTheClue.mp3')
+		#playsound('WriteTheClue.mp3')
 		# here comes the GUI_BirdCipher Machine
 		#key = getKey()
 
@@ -1615,10 +1635,10 @@ while End == False or lives > 0:
 		if key == keys_k[index]:
 
 			updatePlayer_coins()
-			playsound("rightDecrypt.mp3")
-			playsound("GoldCoin.mp3")
+			#playsound("rightDecrypt.mp3")
+			#playsound("GoldCoin.mp3")
 			time.sleep(2)
-			playsound("seePictureAgain.mp3")
+			#playsound("seePictureAgain.mp3")
 			
 			GUI_Creation()
 
@@ -1682,7 +1702,7 @@ while End == False or lives > 0:
 		print("   Guess the size in centimeters of: ", BirdCipher_english_k[index])
 		attempts = 0
 		print()
-		playsound("try_guess.mp3")
+		#playsound("try_guess.mp3")
 		question()
 		print()
 		attempts = attempts + 1
@@ -1694,9 +1714,9 @@ while End == False or lives > 0:
 		print()
 		print()
 		print("   Congratulations!!! You guessed the size of the bird I was thinking of. You have earned 10 points!!!")
-		playsound("Congratulations.mp3")
+		#playsound("Congratulations.mp3")
 		time.sleep(3)
-		playsound("End.mp3")
+		#playsound("End.mp3")
 		points = points + 10
 		print()
 		print("Now you have: ", points, " points.")
