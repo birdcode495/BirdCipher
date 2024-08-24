@@ -1214,12 +1214,6 @@ def GUI_BirdCipher_Machine():
 	decrypt.geometry('1050x540')
 	decrypt.resizable(0, 0)
 
-	#raiz.iconbitmap()
-
-	#decrypt_frame = tk.Frame(decrypt)
-
-	#decrypt_frame.pack()
-
 	player_answer_decrypt = tk.IntVar()
 	player_message_encrypt = tk.StringVar()
 
@@ -1362,11 +1356,10 @@ def GUI_BirdCipher_Machine():
 	encrypted_label = tk.Label(fr2, text = "Your encrypted message is: ")
 	encrypted_label.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
 	encrypted_label.place(x = 65, y = 180)
-
+	
 	cipher_text2_encrp = tk.Label(fr2, text = "", font = ("Comic Sans MS", 10), width = 80)
 	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF')
 	cipher_text2_encrp.place(x = 60, y = 210, height = 80)
-
 
 	nicknameCuad2 = tk.Entry(fr2, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
 	nicknameCuad2.config(bg = '#050005', fg = '#7e086c')
