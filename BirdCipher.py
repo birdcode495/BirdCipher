@@ -146,6 +146,7 @@ password = tk.StringVar()
 confirmPlyr = False
 
 hash1 = ''
+#hash2 = ''
 
 def createPlayer():
 
@@ -175,7 +176,7 @@ def createPlayer():
 
 	#miCursor.execute("CREATE TABLE encryptedMessages(id integer PRIMARY KEY ASC, nickname varchar(30), password varchar(256), server varchar(30), actual_message varchar(256))")
 
-	#miCursor.execute("ALTER TABLE Players ADD COLUMN lifes integer NOT NULL DEFAULT 3")
+	#miCursor.execute("ALTER TABLE encryptedMessages ADD COLUMN key_b varchar(100)")
 
 	sql = 'insert into Players(username, nickname, password, points, coins, feathers, diamonds, lifes) values(?,?,?,?,?,?,?,?)'
 	data = (username.get(), nickname.get(), hash1, 0, 0, 0, 0, 3)
@@ -219,16 +220,16 @@ def createPlayer():
 		lifes = dt[0][8]
 		confirmPlyr = True
 
-		#playsound('PlayerActivated.mp3')
+		playsound('PlayerActivated.mp3')
 
-	#elif dt[0][8] > 0 and hash1 != dt[0][3]:
+	elif dt[0][8] > 0 and hash1 != dt[0][3]:
 
-		#playsound('IncorrectPassword.mp3')
+		playsound('IncorrectPassword.mp3')
 
 
-	#elif dt[0][8] <= 0:
+	elif dt[0][8] <= 0:
 
-		#playsound('GameOver.mp3')
+		playsound('GameOver.mp3')
 
 
 	miConexion.commit()
@@ -1094,8 +1095,12 @@ def GUI_BirdCipher_Machine():
 	global feathers
 	global diamonds
 	global lives
+	global nickname_db
+	global hash1
+	
 
 	key_encryption = ""
+	token = ""
 
 	def comd_decrypt():
 
@@ -1150,6 +1155,7 @@ def GUI_BirdCipher_Machine():
 	def fernet_encryption_function():
 
 		global key_encryption
+		global token
 
 		message_to_encrypt = cipher_text2.get("1.0", "end-1c")
 		message_to_encrypt = message_to_encrypt.encode()
@@ -1205,7 +1211,8 @@ def GUI_BirdCipher_Machine():
 
 		chances_decrypt = 0
 		decrypt.destroy()
-		
+
+	
 
 
 	decrypt = tk.Tk()
@@ -1216,6 +1223,16 @@ def GUI_BirdCipher_Machine():
 
 	player_answer_decrypt = tk.IntVar()
 	player_message_encrypt = tk.StringVar()
+	passw_em = tk.StringVar()
+
+	person1_var = tk.StringVar()
+	person2_var = tk.StringVar()
+	person3_var = tk.StringVar()
+	person4_var = tk.StringVar()
+
+	bdatos = bytes(passw_em.get(), 'utf-8')
+	h = hashlib.new(algoritmo, bdatos)
+	hash2 = HASH.generaHash(h)
 
 	#miImagen = tk.PhotoImage(file = BirdCipher_list_k[2][0])
 	#bird_singing_logo = tk.PhotoImage(file="Singing-logo5.png")
@@ -1339,7 +1356,12 @@ def GUI_BirdCipher_Machine():
 
 	# ---------------
 
-	encryption_machine_logo = tk.PhotoImage(file = "Encryption Machine-logo.png")
+	
+
+
+	encryption_machine_logo = tk.PhotoImage(file = "Send Encrypted Message-logo.png")
+	generate_key_image = tk.PhotoImage(file = "Generate Key-logo.png")
+	encrypt_message_image = tk.PhotoImage(file = "Encrypt Message-logo1.png")
 
 	cipher_text2 = tk.Text(fr2, font = ("Comic Sans MS", 10), width = 80)
 	cipher_text2.config(bg = '#050005', fg = '#FFFFFF')
@@ -1361,18 +1383,18 @@ def GUI_BirdCipher_Machine():
 	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF')
 	cipher_text2_encrp.place(x = 60, y = 210, height = 80)
 
-	nicknameCuad2 = tk.Entry(fr2, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
+	nicknameCuad2 = tk.Entry(fr2, textvariable = passw_em, font = ("Comic Sans MS", 13), justify = "center")
 	nicknameCuad2.config(bg = '#050005', fg = '#7e086c')
 	nicknameCuad2.place(x = 790, y = 100)
 	
 
-	fernet_key_button = tk.Button(fr2, image = decrypt_buttonImg, font = ("Comic Sans MS", 8), command = lambda:fernet_key_gen())
-	fernet_key_button.config(fg = '#1af017')
+	fernet_key_button = tk.Button(fr2, image = generate_key_image, font = ("Comic Sans MS", 8), command = lambda:fernet_key_gen())
+	fernet_key_button.config(fg = '#7e086c')
 	fernet_key_button.place(x = 800, y = 150)
 	
 	#decrypt_button.pack()
 
-	fernet_encryption_message = tk.Button(fr2, image = listen_buttonImg, font = ("Comic Sans MS", 8), command = lambda:fernet_encryption_function())
+	fernet_encryption_message = tk.Button(fr2, image = encrypt_message_image, font = ("Comic Sans MS", 8), command = lambda:fernet_encryption_function())
 	fernet_encryption_message.config(fg = '#1af017')
 	fernet_encryption_message.place(x = 900, y = 150)
 
@@ -1402,21 +1424,21 @@ def GUI_BirdCipher_Machine():
 	labelPoints2.config(bg = "#050005", fg = "#7e086c")
 	labelPoints2.place(x = 212, y = 410)
 
-	labelCoins2 = tk.Label(fr2, text = coins, font = ("Comic Sans MS", 13), justify = "center", width = 8)
-	labelCoins2.config(bg = "#050005", fg = "#7e086c")
-	labelCoins2.place(x = 300, y = 410)
+	person1 = tk.Entry(fr2, textvariable = person1_var, font = ("Comic Sans MS", 13), justify = "center", width = 8)
+	person1.config(bg = "#050005", fg = "#7e086c")
+	person1.place(x = 300, y = 410)
 
-	labelFeathers2 = tk.Label(fr2, text = feathers, font = ("Comic Sans MS", 13), justify = "center", width = 8)
-	labelFeathers2.config(bg = "#050005", fg = "#7e086c")
-	labelFeathers2.place(x = 400, y = 410)
+	person2 = tk.Entry(fr2, textvariable = person2_var, font = ("Comic Sans MS", 13), justify = "center", width = 8)
+	person2.config(bg = "#050005", fg = "#7e086c")
+	person2.place(x = 400, y = 410)
 
-	labelDiamonds2 = tk.Label(fr2, text = diamonds, font = ("Comic Sans MS", 13), justify = "center", width = 8)
-	labelDiamonds2.config(bg = "#050005", fg = "#7e086c")
-	labelDiamonds2.place(x = 500, y = 410)
+	person3 = tk.Entry(fr2, textvariable = person3_var, font = ("Comic Sans MS", 13), justify = "center", width = 8)
+	person3.config(bg = "#050005", fg = "#7e086c")
+	person3.place(x = 500, y = 410)
 
-	labelLives2 = tk.Label(fr2, text = lifes, font = ("Comic Sans MS", 13), justify = "center", width = 7)
-	labelLives2.config(bg = "#050005", fg = "#7e086c")
-	labelLives2.place(x = 617, y = 410)
+	person4 = tk.Entry(fr2, textvariable = person4_var, font = ("Comic Sans MS", 13), justify = "center", width = 7)
+	person4.config(bg = "#050005", fg = "#7e086c")
+	person4.place(x = 617, y = 410)
 
 	labelQuestionKey2 = tk.Label(fr2, text = "Enter the secret key", font = ("Comic Sans MS", 13))
 	labelQuestionKey2.config(fg = "#7e086c")
@@ -1426,9 +1448,9 @@ def GUI_BirdCipher_Machine():
 	labelPlayerBCM2.config(fg = "#7e086c", bg = "#050005")
 	labelPlayerBCM2.place(x = 830, y = 20)
 
-	imageCryptographicMachine2 = tk.Label(fr2, image = encryption_machine_logo)
-	imageCryptographicMachine2.place(x = 740, y = 280)
-	imageCryptographicMachine2.config(bg = "black")
+	imageCryptographicMachine2 = tk.Button(fr2, image = encryption_machine_logo, command = lambda:send_message())
+	imageCryptographicMachine2.place(x = 760, y = 290)
+	imageCryptographicMachine2.config(bg = "#3f0322")
 
 	closeMachineButton2 = tk.Button(fr2, text = "Close the BirdCipher Cryptographic Machine", font = ("Comic Sans MS", 12), command = lambda:closeMachine())
 	closeMachineButton2.place(x = 250, y = 460)
@@ -1512,6 +1534,40 @@ def GUI_BirdCipher_Machine():
 	closeMachineButton3 = tk.Button(fr3, text = "Close the BirdCipher Cryptographic Machine", font = ("Comic Sans MS", 12), command = lambda:closeMachine())
 	closeMachineButton3.place(x = 250, y = 460)
 	closeMachineButton3.config(fg = "#7e086c")
+
+	def send_message():
+
+		global nickname_db
+		global key_encryption
+		global token
+
+
+		bdatos = bytes(passw_em.get(), 'utf-8')
+		h = hashlib.new(algoritmo, bdatos)
+		hash2 = HASH.generaHash(h)
+
+		miConexion2 = sqlite3.connect("BirdCipher_DB.db")
+		miCursor2 = miConexion2.cursor()
+
+		sql110 = 'insert into encryptedMessages(nickname, password, server, actual_message, key_b) values(?,?,?,?,?)'
+		datos_sql110 = (nickname_db, hash2, person1_var.get(), token, key_encryption)
+
+		sql_verf_hash = 'select * from Players where nickname = (?)'
+		sql_verf_hash_data = (nickname_db,)
+
+		#miCursor2.execute(sql110, datos_sql110)
+
+		miCursor2.execute(sql_verf_hash, sql_verf_hash_data)
+		dlt5 = miCursor2.fetchall()
+
+		if dlt5[0][5] > 10:
+
+				miCursor2.execute(sql110, datos_sql110)
+
+
+		miConexion2.commit()
+
+		miConexion2.close()
 
 
 
