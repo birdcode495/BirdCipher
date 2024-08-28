@@ -126,6 +126,9 @@ username_db = ''
 nickname_db = ''
 password_db = ''
 target_person = ''
+target_person_decrypt = ''
+message_sent_decrypt = ''
+key_sent_decrypt = ''
 
 
 
@@ -1099,6 +1102,9 @@ def GUI_BirdCipher_Machine():
 	global nickname_db
 	global hash1
 	global target_person
+	global target_person_decrypt
+	global message_sent_decrypt
+	global key_sent_decrypt
 	
 
 	key_encryption = ""
@@ -1164,7 +1170,7 @@ def GUI_BirdCipher_Machine():
 		f = Fernet(key_encryption)
 		token = f.encrypt(message_to_encrypt)
 		token = token.decode()
-		cipher_text2_encrp.config(text = token, justify = "left", wraplength = 500)
+		cipher_text2_encrp.config(text = token, justify = "left", wraplength = 600)
 		clipboard.copy(token)
 
 
@@ -1265,34 +1271,46 @@ def GUI_BirdCipher_Machine():
 
 	def person1c_actv():
 
+		global target_person_decrypt
+
 		person1c_activated = True
 		person2c_activated = False
 		person3c_activated = False
 		person4c_activated = False
+		target_person_decrypt = person1c_var.get()
 		#playsound()
 
 	def person2c_actv():
+
+		global target_person_decrypt
 
 		person1c_activated = False
 		person2c_activated = True
 		person3c_activated = False
 		person4c_activated = False
+		target_person_decrypt = person2c_var.get()
 		#playsound()
 
 	def person3c_actv():
+
+		global target_person_decrypt
 
 		person1c_activated = False
 		person2c_activated = False
 		person3c_activated = True
 		person4c_activated = False
+		target_person_decrypt = person3c_var.get()
 		#playsound()
 
 	def person4c_actv():
+
+		global target_person_decrypt
 
 		person1c_activated = False
 		person2c_activated = False
 		person3c_activated = False
 		person4c_activated = True
+		target_person_decrypt = person4c_var.get()
 		#playsound()
 
 	
@@ -1644,8 +1662,8 @@ def GUI_BirdCipher_Machine():
 	labelPlayerBCM3.config(fg = "#7e086c", bg = "#050005")
 	labelPlayerBCM3.place(x = 830, y = 20)
 
-	imageCryptographicMachine3 = tk.Label(fr3, image = cryptoMachineImage)
-	imageCryptographicMachine3.place(x = 750, y = 260)
+	imageCryptographicMachine3 = tk.Button(fr3, image = cryptoMachineImage, command = lambda:bc_decription_machine())
+	imageCryptographicMachine3.place(x = 730, y = 260)
 
 	closeMachineButton3 = tk.Button(fr3, text = "Close the BirdCipher Cryptographic Machine", font = ("Comic Sans MS", 12), command = lambda:closeMachine())
 	closeMachineButton3.place(x = 250, y = 460)
@@ -1697,13 +1715,18 @@ def GUI_BirdCipher_Machine():
 
 
 		miConexion2.commit()
-
 		miConexion2.close()
 
 	
 	def displayCiphertext():
 
-		global hash1
+		global nickname_db
+		global key_encryption
+		global token
+		global target_person
+		global message_sent_decrypt
+		global key_sent_decrypt
+	
 
 		cdatos = bytes(password_for_decrypt.get(), 'utf-8')
 		g = hashlib.new(algoritmo, cdatos)
@@ -1715,8 +1738,8 @@ def GUI_BirdCipher_Machine():
 		sql33 = 'select * from Players where nickname = (?)'
 		datasql33 = (nickname_db,)
 
-		sql330 = 'select * from encryptedMessages where server = (?)'
-		datasql330 = (nickname_db,)
+		sql330 = 'select * from encryptedMessages where server = (?) and nickname = (?)'
+		datasql330 = (nickname_db, target_person_decrypt)
 
 		miCursor3.execute(sql33, datasql33)
 		dlt6 = miCursor3.fetchall()
@@ -1726,12 +1749,30 @@ def GUI_BirdCipher_Machine():
 			miCursor3.execute(sql330, datasql330)
 			dlt7 = miCursor3.fetchall()
 
-			if person1c_activated:
+			if len(dlt7) > 0:
 
-				personPointer = dlt7[0][0]
+				message_sent_decrypt = dlt7[0][4]
+				key_sent_decrypt = dlt7[0][6]
 
-				#cipher_text3.config(text = dlt7[0][])
+				cipher_text3.config(text = dlt7[0][4], justify = "left", wraplength = 600, font = ("Comic Sans MS", 10))
+				
+				key_fernet_text2.config(text = dlt7[0][6])
 
+
+		miConexion3.commit()
+		miConexion3.close()
+
+
+	def bc_decription_machine():
+
+		global message_sent_decrypt
+		global key_sent_decrypt
+
+		#message_sent_decrypt = message_sent_decrypt.encode()
+		k = Fernet(key_sent_decrypt)
+		token2 = k.decrypt(message_sent_decrypt)
+		#token2 = token2.decode()
+		cipher_text2_encrp2.config(text = token2, justify = "left", wraplength = 600)
 
 
 
@@ -1881,6 +1922,8 @@ while End == False or lives > 0:
 			#playsound("GoldCoin.mp3")
 			time.sleep(2)
 			#playsound("seePictureAgain.mp3")
+
+			count = 0
 			
 			GUI_Creation()
 
