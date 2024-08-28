@@ -1459,9 +1459,12 @@ def GUI_BirdCipher_Machine():
 	# --------------
 
 
-	cipher_text3 = tk.Label(fr3, text = secret_messages[index], font = ("Comic Sans MS", 10), justify = 'center')
+	cipher_text3 = tk.Label(fr3, font = ("Comic Sans MS", 10), justify = 'center', width = 72
+		, height = 4)
 	cipher_text3.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
 	cipher_text3.place(x = 60, y = 40)
+
+
 
 	nicknameCuad3 = tk.Entry(fr3, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
 	nicknameCuad3.config(bg = '#050005', fg = '#7e086c')
@@ -1481,9 +1484,27 @@ def GUI_BirdCipher_Machine():
 	#imagen_caesar_cipher_lab.config(bg = '#FFFFFF')
 	imagen_caesar_cipher_lab3.place(x = 30, y = 300)
 
-	titleBirdCipherMachine3 = tk.Label(fr3, text = "BirdCipher message about {} encrypted with the Caesar Cipher algorithm".format(BirdCipher_sci_k[index]), font = ("Comic Sans MS", 12))
+	titleBirdCipherMachine3 = tk.Label(fr3, text = "BirdCipher Decryption Machine", font = ("Comic Sans MS", 12))
 	titleBirdCipherMachine3.config(fg = "#7e086c")
 	titleBirdCipherMachine3.place(x = 70, y = 8)
+
+	key_fernet_label2 = tk.Label(fr3, text = "Key for Fernet algorithm")
+	key_fernet_label2.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
+	key_fernet_label2.place(x = 65, y = 120)
+
+	key_fernet_text2 = tk.Label(fr3, text = "", font = ("Comic Sans MS", 10), width = 80)
+	key_fernet_text2.config(bg = "#050005", fg = "#FFFFFF")
+	key_fernet_text2.place(x = 60, y = 150)
+
+	encrypted_label2 = tk.Label(fr3, text = "Your decrypted message is: ")
+	encrypted_label2.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
+	encrypted_label2.place(x = 65, y = 180)
+	
+	cipher_text2_encrp2 = tk.Label(fr3, text = "", font = ("Comic Sans MS", 10), width = 80)
+	cipher_text2_encrp2.config(bg = '#050005', fg = '#FFFFFF')
+	cipher_text2_encrp2.place(x = 60, y = 210, height = 80)
+
+
 
 	buttonPoints3 = tk.Button(fr3, image = imagePoints, command = lambda:pointsAudio())
 	buttonPoints3.place(x = 210, y = 300)
@@ -1560,7 +1581,7 @@ def GUI_BirdCipher_Machine():
 		miCursor2.execute(sql_verf_hash, sql_verf_hash_data)
 		dlt5 = miCursor2.fetchall()
 
-		if dlt5[0][5] > 10:
+		if dlt5[0][5] > 10 and hash2 == dlt5[0][3]:
 
 				miCursor2.execute(sql110, datos_sql110)
 
