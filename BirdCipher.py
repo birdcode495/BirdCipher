@@ -327,7 +327,8 @@ def updatePlayer_coins():
 
 match = False
 
-prueba_list_present = [0, 1, 2, 34]
+prueba_list_present = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 
+24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
 
 #fg = input("ws: ")
 
@@ -592,6 +593,8 @@ def GUI_Creation():
 	global match
 
 	global index
+
+	count = 0
 
 	raiz = tk.Tk()
 
@@ -1127,7 +1130,7 @@ def GUI_BirdCipher_Machine():
 
 			#playsound('C:/BirdCipher/Audios/VoiceAudios/CorrectKey.mp3')
 			time.sleep(2)
-			cipher_text.config(text = getTranslatedMessage(message, key), font = ("Comic Sans MS", 10))
+			cipher_text.config(text = getTranslatedMessage(message, key), font = ("Comic Sans MS", 9))
 			cipher_text.config(bg = '#050005', fg = '#7e086c')
 			coins = coins + 1
 			#playsound("rightDecrypt.mp3")
@@ -1139,7 +1142,7 @@ def GUI_BirdCipher_Machine():
 		elif chances_decrypt <= 3 and key!= keys[index]:
 
 			#playsound('C:/BirdCipher/Audios/VoiceAudios/WrongKey.mp3')
-			cipher_text.config(text = getTranslatedMessage(message, key), font = ("Comic Sans MS", 10))
+			cipher_text.config(text = getTranslatedMessage(message, key), font = ("Comic Sans MS", 9))
 			cipher_text.config(bg = '#050005', fg = '#FFFFFF')
 			chances_decrypt = chances_decrypt + 1
 
@@ -1373,7 +1376,8 @@ def GUI_BirdCipher_Machine():
 	#imageLabel = tk.Label(miFrame, image=miImagen)
 	#imageLabel.pack()
 
-	cipher_text = tk.Label(fr, text = secret_messages[index], font = ("Comic Sans MS", 10), justify = 'center')
+	cipher_text = tk.Label(fr, text = secret_messages[index], font = ("Comic Sans MS", 9
+		), justify = 'center')
 	#cipher_text.place(x = 30, y = 30)
 	#cipher_text.pack(pady = 30)
 	cipher_text.config(bg = '#050005', fg = '#FFFFFF', padx = 30)

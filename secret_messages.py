@@ -313,7 +313,47 @@ nsxjhyx, jfwymbtwrx, xrfqq gnwix fsi xrfqq rfrrfqx. Xytwpx yjsi yt zxj xtfwnsl, 
 htsxjwajx jsjwld. Xtfwnsl wjvznwjx ymjwrfq fnw hzwwjsyx. Ymjnw sjxyx fwj tkyjs ajwd qfwlj fsi rfd gj zxji 
 ktw rfsd djfwx. Xtrj sjxyx mfaj gjjs pstbs yt lwtb yt tajw 2 rjywjx (6 ky 7 ns) ns infrjyjw fsi fgtzy 3 
 rjywjx (9.8 ky) ns ijuym.''', 
-"", "", "", "", 
+'''Ftq nudp rmyuxk Egxupmq oaybdueqe ftq smzzqfe mzp naanuqe. Oaxxqofuhqxk omxxqp egxupe, ftqk mdq yqpugy-
+xmdsq oamefmx eqmnudpe ftmf bxgzsq-puhq rad ruet mzp euyuxmd bdqk. Ftqk tmhq xazs, zmddai, mzp bauzfqp iuzse, 
+mzp m cgufq xazs, sdmpgmfqp, mzp dmftqd xalqzsq-etmbqp fmux itaeq agfqd rqmftqde mdq etadfqd ftmz ftq oqzfdmx 
+azqe. Rdusmfqnudpe mdq m rmyuxk ar eqmnudpe omxxqp Rdqsmfupmq ituot mdq ragzp modaee mxx fdabuomx mzp 
+egnfdabuomx aoqmze. Ftq ruhq qjfmzf ebqouqe mdq oxmeeuruqp uz m euzsxq sqzge, Rdqsmfm. Mxx tmhq bdqpayuzmzfxk 
+nxmow bxgymsq, xazs, pqqbxk radwqp fmuxe mzp xazs taawqp nuxxe. Rqymxqe tmhq itufq gzpqdnqxxuqe mzp ymxqe tmhq 
+m puefuzofuhq dqp sgxmd bagot, ituot ftqk uzrxmfq pgduzs ftq ndqqpuzs eqmeaz fa mffdmof rqymxqe. Oadyadmzfe mzp 
+etmse mdq yqpugy-fa-xmdsq nudpe, iuft napk iqustf uz ftq dmzsq ar 0.35–5 wuxasdmye (0.77–11.02 xn) mzp iuzs 
+ebmz ar 60–100 oqzfuyqfdqe (24–39 uz). Ftq ymvadufk ar ebqouqe tmhq pmdw rqmftqde. Ftq nuxx ue xazs, ftuz mzp 
+taawqp. Ftqud rqqf tmhq iqnnuzs nqfiqqz mxx ragd faqe. Mxx ebqouqe mdq ruet-qmfqde, omfotuzs ftq bdqk nk puhuzs 
+rday ftq egdrmoq.''', 
+'''Jxu Fubusqdyvehcui qhu qd ehtuh ev cutykc-iyput qdt bqhwu mqjuhryhti vekdt mehbtmytu. Qi jhqtyjyedqbbo—rkj 
+uhheduekibo—tuvydut, jxuo udsecfqii qbb ryhti jxqj xqlu vuuj myjx qbb vekh jeui murrut. Xudsu, jxuo muhu vehcuhbo 
+qbie ademd ro iksx dqcui qi jejyfqbcqjui eh ijuwqdefetui. Ceij xqlu q rqhu jxheqj fqjsx (wkbqh fqjsx), qdt jxu 
+deijhybi xqlu uleblut ydje toivkdsjyedqb ibyji, vehsydw jxuc je rhuqjxu jxhekwx jxuyh cekjxi. Jxuo qbie xqlu q 
+fusjydqju dqyb ed jxuyh bedwuij jeu. Jxyi yi ixqfut byau q secr qdt yi kiut je rhkix ekj qdt iufqhqju jxuyh 
+vuqjxuhi. Jxuo vuut ed vyix, igkyt, eh iycybqh cqhydu byvu. Duijydw yi sebedyqb, rkj ydtylytkqb ryhti qhu 
+cedewqceki. Jxu oekdw qhu qbjhysyqb, xqjsxydw vhec jxu uww xubfbuii qdt dqaut yd ceij. Jxuo bqsa q rheet fqjsx. 
+Jxu fubysqdi, ixeurybb qdt xqcuhaef vehc q sbqtu myjxyd jxu ehtuh, myjx jxuyh dunj sbeiuij hubqjylui ruydw q 
+sbqtu sedjqydydw jxu xuhedi, yryiui qdt ifeedrybbi.''', 
+'''Hpel tkx ubkwl ykhf max hkwxk Lmkbzbyhkfxl, pabva bgvenwxl lixvbxl hy fhlmer lhebmtkr tgw ghvmnkgte ubkwl 
+hy ikxr mribybxw ur tg nikbzam lmtgvx, t etkzx, ukhtw axtw, ubghvnetk oblbhg, ubgtnkte axtkbgz, latki mtehgl, 
+tgw yxtmaxkl twtimxw yhk lbexgm yebzam. Xqvximbhgl bgvenwx max wbnkgte ghkmaxkg atpd-hpe tgw max zkxztkbhnl 
+unkkhpbgz hpe. Hpel tkx wbobwxw bgmh mph ytfbebxl: max mknx (hk mribvte) hpe ytfber, Lmkbzbwtx, tgw max utkg-hpe 
+ytfber, Mrmhgbwtx. Hpel angm fhlmer lftee ftfftel, bglxvml, tgw hmaxk ubkwl, temahnza t yxp lixvbxl lixvbtebsx 
+bg angmbgz ybla. Maxr tkx yhngw bg tee kxzbhgl hy max Xtkma xqvxim max ihetk bvx vtil tgw lhfx kxfhmx bletgwl. 
+T zkhni hy hpel bl vteexw t "itkebtfxgm". Hpel ihllxll etkzx, yhkptkw-ytvbgz xrxl tgw xtk-ahexl, t atpd-ebdx 
+uxtd, t yetm ytvx, tgw nlnteer t vhglibvnhnl vbkvex hy yxtmaxkl, t ytvbte wblv, tkhngw xtva xrx. Max yxtmaxkl 
+ftdbgz ni mabl wblv vtg ux twcnlmxw mh latkier yhvnl lhngwl ykhf otkrbgz wblmtgvxl hgmh max hpel' tlrffxmkbvteer 
+ietvxw xtk vtobmbxl.''', 
+'''Bpm Kibpizbqnwzuma wzlmz wn akidmvoqvo jqzla qvktclma bpm Vme Ewztl dctbczma ivl bpm vwe-mfbqvkb 
+Bmzibwzvqbpqlim. Cvtqsm uivg Wtl Ewztl Dctbczma, bpqa ozwcx wn jqzla tiks bitwva ivl ucakctibczm qv bpmqz nmmb 
+acqbijtm bw amqhm xzmg. Qv bpm xiab, bpmg emzm kwvaqlmzml bw jm i aqabmz ozwcx bw bpm abwzsa wn bpm wzlmz 
+Kqkwvqqnwzuma jiaml wv LVI–LVI pgjzqlqhibqwv ivl uwzxpwtwog. Pwemdmz, i 2021 ivitgaqa wn uqbwkpwvlzqit omvma 
+acoomabml i abzwvomz xpgtwomvmbqk zmtibqwvapqx jmbemmv Kibpizbqnwzuma ivl acjniuqtqma wn Ikkqxqbzqnwzuma. 
+Kibpizbqnwzuma, itaw svwev ia Vme Ewztl dctbczma, xwaamaa cvqycm ilixbibqwva qv bpmqz xtcuctikmwca nmibpmza 
+bpib xzmdmvb bpm ikkcuctibqwv wn jikbmzqi ivl ncvoit axwzma, ittweqvo bpmu bw nmml wv kizzqwv eqbpwcb ombbqvo 
+aqks. Bpmam nmibpmz ilixbibqwva qvktclm i tiks wn inbmzapinb, i ntibbmvml apixm, ivl i xwzwca abzckbczm bpib 
+ittwea iqz bw ntwe bpzwcop, xzmdmvbqvo bpm zmbmvbqwv wn uwqabczm ivl jikbmzqi. Bpmqz nmibpmza tiks bpm 
+qvbmztwksqvo pwwsa nwcvl qv wbpmz jqzl nmibpmza, uisqvo bpmu uwzm ntmfqjtm ivl ittweqvo nwz i ozmibmz lmozmm 
+wn uwdmumvb.''', 
 '''Jxu Qssyfyjhyvehcui qhu qd ehtuh ev ryhti jxqj ydsbktui ceij ev jxu tykhdqb ryhti ev 
 fhuo, ydsbktydw xqmai, uqwbui, lkbjkhui, qdt ayjui, rkj dej vqbsedi. Jxu Qssyfyjhyvehcui 
 qhu ademd vhec jxu Cyttbu Uesudu qdt jofysqbbo xqlu q ixqhfbo xeeaut ruqa myjx q ievj 
@@ -328,11 +368,21 @@ q vucqbu yi cehu jxqd jmysu qi xuqlo qi xuh cqju.'''
 ]
 
 
-keys = [13, 17, 21, 14, 18, 20, 23, 8, 11, 2, 7, 9, 17, 13, 6, 5, 4, 24, 13, 22, 21, 10, 8, 6, 2, 7, 9, 15, 25, 5, 0, 0, 0, 0, 16]
+keys = [13, 17, 21, 14, 18, 20, 23, 8, 11, 2, 7, 9, 17, 13, 6, 5, 4, 24, 13, 22, 21, 10, 8, 6, 2, 7, 9, 15, 
+25, 5, 12, 16, 19, 8, 16]
 
 key_audios = ['C:/BirdCipher/Audios/VoiceAudios/k13.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k17.mp3',
-'C:/BirdCipher/Audios/VoiceAudios/k21.mp3', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 
-'', '', '', '', '', '', '', '', '', '', '', '', 'C:/BirdCipher/Audios/VoiceAudios/k16.mp3']
+'C:/BirdCipher/Audios/VoiceAudios/k21.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k14.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k18.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/k20.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k23.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k8.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/k11.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k2.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k7.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/k9.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k17.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k13.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/k6.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k5.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k4.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/k24.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k13.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k22.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/k21.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k10.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k8.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/k6.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k2.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k7.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/k9.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k15.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k25.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/k5.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k12.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k16.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/k19.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k8.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k16.mp3']
 
 crypto_audios = ['C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_0.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_1.mp3',
 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_2.mp3', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
