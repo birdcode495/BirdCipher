@@ -364,12 +364,134 @@ sqhdyleheki, xkdjydw ro iywxj tkhydw jxu tqo eh qj jmybywxj. Jxuo qhu unsufjyedq
 bedw-bylut, qdt ceij xqlu bem hufhetksjylu hqjui. Jxu oekdw xqlu q bedw, luho vqij-whemydw 
 vbutwbydw ijqwu, vebbemut ro 3–8 muuai ev duij sqhu qvjuh vyhij vbywxj, qdt 1 je 3 ouqhi 
 qi iunkqbbo yccqjkhu qtkbji. Jxu iunui xqlu sedifyskekibo tyvvuhudj iypui qdt iecujycui 
-q vucqbu yi cehu jxqd jmysu qi xuqlo qi xuh cqju.'''
+q vucqbu yi cehu jxqd jmysu qi xuqlo qi xuh cqju.''',
+'''Ftq yageqnudpe mdq nudpe uz ftq adpqd Oaxuuradyqe. Ftue sdagb ue zai oazruzqp fa egn-
+Emtmdmz Mrduom, mzp uf ue ftq azxk nudp adpqd oazruzqp qzfudqxk fa ftmf oazfuzqzf, iuft 
+ftq baeeunxq qjoqbfuaz ar fgdmoae ituot mdq oazeupqdqp nk eayq me ftq puefuzof adpqd 
+Ygeabtmsuradyqe, mzp ftq ogowaa daxxqd, ituot ue ftq azxk yqynqd ar ftq adpqd 
+Xqbfaeayuradyqe, mzp ituot ue ragzp uz Ympmsmeomd ngf zaf ymuzxmzp Mrduom. Yageqnudpe 
+tmp m iupqd dmzsq uz ftq Bmxqasqzq, iuft m iupqebdqmp puefdungfuaz uz Qgdabq mzp Zadft 
+Myqduom pgduzs ftq Bmxqaoqzq. Yageqnudpe mdq exqzpqd sdqkuet ad ndaiz nudpe iuft earf, 
+tmudxuwq napk rqmftqde. Ftqk mdq mdnadqmx mzp eogddk ftdagst ftq xqmhqe xuwq dapqzfe, 
+uz eqmdot ar nqdduqe, rdguf mzp ngpe. Ftue tmnuf, mzp ftqud xqse, suhqe dueq fa ftq 
+sdagb'e Qzsxuet zmyq. Ftqk mdq modanmfuo, mzp omz rqqp gbeupq paiz. Mxx ebqouqe tmhq 
+efdazs oxmie mzp dqhqdeunxq agfqd faqe (bmybdapmofkx rqqf). Ftqk mxea tmhq odqefe mzp 
+efgnnk nuxxe. Ftq yageqnudpe oagxp nq oazeupqdqp "xuhuzs raeeuxe" me ftq euj ebqouqe 
+qjfmzf fapmk mdq yqdqxk ftq egdhuhade ar m xuzqmsq ftmf ime ymeeuhqxk yadq puhqdeq uz 
+ftq qmdxk Bmxqasqzq mzp Yuaoqzq.''',
+'''Esp nfnvzz-czwwpc zc nzfczw (Wpaezdzxfd otdnzwzc) td esp zywj mtco ty esp qlxtwj 
+Wpaezdzxtolp, hstns hld acpgtzfdwj zqepy awlnpo ty esp zcopc Nzclnttqzcxpd mfe td yzh 
+awlnpo ty ted zhy zcopc Wpaezdzxtqzcxpd. Esp nfnvzz-czwwpc td le esp czze zq l rczfa 
+esle nzyeltyd esp Eczrzytqzcxpd, Mfnpczetqzcxpd, Atntqzcxpd, lyo Nzclnttqzcxpd. Opdatep 
+ted ylxp, esp Nfnvzz-czwwpc ozpd yze dslcp nwzdp pgzwfetzylcj zctrtyd htes nfnvzzd zc 
+czwwpcd. Te td l xpotfx-wlcrp mtco, tyslmtetyr qzcpded lyo hzzowlyod ty Xlolrldnlc lyo 
+esp Nzxzcz Tdwlyod. Escpp dfmdapntpd lcp opdnctmpo: esp yzxtylep W. o. otdnzwzc td qzfyo 
+ty Xlolrldnlc lyo Xljzeep Tdwlyo, W. o. tyepcxpotfd zy Lyuzfly, lyo W. o. rclntwtd zq 
+Rclyo Nzxzcz. Mldpo zy ted dxlwwpc dtkp, otqqpcpynpd ty esp awfxlrp, lyo xtyzc otqqpcpynp 
+ty esp gztnp, esp wlde zq espdp td dzxpetxpd nzydtopcpo l dpalclep dapntpd, esp Nzxzcz 
+nfnvzz-czwwpc. Fywtvp esp ecfp czwwpcd lyo rczfyo czwwpcd, hspcp esp dpipd slgp topyetnlw 
+laaplclynp, esp nfnvzz-czwwpc td dpiflwwj otnsczxletn. Xlwpd slgp l xzdewj gpwgpej rcpj 
+nspde lyo splo, nslyrtyr rcloflwwj ez hstep zy esp cpxltytyr fyopcalced.''',
+'''Wkh wurjrqv dqg txhwcdov duh elugv lq wkh rughu Wurjrqliruphv /wurɳˋɊȻqɓiȽ˓upl˓c/ zklfk 
+frqwdlqv rqob rqh idplob, wkh Wurjrqlgdh. Wkh idplob Wurjrqlgdh frqwdlqv 46 vshflhv lq 
+vhyhq jhqhud. Wkh irvvlo uhfrug ri wkh wurjrqv gdwhv edfn 49 ploolrq bhduv wr wkh Hduob 
+Hrfhqh. Wkhb pljkw frqvwlwxwh d phpehu ri wkh edvdo udgldwlrq ri wkh rughu Frudflliruphv 
+dqg rughu Sdvvhuliruphv ru eh forvhob uhodwhg wr prxvhelugv dqg rzov. Wkh zrug wurjrq lv 
+Juhhn iru "qleeolqj" dqg uhihuv wr wkh idfw wkdw wkhvh elugv jqdz krohv lq wuhhv wr pdnh 
+wkhlu qhvwv. Wurjrqv duh uhvlghqwv ri wurslfdo iruhvwv zruogzlgh. Wkh juhdwhvw glyhuvlwb 
+lv lq wkh Qhrwurslfv, zkhuh irxu jhqhud rffxuv. Wkhb ihhg rq lqvhfwv dqg iuxlw, dqg wkhlu 
+eurdg eloov dqg zhdn ohjv uhiohfw wkhlu glhw dqg dueruhdo kdelwv. Dowkrxjk wkhlu ioljkw 
+lv idvw, wkhb duh uhoxfwdqw wr iob dqb glvwdqfh. Wurjrqv duh jhqhudoob qrw pljudwrub, 
+dowkrxjk vrph vshflhv xqghuwdnh sduwldo orfdo pryhphqwv. Wurjrqv kdyh vriw, riwhq frorxuixo, 
+ihdwkhuv zlwk glvwlqfwlyh pdoh dqg ihpdoh soxpdjh.''',
+'''Gzhjwtynktwrjx nx fs twijw tk gnwix ymfy htsyfnsx ymj mtwsgnqqx, lwtzsi mtwsgnqqx, 
+mttutjx fsi btti mttutjx. Ymjxj gnwix bjwj uwjantzxqd hqfxxnknji fx rjrgjwx tk Htwfhnnktwrjx. 
+Ymj hqfij nx inxywngzyji ns Fkwnhf, Fxnf, Jzwtuj fsi Rjqfsjxnf. Ymj lwtzsi mtwsgnqqx 
+(Gzhtwanifj) fwj f kfrnqd tk ymj twijw Gzhjwtynktwrjx, bnym f xnslqj ljszx Gzhtwazx fsi 
+ybt jcyfsy xujhnjx. Ymj kfrnqd nx jsijrnh yt xzg-Xfmfwfs Fkwnhf: ymj Fgdxxnsnfs lwtzsi 
+mtwsgnqq thhzwx ns f gjqy kwtr Xjsjlfq jfxy yt Jymntunf, fsi ymj xtzymjws lwtzsi mtwsgnqq 
+thhzwx ns xtzymjws fsi Jfxy Fkwnhf. Lwtzsi mtwsgnqqx fwj qfwlj, bnym fizqyx fwtzsi f rjywj 
+yfqq. Gtym xujhnjx fwj lwtzsi-ibjqqnsl, zsqnpj tymjw mtwsgnqqx. Fqxt zsqnpj rtxy tymjw 
+mtwsgnqqx, ymjd fwj hfwsnatwtzx fsi kjji ts nsxjhyx, xsfpjx, tymjw gnwix, frumngnfsx fsi 
+jajs ytwytnxjx. Ymjd fwj frtsl ymj qtsljxy-qnaji tk fqq gnwix, fsi ymj qfwljw xtzymjws 
+xujhnjx nx utxxngqd ymj xqtbjxy-gwjjinsl (ywnjssnfqqd) fsi qtsljxy-qnaji tk fqq gnwix.''',
+'''Cqn Lxajlrroxavnb jan j paxdy xo dbdjuuh lxuxdaodu kramb rwludmrwp cqn trwporbqnab, 
+cqn knn-njcnab, cqn axuunab, cqn vxcvxcb, jwm cqn cxmrnb. Cqnh pnwnajuuh qjen bhwmjlchuh, 
+frcq cqann oxafjam-yxrwcrwp cxnb (jwm cxnb 3 & 4 odbnm jc cqnra kjbn), cqxdpq rw vjwh 
+trwporbqnab xwn xo cqnbn rb vrbbrwp. Cqn vnvknab xo cqrb xamna jan urwtnm kh cqnra “bujvvrwp” 
+knqjerxda, cqajbqrwp cqnra yanh xwcx bdaojlnb cx mrbjav xa rwljyjlrcjcn cqnv. Cqrb rb ujapnuh 
+jw Xum Fxaum xamna, frcq cqn anyanbnwcjcrxw rw cqn Wnf Fxaum urvrcnm cx cqn mxinw xa bx 
+bynlrnb xo cxmrnb jwm vxcvxcb, jwm j vnan qjwmodu xo cqn vxan cqjw j qdwmanm bynlrnb xo 
+trwporbqnab. Cqn vxcvxcb xa Vxvxcrmjn jan j ojvruh xo kramb rw cqn xamna Lxajlrroxavnb; Juu 
+ngcjwc vxcvxcb jan anbcarlcnm cx fxxmujwm xa oxanbcb rw cqn Wnxcaxyrlb, jwm cqn ujapnbc jan 
+rw Lnwcaju Jvnarlj. Cqnh qjen j lxuxdaodu yudvjpn jwm j anujcrenuh qnjeh kruu. Juu nglnyc 
+cqn cxmh vxcvxc qjen anujcrenuh uxwp cjrub cqjc rw bxvn bynlrnb qjen j mrbcrwlcren 
+ajltnc-urtn cry.''',
+'''Vqvm niuqtqma wn tizomtg izjwzmit jqzla uism cx bpm wzlmz Xqkqnwzuma , bpm jmab-svwev wn 
+bpmu jmqvo bpm Xqkqlim, epqkp qvktclma bpm ewwlxmksmza ivl ktwam zmtibqdma. Bpm Xqkqnwzuma 
+kwvbiqv ijwcb 71 tqdqvo omvmzi, wn epqkp bpm Xqkqlim uism cx ijwcb pitn. Qv omvmzit, bpm 
+Xqkqnwzuma izm qvamkbqdwzwca, itbpwcop bpm jizjmba ivl bwckiva uwabtg mib nzcqb ivl bpm 
+pwvmgocqlma izm cvqycm iuwvo jqzla qv jmqvo ijtm bw lqomab jmmaeif (itbpwcop qvamkba uism 
+cx bpm jcts wn bpmqz lqmb). Vmiztg itt Xqkqnwzuma pidm xizzwb-tqsm hgowlikbgt nmmb—bew bwma 
+nwzeizl ivl bew jiks, iv izzivomumvb bpib pia wjdqwca ildivbioma nwz jqzla bpib axmvl uckp 
+wn bpmqz bqum wv bzmm bzcvsa. Iv mfkmxbqwv izm i nme axmkqma wn bpzmm-bwml ewwlxmksmza. Bpm 
+rikiuiza iaqlm, Xqkqnwzuma lw vwb pidm lwev nmibpmza ib ivg iom, wvtg bzcm nmibpmza. Bpmg 
+zivom qv aqhm nzwu bpm zcnwca xqkctmb ib 8 kmvbqumbzma qv tmvobp, ivl emqopqvo 7 oziua, bw 
+bpm bwkw bwckiv, ib 63 kmvbqumbzma twvo, ivl emqopqvo 680 oziua. Itt vmab qv kidqbqma ivl 
+pidm itbzqkqit gwcvo.''',
+'''Sqhyqcyvehcui (eh Sqhyqcqu) yi qd ehtuh ev fhycqhybo vbywxjbuii ryhti jxqj xqi unyijut 
+veh eluh 50 cybbyed ouqhi. Jxu whekf ydsbktui jxu vqcybo Sqhyqcytqu (iuhyucqi) qdt jxu 
+unjydsj vqcybyui iksx qi Fxehkihxqsytqu, Rqjxehdyjxytqu, Ytyehdyjxytqu qdt Qcuwxydehdyjxytqu. 
+Unjqdj cucruhi (iuhyucqi) qhu edbo ademd vhec Iekjx Qcuhysq, rkj veiiybi ev cqdo unjydsj jqnq 
+qhu qbie vekdt yd ejxuh sedjydudji ydsbktydw Ukhefu qdt Dehjx Qcuhysq. Jxu hut-buwwut iuhyucq 
+(Sqhyqcq shyijqjq), qbie ademd qi jxu shuijut sqhyqcq /aÜhy˘ɇˠcɏ/ qdt shuijut iuhyucq, yi q 
+ceijbo fhutqjeho juhhuijhyqb ryht yd jxu iuhyucq vqcybo (Sqhyqcytqu), ydsbktut yd jxu ehtuh 
+Sqhyqcyvehcui (qbedw myjx jxhuu unjydsj vqcybyui). Jxu hut-buwwut iuhyucq yi mytubo tyijhyrkjut 
+yd Iekjx Qcuhysq, esskhhydw yd sudjhqb qdt uqijuhd Rhqpyb jxhekwx uqijuhd Rebylyq qdt Fqhqwkqo 
+je Khkwkqo qdt sudjhqb Qhwudjydq (iekjx je Bq Fqcfq). Byau jxu rbqsa-buwwut iuhyucq, vqhcuhi 
+evjud kiu jxuc qi wkqht qdycqbi je fhejusj fekbjho vhec fhutqjehi qdt iecujycui xkcqd ydjhktuhi.''',
+'''Nby ilxyl Zufwihczilgym cm lyjlymyhnyx vs nby yrnuhn zugcfs Zufwihcxuy (zufwihm uhx wuluwulum) 
+uhx u buhxzof iz yhcaguncw Jufyiayhy mjywcym. Nluxcncihuffs, nby inbyl vclx iz jlys zugcfcym 
+Wunbulncxuy (Hyq Qilfx pofnolym uhx wihxilm), Muacnnulccxuy (mywlynulsvclx), Juhxcihcxuy (imjlysm), 
+Uwwcjcnlcxuy (buqem) qyly wfummczcyx ch Zufwihczilgym. Buqem uly vclxm iz jlys iz nby zugcfs 
+Uwwcjcnlcxuy. Nbys uly pyls qcxyfs xcmnlcvonyx uhx uly ziohx ih uff wihnchyhnm yrwyjn Uhnulwncwu. 
+Ch Zyvlouls 2005, Wuhuxcuh ilhcnbifiacmn Fiocm Fyzyvply uhhiohwyx u gynbix iz gyumolcha upcuh "CK" 
+vs gyumolcha nbycl chhipuncih ch zyyxcha buvcnm. Vumyx ih nbcm mwufy, buqem qyly hugyx ugiha nby 
+gimn chnyffcayhn vclxm. Nby buqe cm pyls chnyffcayhn niqulxm boguhm uhx inbyl buqem. Ysymcabn: 
+buqem, fcey gimn vclxm, uly nynluwbligunm qcnb ziol nsjym iz wifiol lywyjnilm ch nby ysy. Ohfcey 
+migy vclxm, von mcgcful ni inbyl xcolhuf lujnilm, gimn buqe mjywcym uly pcifyn-myhmcncpy von wuhhin 
+jylwycpy ofnlupcifyn fcabn. Buqem ufmi bupy lyfuncpyfs bcab pcmouf uwocns.''',
+'''Mxoolqp (Mpfqqxzfclojbp), xipl hkltk xp mpfqqxzfkbp xob yfoap tfqe x pqolkd zrosba ybxh, rmofdeq 
+pqxkzb, xka zixtba cbbq. Qebv xob zixppfcfba fk clro cxjfifbp. Mxoolqp—xilkd tfqe oxsbkp, zoltp, 
+gxvp, xka jxdmfbp—xob xjlkd qeb jlpq fkqbiifdbkq yfoap, xka qeb xyfifqv lc pljb pmbzfbp ql fjfqxqb 
+erjxk pmbbze bkexkzbp qebfo mlmrixofqv xp mbqp. Qebv cloj qeb jlpq sxofxyiv pfwba yfoa loabo fk 
+qbojp lc ibkdqe; jxkv xob sfsfaiv zlilroba xka pljb, jriqf-zlilroba. Jlpq mxoolqp buefyfq ifqqib 
+lo kl pburxi afjlomefpj fk qeb sfprxi pmbzqorj. Qeb jlpq fjmloqxkq zljmlkbkqp lc jlpq mxoolqp' 
+afbqp xob pbbap, krqp, corfq, yrap, xka lqebo mixkq jxqbofxi. X cbt pmbzfbp pljbqfjbp bxq xkfjxip 
+xka zxooflk, tefib qeb ilofbp xka ilofhbbqp xob pmbzfxifpba clo cbbafkd lk ciloxi kbzqxo xka plcq 
+corfqp. Xijlpq xii mxoolqp kbpq fk qobb eliiltp (lo kbpq ylubp fk zxmqfsfqv), xka ixv tefqb bddp 
+colj tefze exqze xiqofzfxi (ebimibpp) vlrkd. Qoxmmfkd tfia mxoolqp clo qeb mbq qoxab, xp tbii xp 
+erkqfkd, exyfqxq ilpp, xka zljmbqfqflk colj fksxpfsb pmbzfbp, exp afjfkfpeba tfia mlmrixqflkp, 
+tfqe mxoolqp ybfkd prygbzqba ql jlob bumilfqxqflk qexk xkv lqebo dolrm lc tfia yfoap.''',
+'''T itllxkbgx bl tgr ubkw hy max hkwxk Itllxkbyhkfxl; ykhf Etmbg itllxk 'litkkhp' tgw yhkfbl '
+-latixw') pabva bgvenwxl fhkx matg atey hy tee ubkw lixvbxl. Lhfxmbfxl dghpg tl ixkvabgz ubkwl, 
+itllxkbgxl zxgxkteer atox tg tgblhwtvmre tkktgzxfxgm hy maxbk mhxl (makxx ihbgmbgz yhkptkw tgw 
+hgx utvd), pabva ytvbebmtmxl ixkvabgz. Pbma fhkx matg 140 ytfbebxl Itllxkbyhkfxl bl max etkzxlm 
+hkwxk hy ubkwl tgw tfhgz max fhlm wboxklx vetwxl hy mxkkxlmkbte oxkmxuktmxl, kxikxlxgmbgz 60% hy 
+ubkwl. Fhlm itllxkbgxl tkx bglxvmbohkhnl hk hfgbohkhnl, tgw xtm uhma bglxvml tgw yknbm hk lxxwl. 
+Max mxkfl "itllxkbgx" tgw "Itllxkbyhkfxl" tkx wxkboxw ykhf max lvbxgmbybv gtfx hy max ahnlx 
+litkkhp, Itllxk whfxlmbvnl, tgw nembftmxer ykhf max Etmbg mxkf itllxk, pabva kxyxkl mh litkkhpl 
+tgw lbfbetk lftee ubkwl. Max exz hy itllxkbgx ubkwl vhgmtbgl tg twwbmbhgte lixvbte twtimtmbhg 
+yhk ixkvabgz. T mxgwhg bg max kxtk hy max exz knggbgz ykhf max ngwxklbwx hy max mhxl mh max 
+fnlvex uxabgw max mbubhmtklnl pbee tnmhftmbvteer ux ineexw tgw mbzamxg paxg max exz uxgwl, 
+vtnlbgz max yhhm mh vnke tgw uxvhfx lmbyy paxg max ubkw etgwl hg t uktgva. Mabl xgtuexl 
+itllxkbgxl mh lexxi pabex ixkvabgz pbmahnm yteebgz hyy.'''
+
 ]
 
 
 keys = [13, 17, 21, 14, 18, 20, 23, 8, 11, 2, 7, 9, 17, 13, 6, 5, 4, 24, 13, 22, 21, 10, 8, 6, 2, 7, 9, 15, 
-25, 5, 12, 16, 19, 8, 16]
+25, 5, 12, 16, 19, 8, 16, 12, 11, 3, 5, 9, 8, 16, 20, 23, 19]
 
 key_audios = ['C:/BirdCipher/Audios/VoiceAudios/k13.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k17.mp3',
 'C:/BirdCipher/Audios/VoiceAudios/k21.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k14.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k18.mp3', 

@@ -328,7 +328,7 @@ def updatePlayer_coins():
 match = False
 
 prueba_list_present = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 
-24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
 
 #fg = input("ws: ")
 
@@ -1376,12 +1376,11 @@ def GUI_BirdCipher_Machine():
 	#imageLabel = tk.Label(miFrame, image=miImagen)
 	#imageLabel.pack()
 
-	cipher_text = tk.Label(fr, text = secret_messages[index], font = ("Comic Sans MS", 9
-		), justify = 'center')
+	cipher_text = tk.Label(fr, text = secret_messages[index], font = ("Comic Sans MS", 9), justify = 'center')
 	#cipher_text.place(x = 30, y = 30)
 	#cipher_text.pack(pady = 30)
 	cipher_text.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
-	cipher_text.place(x = 60, y = 40)
+	cipher_text.place(x = 60, y = 60)
 
 
 	nicknameCuad = tk.Entry(fr, textvariable=player_answer_decrypt, font = ("Comic Sans MS", 13), justify = "center")
@@ -1485,6 +1484,9 @@ def GUI_BirdCipher_Machine():
 	cipher_text2.config(bg = '#050005', fg = '#FFFFFF')
 	cipher_text2.place(x = 60, y = 40, height = 70)
 
+	scrollVetrn = tk.Scrollbar(fr2, command = cipher_text2.yview)
+	scrollVetrn.place(x = 710, y = 40)
+
 	key_fernet_label = tk.Label(fr2, text = "Key for Fernet algorithm")
 	key_fernet_label.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
 	key_fernet_label.place(x = 65, y = 120)
@@ -1497,7 +1499,7 @@ def GUI_BirdCipher_Machine():
 	encrypted_label.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
 	encrypted_label.place(x = 65, y = 180)
 	
-	cipher_text2_encrp = tk.Label(fr2, text = "", font = ("Comic Sans MS", 10), width = 80)
+	cipher_text2_encrp = tk.Label(fr2, text = "", font = ("Comic Sans MS", 7), width = 105)
 	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF')
 	cipher_text2_encrp.place(x = 60, y = 210, height = 80)
 
@@ -1505,13 +1507,10 @@ def GUI_BirdCipher_Machine():
 	nicknameCuad2.config(bg = '#050005', fg = '#7e086c')
 	nicknameCuad2.place(x = 790, y = 100)
 	
-
 	fernet_key_button = tk.Button(fr2, image = generate_key_image, font = ("Comic Sans MS", 8), command = lambda:fernet_key_gen())
 	fernet_key_button.config(fg = '#7e086c')
 	fernet_key_button.place(x = 800, y = 150)
 	
-	#decrypt_button.pack()
-
 	fernet_encryption_message = tk.Button(fr2, image = encrypt_message_image, font = ("Comic Sans MS", 8), command = lambda:fernet_encryption_function())
 	fernet_encryption_message.config(fg = '#1af017')
 	fernet_encryption_message.place(x = 900, y = 150)
@@ -1576,12 +1575,9 @@ def GUI_BirdCipher_Machine():
 
 	# --------------
 
-
 	cipher_text3 = tk.Label(fr3, font = ("Comic Sans MS", 10), justify = 'center', width = 72, height = 4)
 	cipher_text3.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
 	cipher_text3.place(x = 60, y = 40)
-
-
 
 	nicknameCuad3 = tk.Entry(fr3, textvariable=password_for_decrypt, font = ("Comic Sans MS", 13), justify = "center")
 	nicknameCuad3.config(bg = '#050005', fg = '#7e086c')
@@ -1591,8 +1587,6 @@ def GUI_BirdCipher_Machine():
 	decrypt_button3.config(fg = '#1af017')
 	decrypt_button3.place(x = 800, y = 150)
 	
-	#decrypt_button.pack()
-
 	decrypt_listen3 = tk.Button(fr3, image = listen_buttonImg, font = ("Comic Sans MS", 8), command = lambda:listen_decrypt_text())
 	decrypt_listen3.config(fg = '#1af017')
 	decrypt_listen3.place(x = 900, y = 150)
