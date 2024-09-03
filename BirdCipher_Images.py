@@ -285,8 +285,20 @@ number_species = [38, 55, 13, 8, 10, 457, 442, 23, 42, 441, 3, 20, 188, 39, 23, 
 97, 73, 141, 240, 355, 42, 420, 20, 1, 52, 83, 248, 541, 8, 119, 502, 7715]
 
 bird_songs = ['C:/BirdCipher/Audios/BirdSongs/BirdSong_0.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_1.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_2.wav',
-'', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 
-'C:/BirdCipher/Audios/BirdSongs/BirdSong_34.wav']
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_3.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_4.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_5.wav', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_6.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_7.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_8.wav', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_9.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_10.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_11.wav', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_12.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_13.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_14.wav', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_15.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_16.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_17.wav', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_18.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_19.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_20.wav', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_21.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_22.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_23.wav', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_24.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_25.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_26.wav', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_27.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_28.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_29.wav', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_30.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_31.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_32.wav', 
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_33.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_34.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_35.wav',
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_36.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_37.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_38.wav',
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_39.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_40.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_41.wav',
+'C:/BirdCipher/Audios/BirdSongs/BirdSong_42.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_43.wav', 'C:/BirdCipher/Audios/BirdSongs/BirdSong_44.wav']
 
 
 # print(len(BirdCipher_list))
