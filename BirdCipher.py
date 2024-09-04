@@ -139,6 +139,8 @@ coins = 0
 feathers = 0
 diamonds = 0
 lives = 4
+ch_profession = True
+jobChosen = ''
 
 login = tk.Tk()
 login.title("BirdCipher welcome and login")
@@ -169,13 +171,14 @@ def createPlayer():
 	global password_db
 	global confirmPlyr
 	global hash1
+	global ch_profession
 
 	bdatos = bytes(password.get(), 'utf-8')
 	h = hashlib.new(algoritmo, bdatos)
 	hash1 = HASH.generaHash(h)
 
-	miConexion = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
-	user = 'uuwo4nvlyzn61jj5sqtu', dbname = 'b5882sxpx70asjk9ktop', password = 'oi7xGqSj3Gcd9tcfzYegl86GwXz1yC')
+	miConexion = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+	user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
 
 	miCursor = miConexion.cursor()
 
@@ -212,6 +215,7 @@ def createPlayer():
 		diamonds = records[0][7]
 		lives = records[0][8]
 		confirmPlyr = True
+		ch_profession = False
 
 		#playsound('PlayerCreated.mp3')
 
@@ -301,12 +305,207 @@ login.mainloop()
 
 
 
+if ch_profession == False:
+
+	profession = tk.Tk()
+	profession.title('Choose your profession')
+	profession.geometry('300x700')
+
+	def birder_choose():
+
+		global jobChosen
+
+		jobChosen = 'Birder - biologist'
+
+		miConexion_prof1 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+
+		miCursor_prof1 = miConexion_prof1.cursor()
+
+		sql35 = 'update players set profession = (%s) where nickname = (%s)'
+		datasql35 = (jobChosen, nickname_db)
+
+		miCursor_prof1.execute(sql35, datasql35)
+
+		miConexion_prof1.commit()
+		miConexion_prof1.close()
+
+		#playsound()
+		profession.destroy()
+
+
+	def developer_choose():
+
+		global jobChosen
+
+		jobChosen = 'Software Developer'
+
+		miConexion_prof1 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+
+		miCursor_prof1 = miConexion_prof1.cursor()
+
+		sql35 = 'update players set profession = (%s) where nickname = (%s)'
+		datasql35 = (jobChosen, nickname_db)
+
+		miCursor_prof1.execute(sql35, datasql35)
+
+		miConexion_prof1.commit()
+		miConexion_prof1.close()
+
+		#playsound()
+		profession.destroy()
+
+
+	def database_manager_choose():
+
+		global jobChosen
+
+		jobChosen = 'Database Manager'
+
+		miConexion_prof1 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+
+		miCursor_prof1 = miConexion_prof1.cursor()
+
+		sql35 = 'update players set profession = (%s) where nickname = (%s)'
+		datasql35 = (jobChosen, nickname_db)
+
+		miCursor_prof1.execute(sql35, datasql35)
+
+		miConexion_prof1.commit()
+		miConexion_prof1.close()
+
+		#playsound()
+		profession.destroy()
+
+
+	def graphic_designer_choose():
+
+		global jobChosen
+
+		jobChosen = 'Graphic Designer'
+
+		miConexion_prof1 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+
+		miCursor_prof1 = miConexion_prof1.cursor()
+
+		sql35 = 'update players set profession = (%s) where nickname = (%s)'
+		datasql35 = (jobChosen, nickname_db)
+
+		miCursor_prof1.execute(sql35, datasql35)
+
+		miConexion_prof1.commit()
+		miConexion_prof1.close()
+
+		#playsound()
+		profession.destroy()
+
+
+	def translator_choose():
+
+		global jobChosen
+
+		jobChosen = 'Translator'
+
+		miConexion_prof1 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+
+		miCursor_prof1 = miConexion_prof1.cursor()
+
+		sql35 = 'update players set profession = (%s) where nickname = (%s)'
+		datasql35 = (jobChosen, nickname_db)
+
+		miCursor_prof1.execute(sql35, datasql35)
+
+		miConexion_prof1.commit()
+		miConexion_prof1.close()
+
+		#playsound()
+		profession.destroy()
+
+
+	def collaborator_choose():
+
+		global jobChosen
+
+		jobChosen = 'Collaboration promover'
+
+		miConexion_prof1 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+
+		miCursor_prof1 = miConexion_prof1.cursor()
+
+		sql35 = 'update players set profession = (%s) where nickname = (%s)'
+		datasql35 = (jobChosen, nickname_db)
+
+		miCursor_prof1.execute(sql35, datasql35)
+
+		miConexion_prof1.commit()
+		miConexion_prof1.close()
+
+		#playsound()
+		profession.destroy()
+
+
+
+	birder_logo = tk.PhotoImage(file = 'Birder-logo.png')
+	developer_logo = tk.PhotoImage(file = 'Developer-logo.png')
+	database_manager_logo = tk.PhotoImage(file = 'Database Manager-logo.png')
+	graphic_designer_logo = tk.PhotoImage(file = 'Graphical Designer-logo.png')
+	translator_logo = tk.PhotoImage(file = 'Translator-logo.png')
+	collaborator_logo = tk.PhotoImage(file = 'Collaboration-logo.png')
+
+	birder_button = tk.Button(profession, image = birder_logo, command = lambda:birder_choose())
+	birder_button.place(x = 20, y = 20)
+	birder_button.config(bg = 'green')
+
+	developer_button = tk.Button(profession, image = developer_logo, command = lambda:developer_choose())
+	developer_button.place(x = 20, y = 120)
+	developer_button.config(bg = 'red')
+
+	database_manager_button = tk.Button(profession, image = database_manager_logo, command = lambda:database_manager_choose())
+	database_manager_button.place(x = 20, y = 220)
+	database_manager_button.config(bg = 'blue')
+
+	graphic_designer_button = tk.Button(profession, image = graphic_designer_logo, command = lambda:graphic_designer_choose())
+	graphic_designer_button.place(x = 20, y = 310)
+	graphic_designer_button.config(bg = 'purple')
+
+	translator_button = tk.Button(profession, image = translator_logo, command = lambda:translator_choose())
+	translator_button.place(x = 20, y = 400)
+	translator_button.config(bg = 'black')
+
+	collaborator_button = tk.Button(profession, image = collaborator_logo, command = lambda:collaborator_choose())
+	collaborator_button.place(x = 20, y = 505)
+	collaborator_button.config(bg = 'purple')
+
+	birder_label = tk.Label(profession, text = 'Birder - Biologist', font = ("Comic Sans MS", 11))
+	birder_label.place(x = 120, y = 48)
+
+	developer_label = tk.Label(profession, text = 'Software Developer', font = ("Comic Sans MS", 11))
+	developer_label.place(x = 120, y = 150)
+
+	database_manager_label = tk.Label(profession, text = 'Database Manager', font = ("Comic Sans MS", 11))
+	database_manager_label.place(x = 120, y = 235)
+
+	graphic_designer_label = tk.Label(profession, text = 'Graphic Designer', font = ("Comic Sans MS", 11))
+	graphic_designer_label.place(x = 120, y = 325)
+
+	translator_label = tk.Label(profession, text = 'Translator', font = ("Comic Sans MS", 11))
+	translator_label.place(x = 120, y = 425)
+
+	collaborator_label = tk.Label(profession, text = 'Collaboration promover', font = ("Comic Sans MS", 11))
+	collaborator_label.place(x = 120, y = 520)
+	
+	profession.mainloop()
 
 
 def updatePlayer_points():
 
-	conexion2 = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
-	user = 'uuwo4nvlyzn61jj5sqtu', dbname = 'b5882sxpx70asjk9ktop', password = 'oi7xGqSj3Gcd9tcfzYegl86GwXz1yC')
+	conexion2 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+	user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
 	
 	cursor2 = conexion2.cursor()
 
@@ -320,8 +519,8 @@ def updatePlayer_points():
 
 def updatePlayer_coins():
 
-	conexion3 = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
-	user = 'uuwo4nvlyzn61jj5sqtu', dbname = 'b5882sxpx70asjk9ktop', password = 'oi7xGqSj3Gcd9tcfzYegl86GwXz1yC')
+	conexion3 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+	user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
 	
 	cursor3 = conexion3.cursor()
 
@@ -334,8 +533,8 @@ def updatePlayer_coins():
 
 def loseLife():
 
-	conexion4 = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
-	user = 'uuwo4nvlyzn61jj5sqtu', dbname = 'b5882sxpx70asjk9ktop', password = 'oi7xGqSj3Gcd9tcfzYegl86GwXz1yC')
+	conexion4 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+	user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
 
 	cursor4 = conexion4.cursor()
 
