@@ -300,6 +300,9 @@ close_window_login.place(x = 90, y = 380)
 login.mainloop()
 
 
+
+
+
 def updatePlayer_points():
 
 	conexion2 = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
@@ -1863,7 +1866,7 @@ while End == False or lives > 0:
 
 	elif guess == secretNumber and attempts <= 7 and len(BirdCipher_list_k) > 1:
 
-		points = points + 10
+		points = points + 100
 		updatePlayer_points()
 		print()
 		print("---------------------------------------------------- RESULTS -----------------------------------------------------")
