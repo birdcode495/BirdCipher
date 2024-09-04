@@ -507,8 +507,28 @@ key_audios = ['C:/BirdCipher/Audios/VoiceAudios/k13.mp3', 'C:/BirdCipher/Audios/
 'C:/BirdCipher/Audios/VoiceAudios/k19.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k8.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k16.mp3']
 
 crypto_audios = ['C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_0.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_1.mp3',
-'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_2.mp3', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-'', '', '', '', '', '', '', '', '', '', '', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_34.mp3']
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_2.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_3.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_4.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_5.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_6.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_7.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_8.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_9.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_10.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_11.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_12.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_13.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_14.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_15.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_16.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_17.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_18.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_19.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_20.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_21.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_22.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_23.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_24.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_25.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_26.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_27.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_28.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_29.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_30.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_31.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_32.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_33.mp3', 
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_34.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_35.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_36.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_37.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_38.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_39.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_40.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_41.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_42.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_43.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_44.mp3']
 
 # print(len(keys))
 # print(len(key_audios))

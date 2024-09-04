@@ -79,6 +79,8 @@ from hash import *
 
 import pyperclip as clipboard
 
+import psycopg2
+
 
 
 
@@ -172,7 +174,8 @@ def createPlayer():
 	h = hashlib.new(algoritmo, bdatos)
 	hash1 = HASH.generaHash(h)
 
-	miConexion = sqlite3.connect("BirdCipher_DB.db")
+	miConexion = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
+	user = 'uuwo4nvlyzn61jj5sqtu', dbname = 'b5882sxpx70asjk9ktop', password = 'oi7xGqSj3Gcd9tcfzYegl86GwXz1yC')
 
 	miCursor = miConexion.cursor()
 
@@ -182,13 +185,13 @@ def createPlayer():
 
 	#miCursor.execute("ALTER TABLE encryptedMessages ADD COLUMN key_b varchar(100)")
 
-	sql = 'insert into Players(username, nickname, password, points, coins, feathers, diamonds, lifes) values(?,?,?,?,?,?,?,?)'
+	sql = 'insert into Players(username, nickname, password, points, coins, feathers, diamonds, lives) values(%s,%s,%s,%s,%s,%s,%s,%s)'
 	data = (username.get(), nickname.get(), hash1, 0, 0, 0, 0, 3)
 
-	sql2 = 'insert into encryptedMessages(nickname, password) values(?,?)'
+	sql2 = 'insert into encryptedMessages(nickname, password) values(%s,%s)'
 	data2 = (nickname.get(), hash1)
 
-	sql3 = 'select * from Players where nickname = (?)'
+	sql3 = 'select * from Players where nickname = (%s)'
 	data3 = (nickname.get(),)
 
 	miCursor.execute(sql3, data3)
@@ -299,10 +302,12 @@ login.mainloop()
 
 def updatePlayer_points():
 
-	conexion2 = sqlite3.connect("BirdCipher_DB.db")
+	conexion2 = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
+	user = 'uuwo4nvlyzn61jj5sqtu', dbname = 'b5882sxpx70asjk9ktop', password = 'oi7xGqSj3Gcd9tcfzYegl86GwXz1yC')
+	
 	cursor2 = conexion2.cursor()
 
-	sql4 = "update Players set (points) = (?) where nickname = (?)"
+	sql4 = "update Players set points = (%s) where nickname = (%s)"
 	datsActs = (points, nickname_db)
 
 	cursor2.execute(sql4, datsActs)
@@ -312,10 +317,12 @@ def updatePlayer_points():
 
 def updatePlayer_coins():
 
-	conexion3 = sqlite3.connect("BirdCipher_DB.db")
+	conexion3 = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
+	user = 'uuwo4nvlyzn61jj5sqtu', dbname = 'b5882sxpx70asjk9ktop', password = 'oi7xGqSj3Gcd9tcfzYegl86GwXz1yC')
+	
 	cursor3 = conexion3.cursor()
 
-	sql5 = "update Players set (coins) = (?) where nickname = (?)"
+	sql5 = "update Players set coins = (%s) where nickname = (%s)"
 	datsActs2 = (coins, nickname_db)
 
 	cursor3.execute(sql5, datsActs2)
