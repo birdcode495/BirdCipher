@@ -203,7 +203,7 @@ def createPlayer():
 	if len(dt) == 0:
 
 		miCursor.execute(sql, data)
-		miCursor.execute(sql2, data2)
+		#miCursor.execute(sql2, data2)
 		miCursor.execute(sql3, data3)
 		records = miCursor.fetchall()
 		username_db = records[0][1]
@@ -1379,7 +1379,7 @@ def GUI_BirdCipher_Machine():
 		# message_to_encrypt = cipher_text2.get("1.0", "end-1c")
 		# message_to_encrypt = message_to_encrypt.encode()
 		key_encryption = Fernet.generate_key()
-		#f = Fernet(key)
+		
 		key_fernet_text.config(text = key_encryption.decode())
 		clipboard.copy(key_encryption)
 
@@ -1901,8 +1901,10 @@ def GUI_BirdCipher_Machine():
 		h = hashlib.new(algoritmo, bdatos)
 		hash2 = HASH.generaHash(h)
 
-		miConexion2 = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
-		user = 'uuwo4nvlyzn61jj5sqtu', dbname = 'b5882sxpx70asjk9ktop', password = 'oi7xGqSj3Gcd9tcfzYegl86GwXz1yC')
+		key_encryption = key_encryption.decode()
+
+		miConexion2 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
 		
 		miCursor2 = miConexion2.cursor()
 
@@ -1912,16 +1914,16 @@ def GUI_BirdCipher_Machine():
 		sql_verf_hash = 'select * from Players where nickname = (%s)'
 		sql_verf_hash_data = (nickname_db,)
 
-		sql_verf_server = 'select * from encryptedMessages where server = (%s)'
-		sql_verf_server_data = (target_person,)
+		sql_verf_server = 'select * from encryptedMessages where (nickname = (%s) and server = (%s))'
+		sql_verf_server_data = (nickname_db, target_person)
 
-		sql111 = 'update encryptedMessages set (nickname, password, server, actual_message, key_b) = (%s,%s,%s,%s,%s) where server = (%s)'
-		datasql111 = (nickname_db, hash2, target_person, token, key_encryption, target_person)
+		sql111 = 'update encryptedMessages set (nickname, password, server, actual_message, key_b) = (%s,%s,%s,%s,%s) where (nickname = (%s) and server = (%s))'
+		datasql111 = (nickname_db, hash2, target_person, token, key_encryption, nickname_db, target_person)
 
 		miCursor2.execute(sql_verf_hash, sql_verf_hash_data)
 		dlt5 = miCursor2.fetchall()
 
-		if dlt5[0][5] > 10 and hash2 == dlt5[0][3]:
+		if dlt5[0][5] >= 10 and hash2 == dlt5[0][3]:
 
 			miCursor2.execute(sql_verf_server, sql_verf_server_data)
 			df1 = miCursor2.fetchall()
@@ -1953,7 +1955,9 @@ def GUI_BirdCipher_Machine():
 		g = hashlib.new(algoritmo, cdatos)
 		hash3 = HASH.generaHash(g)
 
-		miConexion3 = sqlite3.connect("BirdCipher_DB.db")
+		miConexion3 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+		
 		miCursor3 = miConexion3.cursor()
 
 		sql33 = 'select * from Players where nickname = (%s)'
@@ -1973,11 +1977,11 @@ def GUI_BirdCipher_Machine():
 			if len(dlt7) > 0:
 
 				message_sent_decrypt = dlt7[0][4]
-				key_sent_decrypt = dlt7[0][6]
+				key_sent_decrypt = dlt7[0][5]
 
-				cipher_text3.config(text = dlt7[0][4], justify = "left", wraplength = 600, font = ("Comic Sans MS", 10))
+				cipher_text3.config(text = dlt7[0][4], justify = "left", wraplength = 600, font = ("Comic Sans MS", 8))
 				
-				key_fernet_text2.config(text = dlt7[0][6])
+				key_fernet_text2.config(text = dlt7[0][5])
 
 
 		miConexion3.commit()
@@ -2105,7 +2109,7 @@ while End == False or lives > 0:
 		caesarCipher()
 		#playsound("DecipherMessage.mp3")
 		print()
-		print("                                                     ", BirdCipher_sci_k[index], "                                      ")
+		print("                                                    ", BirdCipher_sci_k[index], "                                      ")
 		print()
 		time.sleep(3)
 		print("                                               ", BirdCipher_english_k[index], "                                        ")
@@ -2114,10 +2118,10 @@ while End == False or lives > 0:
 		print("                                                 Caesar Cipher Algorithm                                                ")
 		time.sleep(3)
 		print()
-		print("                                                 Simmetrycal cryptography                                                ")
+		print("                                                 Symmetrical cryptography                                                ")
 		time.sleep(3)
 		print()
-		print("                                    Here comes the BirdCipher Cryptographic Machine                                    ")
+		print("                                      Here comes the BirdCipher Cryptographic Machine                                    ")
 		print()
 		print()
 		print(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
