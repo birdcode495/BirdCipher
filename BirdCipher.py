@@ -138,7 +138,7 @@ points = 0
 coins = 0
 feathers = 0
 diamonds = 0
-lifes = 3
+lives = 4
 
 login = tk.Tk()
 login.title("BirdCipher welcome and login")
@@ -160,7 +160,7 @@ def createPlayer():
 	global coins
 	global feathers
 	global diamonds
-	global lifes
+	global lives
 	global username
 	global nickname
 	global password
@@ -186,7 +186,7 @@ def createPlayer():
 	#miCursor.execute("ALTER TABLE encryptedMessages ADD COLUMN key_b varchar(100)")
 
 	sql = 'insert into Players(username, nickname, password, points, coins, feathers, diamonds, lives) values(%s,%s,%s,%s,%s,%s,%s,%s)'
-	data = (username.get(), nickname.get(), hash1, 0, 0, 0, 0, 3)
+	data = (username.get(), nickname.get(), hash1, 0, 0, 0, 0, 4)
 
 	sql2 = 'insert into encryptedMessages(nickname, password) values(%s,%s)'
 	data2 = (nickname.get(), hash1)
@@ -210,7 +210,7 @@ def createPlayer():
 		coins = records[0][5]
 		feathers = records[0][6]
 		diamonds = records[0][7]
-		lifes = records[0][8]
+		lives = records[0][8]
 		confirmPlyr = True
 
 		#playsound('PlayerCreated.mp3')
@@ -224,7 +224,7 @@ def createPlayer():
 		coins = dt[0][5]
 		feathers = dt[0][6]
 		diamonds = dt[0][7]
-		lifes = dt[0][8]
+		lives = dt[0][8]
 		confirmPlyr = True
 
 		playsound('PlayerActivated.mp3')
@@ -332,7 +332,19 @@ def updatePlayer_coins():
 	conexion3.commit()
 	conexion3.close()
 
+def loseLife():
 
+	conexion4 = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
+	user = 'uuwo4nvlyzn61jj5sqtu', dbname = 'b5882sxpx70asjk9ktop', password = 'oi7xGqSj3Gcd9tcfzYegl86GwXz1yC')
+
+	cursor4 = conexion4.cursor()
+
+	sql6 = 'update players set lives = (%s) where nickname = (%s)'
+	datasql6 = (lives, nickname_db)
+
+	cursor4.execute(sql6, datasql6)
+	conexion4.commit()
+	conexion4.close()
 
 
 match = False
@@ -1461,7 +1473,7 @@ def GUI_BirdCipher_Machine():
 	labelDiamonds.config(bg = "#050005", fg = "#7e086c")
 	labelDiamonds.place(x = 500, y = 410)
 
-	labelLives = tk.Label(fr, text = lifes, font = ("Comic Sans MS", 13), justify = "center", width = 7)
+	labelLives = tk.Label(fr, text = lives, font = ("Comic Sans MS", 13), justify = "center", width = 7)
 	labelLives.config(bg = "#050005", fg = "#7e086c")
 	labelLives.place(x = 617, y = 410)
 
@@ -1690,19 +1702,21 @@ def GUI_BirdCipher_Machine():
 		h = hashlib.new(algoritmo, bdatos)
 		hash2 = HASH.generaHash(h)
 
-		miConexion2 = sqlite3.connect("BirdCipher_DB.db")
+		miConexion2 = psycopg2.connect(host = 'b5882sxpx70asjk9ktop-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'uuwo4nvlyzn61jj5sqtu', dbname = 'b5882sxpx70asjk9ktop', password = 'oi7xGqSj3Gcd9tcfzYegl86GwXz1yC')
+		
 		miCursor2 = miConexion2.cursor()
 
-		sql110 = 'insert into encryptedMessages(nickname, password, server, actual_message, key_b) values(?,?,?,?,?)'
+		sql110 = 'insert into encryptedMessages(nickname, password, server, actual_message, key_b) values(%s,%s,%s,%s,%s)'
 		datos_sql110 = (nickname_db, hash2, target_person, token, key_encryption)
 
-		sql_verf_hash = 'select * from Players where nickname = (?)'
+		sql_verf_hash = 'select * from Players where nickname = (%s)'
 		sql_verf_hash_data = (nickname_db,)
 
-		sql_verf_server = 'select * from encryptedMessages where server = (?)'
+		sql_verf_server = 'select * from encryptedMessages where server = (%s)'
 		sql_verf_server_data = (target_person,)
 
-		sql111 = 'update encryptedMessages set (nickname, password, server, actual_message, key_b) = (?,?,?,?,?) where server = (?)'
+		sql111 = 'update encryptedMessages set (nickname, password, server, actual_message, key_b) = (%s,%s,%s,%s,%s) where server = (%s)'
 		datasql111 = (nickname_db, hash2, target_person, token, key_encryption, target_person)
 
 		miCursor2.execute(sql_verf_hash, sql_verf_hash_data)
@@ -1743,10 +1757,10 @@ def GUI_BirdCipher_Machine():
 		miConexion3 = sqlite3.connect("BirdCipher_DB.db")
 		miCursor3 = miConexion3.cursor()
 
-		sql33 = 'select * from Players where nickname = (?)'
+		sql33 = 'select * from Players where nickname = (%s)'
 		datasql33 = (nickname_db,)
 
-		sql330 = 'select * from encryptedMessages where server = (?) and nickname = (?)'
+		sql330 = 'select * from encryptedMessages where server = (%s) and nickname = (%s)'
 		datasql330 = (nickname_db, target_person_decrypt)
 
 		miCursor3.execute(sql33, datasql33)
@@ -1791,7 +1805,7 @@ def GUI_BirdCipher_Machine():
 
 attempts = 1
 
-lives = 4
+
 
 End = False
 
@@ -1818,6 +1832,7 @@ while End == False or lives > 0:
 		print("   You have tried 7 times and have not been able to guess the size of this bird. You lost a life.")
 		print()
 		lives = lives - 1
+		loseLife()
 		print("   Now you have: ", lives, " lives")
 		IndexCreation()
 		secretNumber = number_species_k[index]
@@ -1871,7 +1886,7 @@ while End == False or lives > 0:
 		print()
 		print("---------------------------------------------------- RESULTS -----------------------------------------------------")
 		print()
-		print("   Congratulations!!! You guessed the total number of species of this group. You have earned 10 points!!!")
+		print("   Congratulations!!! You guessed the total number of species of this group. You have earned 100 points!!!")
 		print()
 		print("   Now you have: ", points, " points.")
 		#hit = True
@@ -2006,11 +2021,11 @@ while End == False or lives > 0:
 		print("--------------------------------------------------- RESULTS -----------------------------------------------------------")
 		print()
 		print()
-		print("   Congratulations!!! You guessed the size of the bird I was thinking of. You have earned 10 points!!!")
+		print("   Congratulations!!! You guessed the size of the bird I was thinking of. You have earned 100 points!!!")
 		#playsound("Congratulations.mp3")
 		time.sleep(3)
 		#playsound("End.mp3")
-		points = points + 10
+		points = points + 100
 		print()
 		print("Now you have: ", points, " points.")
 		del BirdCipher_list_k[0]
