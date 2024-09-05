@@ -120,7 +120,7 @@ bird_songs_k = bird_songs
 # ----------------------------- Temas tratados: Función print(""), función time.sleep(), función input() y reproducción de audio ----------------------------
 
 
-#playsound('Milvago_chimachima.wav')
+playsound('Milvago_chimachima.wav')
 
 
 
@@ -217,7 +217,7 @@ def createPlayer():
 		confirmPlyr = True
 		ch_profession = False
 
-		#playsound('PlayerCreated.mp3')
+		playsound('PlayerCreated.mp3')
 
 	elif dt[0][8] > 0 and hash1 == dt[0][3]:
 
@@ -254,12 +254,12 @@ def confirmPlayer():
 
 	if confirmPlyr == True:
 
-		#playsound('completedAuthentication.mp3')
+		playsound('completedAuthentication.mp3')
 		login.destroy()
 
-	# else:
+	else:
 
-	# 	playsound('completeAuth.mp3')
+		playsound('completeAuth.mp3')
 
 
 
@@ -330,7 +330,7 @@ if ch_profession == False:
 		miConexion_prof1.commit()
 		miConexion_prof1.close()
 
-		#playsound()
+		playsound('BirderChosen.mp3')
 		profession.destroy()
 
 
@@ -353,7 +353,7 @@ if ch_profession == False:
 		miConexion_prof1.commit()
 		miConexion_prof1.close()
 
-		#playsound()
+		playsound('DeveloperChosen.mp3')
 		profession.destroy()
 
 
@@ -376,7 +376,7 @@ if ch_profession == False:
 		miConexion_prof1.commit()
 		miConexion_prof1.close()
 
-		#playsound()
+		playsound('DatabaseManagerChosen.mp3')
 		profession.destroy()
 
 
@@ -399,7 +399,7 @@ if ch_profession == False:
 		miConexion_prof1.commit()
 		miConexion_prof1.close()
 
-		#playsound()
+		playsound('GraphicDesignerChosen.mp3')
 		profession.destroy()
 
 
@@ -422,7 +422,7 @@ if ch_profession == False:
 		miConexion_prof1.commit()
 		miConexion_prof1.close()
 
-		#playsound()
+		playsound('TranslatorChosen.mp3')
 		profession.destroy()
 
 
@@ -445,7 +445,7 @@ if ch_profession == False:
 		miConexion_prof1.commit()
 		miConexion_prof1.close()
 
-		#playsound()
+		playsound('CollaborationPromoterChosen.mp3')
 		profession.destroy()
 
 
@@ -496,7 +496,7 @@ if ch_profession == False:
 	translator_label = tk.Label(profession, text = 'Translator', font = ("Comic Sans MS", 11))
 	translator_label.place(x = 120, y = 425)
 
-	collaborator_label = tk.Label(profession, text = 'Collaboration promover', font = ("Comic Sans MS", 11))
+	collaborator_label = tk.Label(profession, text = 'Collaboration promoter', font = ("Comic Sans MS", 11))
 	collaborator_label.place(x = 120, y = 520)
 	
 	profession.mainloop()
@@ -613,15 +613,15 @@ def copy_hash():
 	global hash1
 
 	clipboard.copy(hash1)
-	#playsound('C:/BirdCipher/Audios/VoiceAudios/hash_copied.mp3')
+	playsound('C:/BirdCipher/Audios/VoiceAudios/hash_copied.mp3')
 
-#def confidentiality_audio():
+def confidentiality_audio():
 
-	#playsound('C:/BirdCipher/Audios/VoiceAudios/confidentiality.mp3')
+	playsound('C:/BirdCipher/Audios/VoiceAudios/confidentiality.mp3')
 
-#def integrity_audio():
+def integrity_audio():
 
-	#playsound('C:/BirdCipher/Audios/VoiceAudios/integrity.mp3')
+	playsound('C:/BirdCipher/Audios/VoiceAudios/integrity.mp3')
 
 
 
@@ -698,7 +698,7 @@ print("     Welcome to BirdCipher ", username_db,  "!!! Now, let us learn more a
 
 time.sleep(3)
 
-#playsound("C:/BirdCipher/Audios/VoiceAudios/species_info.mp3")
+playsound("C:/BirdCipher/Audios/VoiceAudios/species_info.mp3")
 
 index = 890
 
@@ -848,15 +848,15 @@ def GUI_Creation():
 	change_image.place(x = 20, y = 115)
 
 
-	#def bird_singing():
+	def bird_singing():
 
-		#if match == False:
+		if match == False:
 
-			#playsound("C:/BirdCipher/Audios/VoiceAudios/ableHearSong.mp3")
+			playsound("C:/BirdCipher/Audios/VoiceAudios/ableHearSong.mp3")
 
-		#elif match == True:
+		elif match == True:
 
-			#playsound(bird_songs_k[index])
+			playsound(bird_songs_k[index])
 
 	def change_image_bird():
 
@@ -864,7 +864,7 @@ def GUI_Creation():
 		global miImagen
 		global index
 
-		#playsound('cartoon130.mp3')
+		playsound('cartoon130.mp3')
 		miImagen = tk.PhotoImage(file = BirdCipher_list_k[index][count + 1])
 		imageLabel.config(image = miImagen)
 		imageLabel.pack()
@@ -910,30 +910,30 @@ def GUI_Creation():
 
 def caesarCipher():
 
-# 	def CaesarExplanat():
+	def CaesarExplanat():
 
-# 		#playsound("CaesarCipherExplanation0A.mp3")
+		#playsound("CaesarCipherExplanation0A.mp3")
 		
 	
-# 	def CaesarExplanat2():
+	def CaesarExplanat2():
 
-# 		#playsound("CaesarCipherExplanation0B.mp3")
+		#playsound("CaesarCipherExplanation0B.mp3")
 
-# 	def CaesarExplanat3():
+	def CaesarExplanat3():
 
-# 		#playsound("CaesarCipherExplanation1.mp3")
+		#playsound("CaesarCipherExplanation1.mp3")
 
-# 	def CaesarExplanat4():
+	def CaesarExplanat4():
 
-# 		#playsound("CaesarCipherExplanation2.mp3")
+		#playsound("CaesarCipherExplanation2.mp3")
 
-# 	def CaesarExplanat5():
+	def CaesarExplanat5():
 
-# 		#playsound("CaesarCipherExplanation3.mp3")
+		#playsound("CaesarCipherExplanation3.mp3")
 
-# 	def CaesarChallenge():
+	def CaesarChallenge():
 
-# 		#playsound("CaesarChallenge.mp3")
+		#playsound("CaesarChallenge.mp3")
 
 		
 
@@ -1151,42 +1151,42 @@ migration = False
 
 def info_display():
 
-	#playsound("C:/BirdCipher/Audios/VoiceAudios/vernacularNames.mp3")
+	playsound("C:/BirdCipher/Audios/VoiceAudios/vernacularNames.mp3")
 	time.sleep(4)
 
 	print()
 	print("-------------------------------------------------- BIRDS INFORMATION --------------------------------------------------------------")
 	print()
 	print()
-	#playsound("idea-1.mp3")
+	playsound("idea-1.mp3")
 	print("     * The scientific name of this order of birds is: ", BirdCipher_sci_k[index])
 	print()
 	time.sleep(1)
-	#playsound("idea-1.mp3")
+	playsound("idea-1.mp3")
 	print("     * The english name of this order of birds is: ", BirdCipher_english_k[index])
 	print()
 	time.sleep(1)
-	#playsound("idea-1.mp3")
+	playsound("idea-1.mp3")
 	print("     * The spanish name of this order of birds is: ", BirdCipher_Spanish_k[index])
 	print()
 	time.sleep(1)
-	#playsound("idea-1.mp3")
+	playsound("idea-1.mp3")
 	print("     * The french name of this order of birds is: ", BirdCipher_french_k[index])
 	print()
 	time.sleep(1)
-	#playsound("idea-1.mp3")
+	playsound("idea-1.mp3")
 	print("     * The german name of this order of birds is: ", BirdCipher_german_k[index])
 	print()
 	time.sleep(1)
-	#playsound("idea-1.mp3")
+	playsound("idea-1.mp3")
 	print("     * The chinese name of this order of birds is: ", BirdCipher_chinese_k[index]) 
 	print()
 	time.sleep(1)
-	#playsound("idea-1.mp3")
+	playsound("idea-1.mp3")
 	print("     * The pinyin (chinese phonetic transcription system) is: ", BirdCipher_pinyin_k[index]) 
 	print()
 	time.sleep(1)
-	# playsound("idea-1.mp3")
+	#playsound("idea-1.mp3")
 	# print("     * The secret message about this species is: ")
 	# print()
 	# print("     ", secret_messages[index])
@@ -1280,8 +1280,8 @@ print()
 #time.sleep(3)
 
 
-#playsound("WelcomeSecretNumbers.mp3")
-#playsound("try_guess.mp3")
+playsound("WelcomeSecretNumbers.mp3")
+playsound("try_guess.mp3")
 
 print("   Guess the number of species of the group: ", BirdCipher_english_k[index])  # --- Trabaje en el RETO 2
 
@@ -1301,7 +1301,7 @@ def question():
 
 		except ValueError:
 
-			#playsound('integerNumber.mp3')
+			playsound('integerNumber.mp3')
 			print("   * You must enter an integer number. Try again.")
 			
 
@@ -1349,35 +1349,33 @@ def GUI_BirdCipher_Machine():
 
 		if chances_decrypt <= 3 and key == keys[index]:
 
-			#playsound('C:/BirdCipher/Audios/VoiceAudios/CorrectKey.mp3')
+			playsound('C:/BirdCipher/Audios/VoiceAudios/CorrectKey.mp3')
 			time.sleep(2)
 			cipher_text.config(text = getTranslatedMessage(message, key), font = ("Comic Sans MS", 9))
 			cipher_text.config(bg = '#050005', fg = '#7e086c')
 			coins = coins + 1
-			#playsound("rightDecrypt.mp3")
-			#playsound("GoldCoin.mp3")
+			playsound("rightDecrypt.mp3")
+			playsound("GoldCoin.mp3")
 			labelCoins.config(text = coins)
 			match = True
 			
 
 		elif chances_decrypt <= 3 and key!= keys[index]:
 
-			#playsound('C:/BirdCipher/Audios/VoiceAudios/WrongKey.mp3')
+			playsound('C:/BirdCipher/Audios/VoiceAudios/WrongKey.mp3')
 			cipher_text.config(text = getTranslatedMessage(message, key), font = ("Comic Sans MS", 9))
 			cipher_text.config(bg = '#050005', fg = '#FFFFFF')
 			chances_decrypt = chances_decrypt + 1
 
-		# elif chances_decrypt > 3:
+		elif chances_decrypt > 3:
 
-		# 	playsound('C:/BirdCipher/Audios/VoiceAudios/chances_decrypt.mp3')
+			playsound('C:/BirdCipher/Audios/VoiceAudios/chances_decrypt.mp3')
 
 
 	def fernet_key_gen():
 
 		global key_encryption
 
-		# message_to_encrypt = cipher_text2.get("1.0", "end-1c")
-		# message_to_encrypt = message_to_encrypt.encode()
 		key_encryption = Fernet.generate_key()
 		
 		key_fernet_text.config(text = key_encryption.decode())
@@ -1445,8 +1443,6 @@ def GUI_BirdCipher_Machine():
 		decrypt.destroy()
 
 
-	
-
 	def person1_actv():
 
 		global target_person
@@ -1491,7 +1487,6 @@ def GUI_BirdCipher_Machine():
 		target_person = person4_var.get()
 		#playsound()
 
-	
 
 	def person1c_actv():
 
@@ -1931,10 +1926,12 @@ def GUI_BirdCipher_Machine():
 			if len(df1) == 0:
 
 				miCursor2.execute(sql110, datos_sql110)
+				#playsound()
 
 			elif len(df1) > 0:
 
 				miCursor2.execute(sql111, datasql111)
+				#playsound()
 
 
 		miConexion2.commit()
@@ -2031,7 +2028,7 @@ while End == False or lives > 0:
 		print()
 		print("------------------------------------------------- RESULTS --------------------------------------------------------")
 		print()
-		#playsound("Lost_a_life.mp3")
+		playsound("Lost_a_life.mp3")
 		print("   You have tried 7 times and have not been able to guess the size of this bird. You lost a life.")
 		print()
 		lives = lives - 1
@@ -2050,7 +2047,7 @@ while End == False or lives > 0:
 		print()
 		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[index])
 		print()
-		#playsound("try_guess.mp3")
+		playsound("try_guess.mp3")
 		#guess = float(input("   Enter the number of species: "))
 		question()
 		print()
@@ -2068,7 +2065,7 @@ while End == False or lives > 0:
 
 	elif guess < secretNumber:
 
-		#playsound("larger.mp3")
+		playsound("larger.mp3")
 		print("   * There are more species in this group (order) of birds. Try again.")
 		question()
 		attempts = attempts + 1
@@ -2076,7 +2073,7 @@ while End == False or lives > 0:
 
 	elif guess > secretNumber:
 
-		#playsound("smaller.mp3")
+		playsound("smaller.mp3")
 		print("   * There are fewer species in this group (order) of birds. Try again: ")
 		question()
 		attempts = attempts + 1
@@ -2093,7 +2090,7 @@ while End == False or lives > 0:
 		print()
 		print("   Now you have: ", points, " points.")
 		#hit = True
-		#playsound("Congratulations.mp3")
+		playsound("Congratulations.mp3")
 		time.sleep(8)
 		print()
 		print()
@@ -2103,11 +2100,11 @@ while End == False or lives > 0:
 		print()
 		time.sleep(3)
 		print(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-		#playsound("radar-ufo.mp3")
-		#playsound("sonar-radar.mp3")
+		playsound("radar-ufo.mp3")
+		playsound("sonar-radar.mp3")
 		time.sleep(3)
 		caesarCipher()
-		#playsound("DecipherMessage.mp3")
+		playsound("DecipherMessage.mp3")
 		print()
 		print("                                                    ", BirdCipher_sci_k[index], "                                      ")
 		print()
@@ -2126,10 +2123,10 @@ while End == False or lives > 0:
 		print()
 		print(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 
-		#playsound('MessageClueObtained.mp3')
-		#playsound(key_audios_k[index])
+		playsound('MessageClueObtained.mp3')
+		playsound(key_audios_k[index])
 		time.sleep(2)
-		#playsound('WriteTheClue.mp3')
+		playsound('WriteTheClue.mp3')
 		# here comes the GUI_BirdCipher Machine
 		#key = getKey()
 
@@ -2144,10 +2141,10 @@ while End == False or lives > 0:
 		if key == keys_k[index]:
 
 			updatePlayer_coins()
-			#playsound("rightDecrypt.mp3")
+			playsound("rightDecrypt.mp3")
 			#playsound("GoldCoin.mp3")
 			time.sleep(2)
-			#playsound("seePictureAgain.mp3")
+			playsound("seePictureAgain.mp3")
 
 			count = 0
 			
@@ -2213,7 +2210,7 @@ while End == False or lives > 0:
 		print("   Guess the size in centimeters of: ", BirdCipher_english_k[index])
 		attempts = 0
 		print()
-		#playsound("try_guess.mp3")
+		playsound("try_guess.mp3")
 		question()
 		print()
 		attempts = attempts + 1
@@ -2225,9 +2222,9 @@ while End == False or lives > 0:
 		print()
 		print()
 		print("   Congratulations!!! You guessed the size of the bird I was thinking of. You have earned 100 points!!!")
-		#playsound("Congratulations.mp3")
+		playsound("Congratulations.mp3")
 		time.sleep(3)
-		#playsound("End.mp3")
+		playsound("End.mp3")
 		points = points + 100
 		print()
 		print("Now you have: ", points, " points.")
