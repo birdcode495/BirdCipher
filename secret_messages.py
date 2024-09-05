@@ -504,7 +504,11 @@ key_audios = ['C:/BirdCipher/Audios/VoiceAudios/k13.mp3', 'C:/BirdCipher/Audios/
 'C:/BirdCipher/Audios/VoiceAudios/k6.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k2.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k7.mp3', 
 'C:/BirdCipher/Audios/VoiceAudios/k9.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k15.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k25.mp3', 
 'C:/BirdCipher/Audios/VoiceAudios/k5.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k12.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k16.mp3', 
-'C:/BirdCipher/Audios/VoiceAudios/k19.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k8.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k16.mp3']
+'C:/BirdCipher/Audios/VoiceAudios/k19.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k8.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k16.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/k12.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k11.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k3.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/k5.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k9.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k8.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/k16.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k20.mp3', 'C:/BirdCipher/Audios/VoiceAudios/k23.mp3',
+'C:/BirdCipher/Audios/VoiceAudios/k19.mp3']
 
 crypto_audios = ['C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_0.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_1.mp3',
 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_2.mp3', 'C:/BirdCipher/Audios/VoiceAudios/Cryptos/Ord_3.mp3', 

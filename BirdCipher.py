@@ -640,7 +640,7 @@ birdCipher.resizable(0, 0)
 birdCipher_frame.pack()
 birdCipher_image = tk.PhotoImage(file = "BirdCipher-logo1.png")
 birdCipherLabel = tk.Label(birdCipher_frame, image = birdCipher_image)
-birdCipherLabel.pack(padx = 50)
+birdCipherLabel.pack(padx = 20)
 #birdCipherLabel.place(x = 20, y = 0)
 
 birdCipher_audio = tk.Button(birdCipher_frame, image = games_rules, command = lambda:confidentiality_audio())
@@ -912,28 +912,28 @@ def caesarCipher():
 
 	def CaesarExplanat():
 
-		#playsound("CaesarCipherExplanation0A.mp3")
+		playsound("CaesarCipherExplanation0A.mp3")
 		
 	
 	def CaesarExplanat2():
 
-		#playsound("CaesarCipherExplanation0B.mp3")
+		playsound("CaesarCipherExplanation0B.mp3")
 
 	def CaesarExplanat3():
 
-		#playsound("CaesarCipherExplanation1.mp3")
+		playsound("CaesarCipherExplanation1.mp3")
 
 	def CaesarExplanat4():
 
-		#playsound("CaesarCipherExplanation2.mp3")
+		playsound("CaesarCipherExplanation2.mp3")
 
 	def CaesarExplanat5():
 
-		#playsound("CaesarCipherExplanation3.mp3")
+		playsound("CaesarCipherExplanation3.mp3")
 
 	def CaesarChallenge():
 
-		#playsound("CaesarChallenge.mp3")
+		playsound("CaesarChallenge.mp3")
 
 		
 
@@ -1185,7 +1185,7 @@ def info_display():
 	playsound("idea-1.mp3")
 	print("     * The pinyin (chinese phonetic transcription system) is: ", BirdCipher_pinyin_k[index]) 
 	print()
-	time.sleep(1)
+	time.sleep(20)
 	#playsound("idea-1.mp3")
 	# print("     * The secret message about this species is: ")
 	# print()
@@ -1358,6 +1358,7 @@ def GUI_BirdCipher_Machine():
 			playsound("GoldCoin.mp3")
 			labelCoins.config(text = coins)
 			match = True
+			decrypt_button.config(state = 'disabled')
 			
 
 		elif chances_decrypt <= 3 and key!= keys[index]:
@@ -1369,6 +1370,7 @@ def GUI_BirdCipher_Machine():
 
 		elif chances_decrypt > 3:
 
+			decrypt_button.config(state = 'disabled')
 			playsound('C:/BirdCipher/Audios/VoiceAudios/chances_decrypt.mp3')
 
 
