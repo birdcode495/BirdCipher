@@ -1440,8 +1440,12 @@ def GUI_BirdCipher_Machine():
 
 		global chances_decrypt
 		global match
+		global target_person
+		global target_person_decrypt
 
 		chances_decrypt = 0
+		target_person = ''
+		target_person_decrypt = ''
 		decrypt.destroy()
 
 
@@ -1454,7 +1458,9 @@ def GUI_BirdCipher_Machine():
 		person3_activated = False
 		person4_activated = False
 		target_person = person1_var.get()
-		#playsound()
+		playsound('bambu_click.mp3')
+		playsound('activatedPersonA.mp3')
+
 
 	def person2_actv():
 
@@ -1465,7 +1471,8 @@ def GUI_BirdCipher_Machine():
 		person3_activated = False
 		person4_activated = False
 		target_person = person2_var.get()
-		#playsound()
+		playsound('bambu_click.mp3')
+		playsound('activatedPersonA.mp3')
 
 	def person3_actv():
 
@@ -1476,7 +1483,8 @@ def GUI_BirdCipher_Machine():
 		person3_activated = True
 		person4_activated = False
 		target_person = person3_var.get()
-		#playsound()
+		playsound('bambu_click.mp3')
+		playsound('activatedPersonA.mp3')
 
 	def person4_actv():
 
@@ -1487,7 +1495,8 @@ def GUI_BirdCipher_Machine():
 		person3_activated = False
 		person4_activated = True
 		target_person = person4_var.get()
-		#playsound()
+		playsound('bambu_click.mp3')
+		playsound('activatedPersonA.mp3')
 
 
 	def person1c_actv():
@@ -1499,7 +1508,8 @@ def GUI_BirdCipher_Machine():
 		person3c_activated = False
 		person4c_activated = False
 		target_person_decrypt = person1c_var.get()
-		#playsound()
+		playsound('button_click.mp3')
+		playsound('activatedPersonB.mp3')
 
 	def person2c_actv():
 
@@ -1510,7 +1520,8 @@ def GUI_BirdCipher_Machine():
 		person3c_activated = False
 		person4c_activated = False
 		target_person_decrypt = person2c_var.get()
-		#playsound()
+		playsound('button_click.mp3')
+		playsound('activatedPersonB.mp3')
 
 	def person3c_actv():
 
@@ -1521,7 +1532,8 @@ def GUI_BirdCipher_Machine():
 		person3c_activated = True
 		person4c_activated = False
 		target_person_decrypt = person3c_var.get()
-		#playsound()
+		playsound('button_click.mp3')
+		playsound('activatedPersonB.mp3')
 
 	def person4c_actv():
 
@@ -1532,7 +1544,8 @@ def GUI_BirdCipher_Machine():
 		person3c_activated = False
 		person4c_activated = True
 		target_person_decrypt = person4c_var.get()
-		#playsound()
+		playsound('button_click.mp3')
+		playsound('activatedPersonB.mp3')
 
 	
 	decrypt = tk.Tk()
@@ -1697,6 +1710,10 @@ def GUI_BirdCipher_Machine():
 	encryption_machine_logo = tk.PhotoImage(file = "Send Encrypted Message-logo.png")
 	generate_key_image = tk.PhotoImage(file = "Generate Key-logo.png")
 	encrypt_message_image = tk.PhotoImage(file = "Encrypt Message-logo1.png")
+	person1_image = tk.PhotoImage(file = 'Person1.png')
+	person2_image = tk.PhotoImage(file = 'Person2.png')
+	person3_image = tk.PhotoImage(file = 'Person3.png')
+	person4_image = tk.PhotoImage(file = 'Person4.png')
 
 	cipher_text2 = tk.Text(fr2, font = ("Comic Sans MS", 10), width = 80)
 	cipher_text2.config(bg = '#050005', fg = '#FFFFFF')
@@ -1743,17 +1760,17 @@ def GUI_BirdCipher_Machine():
 	buttonPoints2 = tk.Button(fr2, image = imagePoints, command = lambda:pointsAudio())
 	buttonPoints2.place(x = 210, y = 300)
 
-	buttonCoins2 = tk.Button(fr2, image = imageCoins, command = lambda:person1_actv())
-	buttonCoins2.place(x = 300, y = 300)
+	buttonPerson1a = tk.Button(fr2, image = person1_image, command = lambda:person1_actv())
+	buttonPerson1a.place(x = 300, y = 300)
 
-	buttonFeathers2 = tk.Button(fr2, image =imageFeathers, command = lambda:person2_actv())
-	buttonFeathers2.place(x = 400, y = 300)
+	buttonPerson2a = tk.Button(fr2, image = person2_image, command = lambda:person2_actv())
+	buttonPerson2a.place(x = 400, y = 300)
 
-	buttonDiamonds2 = tk.Button(fr2, image = imageDiamonds, command = lambda:person3_actv())
-	buttonDiamonds2.place(x= 500, y = 300)
+	buttonPerson3a = tk.Button(fr2, image = person3_image, command = lambda:person3_actv())
+	buttonPerson3a.place(x= 500, y = 300)
 
-	buttonLives2 = tk.Button(fr2, image = imageLives, command = lambda:person4_actv())
-	buttonLives2.place(x = 615, y = 300)
+	buttonPerson4a = tk.Button(fr2, image = person4_image, command = lambda:person4_actv())
+	buttonPerson4a.place(x = 615, y = 300)
 
 	labelPoints2 = tk.Label(fr2, text = points, font = ("Comic Sans MS", 13), justify = "center", width = 6)
 	labelPoints2.config(bg = "#050005", fg = "#7e086c")
@@ -1775,7 +1792,7 @@ def GUI_BirdCipher_Machine():
 	person4.config(bg = "#050005", fg = "#7e086c")
 	person4.place(x = 617, y = 410)
 
-	labelQuestionKey2 = tk.Label(fr2, text = "Enter the secret key", font = ("Comic Sans MS", 13))
+	labelQuestionKey2 = tk.Label(fr2, text = "Enter your password", font = ("Comic Sans MS", 13))
 	labelQuestionKey2.config(fg = "#7e086c")
 	labelQuestionKey2.place(x = 805, y = 60)
 
@@ -1833,22 +1850,20 @@ def GUI_BirdCipher_Machine():
 	cipher_text2_encrp2.config(bg = '#050005', fg = '#FFFFFF')
 	cipher_text2_encrp2.place(x = 60, y = 210, height = 80)
 
-
-
 	buttonPoints3 = tk.Button(fr3, image = imagePoints, command = lambda:pointsAudio())
 	buttonPoints3.place(x = 210, y = 300)
 
-	buttonCoins3 = tk.Button(fr3, image = imageCoins, command = lambda:person1c_actv())
-	buttonCoins3.place(x = 300, y = 300)
+	buttonPerson1b = tk.Button(fr3, image = person1_image, command = lambda:person1c_actv())
+	buttonPerson1b.place(x = 300, y = 300)
 
-	buttonFeathers3 = tk.Button(fr3, image =imageFeathers, command = lambda:person2c_actv())
-	buttonFeathers3.place(x = 400, y = 300)
+	buttonPerson2b = tk.Button(fr3, image = person2_image, command = lambda:person2c_actv())
+	buttonPerson2b.place(x = 400, y = 300)
 
-	buttonDiamonds3 = tk.Button(fr3, image = imageDiamonds, command = lambda:person3c_actv())
-	buttonDiamonds3.place(x= 500, y = 300)
+	buttonPerson3b = tk.Button(fr3, image = person3_image, command = lambda:person3c_actv())
+	buttonPerson3b.place(x= 500, y = 300)
 
-	buttonLives3 = tk.Button(fr3, image = imageLives, command = lambda:person4c_actv())
-	buttonLives3.place(x = 615, y = 300)
+	buttonPerson4b = tk.Button(fr3, image = person4_image, command = lambda:person4c_actv())
+	buttonPerson4b.place(x = 615, y = 300)
 
 	labelPoints3 = tk.Label(fr3, text = points, font = ("Comic Sans MS", 13), justify = "center", width = 6)
 	labelPoints3.config(bg = "#050005", fg = "#7e086c")
@@ -1870,7 +1885,7 @@ def GUI_BirdCipher_Machine():
 	person4_c.config(bg = "#050005", fg = "#7e086c")
 	person4_c.place(x = 617, y = 410)
 
-	labelQuestionKey3 = tk.Label(fr3, text = "Enter the secret key", font = ("Comic Sans MS", 13))
+	labelQuestionKey3 = tk.Label(fr3, text = "Enter your password", font = ("Comic Sans MS", 13))
 	labelQuestionKey3.config(fg = "#7e086c")
 	labelQuestionKey3.place(x = 805, y = 60)
 
@@ -1897,8 +1912,7 @@ def GUI_BirdCipher_Machine():
 		bdatos = bytes(passw_em.get(), 'utf-8')
 		h = hashlib.new(algoritmo, bdatos)
 		hash2 = HASH.generaHash(h)
-
-		key_encryption = key_encryption.decode()
+	
 
 		miConexion2 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
 		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
@@ -1920,8 +1934,14 @@ def GUI_BirdCipher_Machine():
 		miCursor2.execute(sql_verf_hash, sql_verf_hash_data)
 		dlt5 = miCursor2.fetchall()
 
-		if dlt5[0][5] >= 10 and hash2 == dlt5[0][3]:
+		if target_person == '':
 
+			playsound('perder_incorrecto_no_valido.mp3')
+			playsound('activatePersonFirst_toSend.mp3')
+
+		elif dlt5[0][5] >= 10 and hash2 == dlt5[0][3] and target_person != '':
+
+			key_encryption = key_encryption.decode()
 			miCursor2.execute(sql_verf_server, sql_verf_server_data)
 			df1 = miCursor2.fetchall()
 
@@ -1935,6 +1955,7 @@ def GUI_BirdCipher_Machine():
 				miCursor2.execute(sql111, datasql111)
 				#playsound()
 
+		
 
 		miConexion2.commit()
 		miConexion2.close()
@@ -1945,7 +1966,7 @@ def GUI_BirdCipher_Machine():
 		global nickname_db
 		global key_encryption
 		global token
-		global target_person
+		global target_person_decrypt
 		global message_sent_decrypt
 		global key_sent_decrypt
 	
@@ -1970,8 +1991,15 @@ def GUI_BirdCipher_Machine():
 
 		if hash3 == dlt6[0][3]:
 
-			miCursor3.execute(sql330, datasql330)
-			dlt7 = miCursor3.fetchall()
+			if target_person_decrypt != '':
+
+				miCursor3.execute(sql330, datasql330)
+				dlt7 = miCursor3.fetchall()
+
+			elif target_person_decrypt == '':
+
+				playsound('perder_incorrecto_no_valido.mp3')
+				playsound('activatePersonFirst_toReceive.mp3')
 
 			if len(dlt7) > 0:
 

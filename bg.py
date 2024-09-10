@@ -3,6 +3,7 @@ import requests
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
+import json
 #import pandas as pd
 from io import StringIO
 from docx import Document
@@ -70,4 +71,8 @@ headers = {
 
 response = requests.get(url, headers=headers)
 
-print(response.text)
+dicc = json.loads(response.text)
+
+print('Antivirus: ', dicc['data']['attributes']['last_analysis_results']['Kaspersky']['engine_name'],
+    ' Result: ', dicc['data']['attributes']['last_analysis_results']['Kaspersky']['category'], ' engine_update: ',
+    dicc['data']['attributes']['last_analysis_results']['Kaspersky']['engine_update'])
