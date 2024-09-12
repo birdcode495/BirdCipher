@@ -1909,9 +1909,9 @@ def GUI_BirdCipher_Machine():
 
 
 
-		bdatos = bytes(passw_em.get(), 'utf-8')
-		h = hashlib.new(algoritmo, bdatos)
-		hash2 = HASH.generaHash(h)
+
+
+		
 	
 
 		miConexion2 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
@@ -1934,12 +1934,18 @@ def GUI_BirdCipher_Machine():
 		miCursor2.execute(sql_verf_hash, sql_verf_hash_data)
 		dlt5 = miCursor2.fetchall()
 
-		if target_person == '':
+		if target_person == '' or passw_em.get() == '':
 
 			playsound('perder_incorrecto_no_valido.mp3')
 			playsound('activatePersonFirst_toSend.mp3')
 
-		elif dlt5[0][5] >= 10 and hash2 == dlt5[0][3] and target_person != '':
+		elif passw_em.get() != '':
+
+			bdatos = bytes(passw_em.get(), 'utf-8')
+			h = hashlib.new(algoritmo, bdatos)
+			hash2 = HASH.generaHash(h)
+
+		if dlt5[0][5] >= 10 and hash2 == dlt5[0][3] and target_person != '':
 
 			key_encryption = key_encryption.decode()
 			miCursor2.execute(sql_verf_server, sql_verf_server_data)
@@ -1948,12 +1954,14 @@ def GUI_BirdCipher_Machine():
 			if len(df1) == 0:
 
 				miCursor2.execute(sql110, datos_sql110)
-				#playsound()
+				playsound('cartoon130.mp3')
+				playsound('message_sent_success.mp3')
 
 			elif len(df1) > 0:
 
 				miCursor2.execute(sql111, datasql111)
-				#playsound()
+				playsound('cartoon130.mp3')
+				playsound('message_sent_success.mp3')
 
 		
 
