@@ -131,7 +131,9 @@ target_person = ''
 target_person_decrypt = ''
 message_sent_decrypt = ''
 key_sent_decrypt = ''
-
+key_encryption = ""
+key_encryption_test = False
+token = ""
 
 
 points = 0
@@ -1329,10 +1331,12 @@ def GUI_BirdCipher_Machine():
 	global target_person_decrypt
 	global message_sent_decrypt
 	global key_sent_decrypt
+	global key_encryption
+	global key_encryption_test
+	global token
 	
 
-	key_encryption = ""
-	token = ""
+	
 
 	def comd_decrypt():
 
@@ -1377,25 +1381,34 @@ def GUI_BirdCipher_Machine():
 	def fernet_key_gen():
 
 		global key_encryption
+		global key_encryption_test
 
 		key_encryption = Fernet.generate_key()
 		
 		key_fernet_text.config(text = key_encryption.decode())
 		clipboard.copy(key_encryption)
+		key_encryption_test = True
 
 
 	def fernet_encryption_function():
 
 		global key_encryption
+		global key_encryption_test
 		global token
 
-		message_to_encrypt = cipher_text2.get("1.0", "end-1c")
-		message_to_encrypt = message_to_encrypt.encode()
-		f = Fernet(key_encryption)
-		token = f.encrypt(message_to_encrypt)
-		token = token.decode()
-		cipher_text2_encrp.config(text = token, justify = "left", wraplength = 600)
-		clipboard.copy(token)
+		if key_encryption_test == True:
+
+			message_to_encrypt = cipher_text2.get("1.0", "end-1c")
+			message_to_encrypt = message_to_encrypt.encode()
+			f = Fernet(key_encryption)
+			token = f.encrypt(message_to_encrypt)
+			token = token.decode()
+			cipher_text2_encrp.config(text = token, justify = "left", wraplength = 600)
+			clipboard.copy(token)
+
+		elif key_encryption_test == False:
+
+			playsound('MustGenerateKey.mp3')
 
 
 	def listen_decrypt_text():
@@ -1453,50 +1466,74 @@ def GUI_BirdCipher_Machine():
 
 		global target_person
 
-		person1_activated = True
-		person2_activated = False
-		person3_activated = False
-		person4_activated = False
-		target_person = person1_var.get()
-		playsound('bambu_click.mp3')
-		playsound('activatedPersonA.mp3')
+		if person1_var.get() != '':
+
+			person1_activated = True
+			person2_activated = False
+			person3_activated = False
+			person4_activated = False
+			target_person = person1_var.get()
+			playsound('bambu_click.mp3')
+			playsound('activatedPersonA.mp3')
+
+		elif person1_var.get() == '':
+
+			playsound('EnterUsername.mp3')
 
 
 	def person2_actv():
 
 		global target_person
 
-		person1_activated = False
-		person2_activated = True
-		person3_activated = False
-		person4_activated = False
-		target_person = person2_var.get()
-		playsound('bambu_click.mp3')
-		playsound('activatedPersonA.mp3')
+		if person2_var.get() != '':
+
+			person1_activated = False
+			person2_activated = True
+			person3_activated = False
+			person4_activated = False
+			target_person = person2_var.get()
+			playsound('bambu_click.mp3')
+			playsound('activatedPersonA.mp3')
+
+		elif person2_var.get() == '':
+
+			playsound('EnterUsername.mp3')
 
 	def person3_actv():
 
 		global target_person
 
-		person1_activated = False
-		person2_activated = False
-		person3_activated = True
-		person4_activated = False
-		target_person = person3_var.get()
-		playsound('bambu_click.mp3')
-		playsound('activatedPersonA.mp3')
+		if person3_var.get() != '':
+
+			person1_activated = False
+			person2_activated = False
+			person3_activated = True
+			person4_activated = False
+			target_person = person3_var.get()
+			playsound('bambu_click.mp3')
+			playsound('activatedPersonA.mp3')
+
+		elif person3_var.get() == '':
+
+			playsound('EnterUsername.mp3')
 
 	def person4_actv():
 
 		global target_person
 
-		person1_activated = False
-		person2_activated = False
-		person3_activated = False
-		person4_activated = True
-		target_person = person4_var.get()
-		playsound('bambu_click.mp3')
-		playsound('activatedPersonA.mp3')
+		if person4_var.get() != '':
+
+			person1_activated = False
+			person2_activated = False
+			person3_activated = False
+			person4_activated = True
+			target_person = person4_var.get()
+			playsound('bambu_click.mp3')
+			playsound('activatedPersonA.mp3')
+
+		elif person4_var.get() == '':
+
+			playsound('EnterUsername.mp3')
 
 
 	def person1c_actv():
@@ -1593,15 +1630,19 @@ def GUI_BirdCipher_Machine():
 		
 	fr = ttk.Frame(notebk, width = 1050, height=540)
 	fr.configure(style = "BW.TLabel")
-	fr.pack(fill='both', expand=True)
+	fr.pack(fill = 'both', expand = True)
 	notebk.add(fr, text = "      BirdCipher Decrypt Machine")
 
-	fr2 = ttk.Frame(notebk, width = 1150, height=540)
-	fr2.pack(fill='both', expand=True)
+	fr0 = ttk.Frame(notebk, width = 1050, height = 540)
+	fr0.pack(fill = 'both', expand = True)
+	notebk.add(fr0, text = '     Cybersecurity and social engineering')
+
+	fr2 = ttk.Frame(notebk, width = 1150, height = 540)
+	fr2.pack(fill = 'both', expand = True)
 	notebk.add(fr2, text = "      BirdCipher Personal Encryption Machine")
 
-	fr3 = ttk.Frame(notebk, width = 1050, height=540)
-	fr3.pack(fill='both', expand=True)
+	fr3 = ttk.Frame(notebk, width = 1050, height = 540)
+	fr3.pack(fill = 'both', expand = True)
 	notebk.add(fr3, text = "      BirdCipher Personal Decryption Machine")
 
 	#imageLabel = tk.Label(miFrame, image=miImagen)
@@ -1907,63 +1948,74 @@ def GUI_BirdCipher_Machine():
 		global token
 		global target_person
 
-
-
-
-
-		
-	
+		bdatos = bytes(passw_em.get(), 'utf-8')
+		h = hashlib.new(algoritmo, bdatos)
+		hash2 = HASH.generaHash(h)
 
 		miConexion2 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
 		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
 		
 		miCursor2 = miConexion2.cursor()
 
-		sql110 = 'insert into encryptedMessages(nickname, password, server, actual_message, key_b) values(%s,%s,%s,%s,%s)'
-		datos_sql110 = (nickname_db, hash2, target_person, token, key_encryption)
-
 		sql_verf_hash = 'select * from Players where nickname = (%s)'
 		sql_verf_hash_data = (nickname_db,)
-
-		sql_verf_server = 'select * from encryptedMessages where (nickname = (%s) and server = (%s))'
-		sql_verf_server_data = (nickname_db, target_person)
-
-		sql111 = 'update encryptedMessages set (nickname, password, server, actual_message, key_b) = (%s,%s,%s,%s,%s) where (nickname = (%s) and server = (%s))'
-		datasql111 = (nickname_db, hash2, target_person, token, key_encryption, nickname_db, target_person)
-
 		miCursor2.execute(sql_verf_hash, sql_verf_hash_data)
 		dlt5 = miCursor2.fetchall()
 
-		if target_person == '' or passw_em.get() == '':
+		if dlt5[0][5] >= 10 and hash2 == dlt5[0][3]:
 
-			playsound('perder_incorrecto_no_valido.mp3')
-			playsound('activatePersonFirst_toSend.mp3')
+			if target_person != '':
 
-		elif passw_em.get() != '':
+				sql_verf_server = 'select * from encryptedMessages where (nickname = (%s) and server = (%s))'
+				sql_verf_server_data = (nickname_db, target_person)
+				miCursor2.execute(sql_verf_server, sql_verf_server_data)
+				df1 = miCursor2.fetchall()
+				df1_test = True
 
-			bdatos = bytes(passw_em.get(), 'utf-8')
-			h = hashlib.new(algoritmo, bdatos)
-			hash2 = HASH.generaHash(h)
+				if len(df1) == 0 and df1_test == True:
 
-		if dlt5[0][5] >= 10 and hash2 == dlt5[0][3] and target_person != '':
+					try:
 
-			key_encryption = key_encryption.decode()
-			miCursor2.execute(sql_verf_server, sql_verf_server_data)
-			df1 = miCursor2.fetchall()
+						key_encryption = key_encryption.decode()
+						sql110 = 'insert into encryptedMessages(nickname, password, server, actual_message, key_b) values(%s,%s,%s,%s,%s)'
+						datos_sql110 = (nickname_db, hash2, target_person, token, key_encryption)
+						miCursor2.execute(sql110, datos_sql110)
+						playsound('cartoon130.mp3')
+						playsound('message_sent_success.mp3')
 
-			if len(df1) == 0:
+					except NameError:
 
-				miCursor2.execute(sql110, datos_sql110)
-				playsound('cartoon130.mp3')
-				playsound('message_sent_success.mp3')
+						playsound('StepsForSending.mp3')
 
-			elif len(df1) > 0:
+				elif len(df1) > 0 and df1_test == True:
 
-				miCursor2.execute(sql111, datasql111)
-				playsound('cartoon130.mp3')
-				playsound('message_sent_success.mp3')
+					try:
 
-		
+						sql111 = 'update encryptedMessages set (nickname, password, server, actual_message, key_b) = (%s,%s,%s,%s,%s) where (nickname = (%s) and server = (%s))'
+						datasql111 = (nickname_db, hash2, target_person, token, key_encryption, nickname_db, target_person)
+						miCursor2.execute(sql111, datasql111)
+						playsound('cartoon130.mp3')
+						playsound('message_sent_success.mp3')
+
+					except NameError:
+
+						playsound('StepsForSending.mp3')
+
+			elif target_person == '':
+
+				playsound('RecipientUsername.mp3')
+				df = -1
+				df1_test = False
+
+
+		elif dlt5[0][5] >= 10 and hash2 != dlt5[0][3]:
+
+			playsound('WrongPass.mp3')
+
+		elif dlt5[0][5] < 10:
+
+			playsound('AuthorizationSendMssg.mp3')
+
 
 		miConexion2.commit()
 		miConexion2.close()
