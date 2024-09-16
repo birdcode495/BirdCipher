@@ -1540,49 +1540,73 @@ def GUI_BirdCipher_Machine():
 
 		global target_person_decrypt
 
-		person1c_activated = True
-		person2c_activated = False
-		person3c_activated = False
-		person4c_activated = False
-		target_person_decrypt = person1c_var.get()
-		playsound('button_click.mp3')
-		playsound('activatedPersonB.mp3')
+		if person1c_var.get() != '':
+
+			person1c_activated = True
+			person2c_activated = False
+			person3c_activated = False
+			person4c_activated = False
+			target_person_decrypt = person1c_var.get()
+			playsound('button_click.mp3')
+			playsound('activatedPersonB.mp3')
+
+		elif person1c_var.get() == '':
+
+			playsound('activatePersonReceiveMessages.mp3')
 
 	def person2c_actv():
 
 		global target_person_decrypt
 
-		person1c_activated = False
-		person2c_activated = True
-		person3c_activated = False
-		person4c_activated = False
-		target_person_decrypt = person2c_var.get()
-		playsound('button_click.mp3')
-		playsound('activatedPersonB.mp3')
+		if person2c_var.get() != '':
+
+			person1c_activated = False
+			person2c_activated = True
+			person3c_activated = False
+			person4c_activated = False
+			target_person_decrypt = person2c_var.get()
+			playsound('button_click.mp3')
+			playsound('activatedPersonB.mp3')
+
+		elif person2c_var.get() == '':
+
+			playsound('activatePersonReceiveMessages.mp3')
 
 	def person3c_actv():
 
 		global target_person_decrypt
 
-		person1c_activated = False
-		person2c_activated = False
-		person3c_activated = True
-		person4c_activated = False
-		target_person_decrypt = person3c_var.get()
-		playsound('button_click.mp3')
-		playsound('activatedPersonB.mp3')
+		if person3c_var.get() != '':
+
+			person1c_activated = False
+			person2c_activated = False
+			person3c_activated = True
+			person4c_activated = False
+			target_person_decrypt = person3c_var.get()
+			playsound('button_click.mp3')
+			playsound('activatedPersonB.mp3')
+
+		elif person3c_var.get() == '':
+
+			playsound('activatePersonReceiveMessages.mp3')
 
 	def person4c_actv():
 
 		global target_person_decrypt
 
-		person1c_activated = False
-		person2c_activated = False
-		person3c_activated = False
-		person4c_activated = True
-		target_person_decrypt = person4c_var.get()
-		playsound('button_click.mp3')
-		playsound('activatedPersonB.mp3')
+		if person4c_var.get() != '':
+
+			person1c_activated = False
+			person2c_activated = False
+			person3c_activated = False
+			person4c_activated = True
+			target_person_decrypt = person4c_var.get()
+			playsound('button_click.mp3')
+			playsound('activatedPersonB.mp3')
+
+		elif person4c_var.get() == '':
+
+			playsound('activatePersonReceiveMessages.mp3')
 
 	
 	decrypt = tk.Tk()
@@ -1974,7 +1998,7 @@ def GUI_BirdCipher_Machine():
 
 				if len(df1) == 0 and df1_test == True:
 
-					try:
+					if token != '' and key_encryption != '':
 
 						#key_encryption = key_encryption.decode()
 						sql110 = 'insert into encryptedMessages(nickname, password, server, actual_message, key_b) values(%s,%s,%s,%s,%s)'
@@ -1983,13 +2007,13 @@ def GUI_BirdCipher_Machine():
 						playsound('cartoon130.mp3')
 						playsound('message_sent_success.mp3')
 
-					except NameError:
+					elif token == '' or key_encryption == '':
 
 						playsound('StepsForSending.mp3')
 
 				elif len(df1) > 0 and df1_test == True:
 
-					try:
+					if token != '' and key_encryption != '':
 
 						sql111 = 'update encryptedMessages set (nickname, password, server, actual_message, key_b) = (%s,%s,%s,%s,%s) where (nickname = (%s) and server = (%s))'
 						datasql111 = (nickname_db, hash2, target_person, token.decode(), key_encryption.decode(), nickname_db, target_person)
@@ -1997,7 +2021,7 @@ def GUI_BirdCipher_Machine():
 						playsound('cartoon130.mp3')
 						playsound('message_sent_success.mp3')
 
-					except NameError:
+					elif token == '' or key_encryption == '':
 
 						playsound('StepsForSending.mp3')
 
@@ -2066,9 +2090,13 @@ def GUI_BirdCipher_Machine():
 				message_sent_decrypt = dlt7[0][5]
 				key_sent_decrypt = dlt7[0][4]
 
-				cipher_text3.config(text = dlt7[0][5], justify = "left", wraplength = 600, font = ("Comic Sans MS", 10))
+				cipher_text3.config(text = dlt7[0][5], justify = "left", wraplength = 600, font = ("Comic Sans MS", 9))
 				
-				key_fernet_text2.config(text = dlt7[0][4], justify = 'center', wraplength = 300, font = ('Comic Sans MS', 10))
+				key_fernet_text2.config(text = dlt7[0][4], justify = 'center', wraplength = 300, font = ('Comic Sans MS', 9))
+
+		elif hash3 != dlt6[0][3]:
+
+			playsound('WrongPass.mp3')
 
 
 		miConexion3.commit()
@@ -2098,7 +2126,7 @@ def GUI_BirdCipher_Machine():
 		k = Fernet(b)
 		token2 = k.decrypt(a)
 		token2 = token2.decode()
-		cipher_text2_encrp2.config(text = token2, justify = "left", wraplength = 600, font = ("Comic Sans MS", 10))
+		cipher_text2_encrp2.config(text = token2, justify = "left", wraplength = 600, font = ("Comic Sans MS", 9))
 
 		miConexion3.commit()
 		miConexion3.close()
