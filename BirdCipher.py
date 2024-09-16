@@ -138,6 +138,7 @@ key_sent_decrypt = ''
 key_encryption = ""
 key_encryption_test = False
 token = ""
+counter_social_eng = -1
 
 
 points = 0
@@ -1354,6 +1355,7 @@ def GUI_BirdCipher_Machine():
 	global key_encryption
 	global key_encryption_test
 	global token
+	global counter_social_eng
 	
 
 	
@@ -1812,9 +1814,9 @@ def GUI_BirdCipher_Machine():
 			answer_button_social_eng.config(state = 'disabled')
 
 
-	counter_social_eng = -1
+	counter_social_eng = counter_social_eng + 1
 	index_social_eng = list(range(44))
-	index_social_eng_choose = index_social_eng[counter_social_eng + 1]
+	index_social_eng_choose = index_social_eng[counter_social_eng]
 	img_social_eng = tk.PhotoImage(file = imagenes_ing_social[index_social_eng_choose])
 	varOption = tk.IntVar()
 
@@ -1823,19 +1825,19 @@ def GUI_BirdCipher_Machine():
 
 	rad_button1 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][0], variable = varOption, value = 0)
 	rad_button1.place(x = 500, y = 40)
-	rad_button1.config(font = ('Comic Sans MS', 8))
+	rad_button1.config(font = ('Comic Sans MS', 8), justify = 'left')
 
 	rad_button2 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][1], variable = varOption, value = 1)
 	rad_button2.place(x = 500, y = 80)
-	rad_button2.config(font = ('Comic Sans MS', 8))
+	rad_button2.config(font = ('Comic Sans MS', 8), justify = 'left')
 
 	rad_button3 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][2], variable = varOption, value = 2)
 	rad_button3.place(x = 500, y = 120)
-	rad_button3.config(font = ('Comic Sans MS', 8))
+	rad_button3.config(font = ('Comic Sans MS', 8), justify = 'left')
 
 	rad_button4 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][3], variable = varOption, value = 3)
 	rad_button4.place(x = 500, y = 160)
-	rad_button4.config(font = ('Comic Sans MS', 8))
+	rad_button4.config(font = ('Comic Sans MS', 8), justify = 'left')
 
 	answer_button_social_eng = tk.Button(fr0, text = 'Send answer', command = lambda:send_answer_social_eng())
 	answer_button_social_eng.place(x = 530, y = 200)

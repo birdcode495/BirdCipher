@@ -1,3 +1,3 @@
-imagenes_ing_social = ['Confidentiality.png']
+imagenes_ing_social = ['Data security.png', 'Cybersecurity.png', 'Confidentiality.png']
 
 
