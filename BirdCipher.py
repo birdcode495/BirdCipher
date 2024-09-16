@@ -77,6 +77,10 @@ from cryptography.fernet import Fernet
 
 from hash import *
 
+from imagenes_ing_social import *
+
+from tests_ing_social import *
+
 import pyperclip as clipboard
 
 import psycopg2
@@ -533,6 +537,22 @@ def updatePlayer_coins():
 	conexion3.commit()
 	conexion3.close()
 
+def updatePlayer_feathers():
+
+	conexion5 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+	user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+	
+	cursor5 = conexion5.cursor()
+
+	sql7 = "update Players set feathers = (%s) where nickname = (%s)"
+	datsActs7 = (feathers, nickname_db)
+
+	cursor5.execute(sql7, datsActs7)
+	conexion5.commit()
+	conexion5.close()
+
+
+
 def loseLife():
 
 	conexion4 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
@@ -559,7 +579,7 @@ prueba_list_present = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
 print()
 print()
 print()
-print(" ---------------------------------------------------------------------------------------------------------------------------------------")
+print(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 print()
 print("              ****************************************************************************************************************  ")
 print()
@@ -569,7 +589,7 @@ print("                                   A cryptographic serious game for Numer
 print()
 print("              ****************************************************************************************************************  ")
 print()
-print(" ---------------------------------------------------------------------------------------------------------------------------------------")
+print(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 
 
 time.sleep(5)
@@ -1360,6 +1380,7 @@ def GUI_BirdCipher_Machine():
 			coins = coins + 1
 			playsound("rightDecrypt.mp3")
 			playsound("GoldCoin.mp3")
+			updatePlayer_coins()
 			labelCoins.config(text = coins)
 			match = True
 			decrypt_button.config(state = 'disabled')
@@ -1769,9 +1790,61 @@ def GUI_BirdCipher_Machine():
 
 	# ---------------
 
+	def play_social_eng_audio():
+
+		playsound(social_eng_audio[index_social_eng_choose])
+
+	def send_answer_social_eng():
+
+		global feathers
+
+		if varOption.get() == correct_answers_social_eng[index_social_eng_choose]:
+
+			playsound('wonFeather.mp3')
+			feathers = feathers + 1
+			updatePlayer_feathers()
+			labelFeathers.config(text = feathers)
+			answer_button_social_eng.config(state = 'disabled')
+
+		elif varOption.get() != correct_answers_social_eng[index_social_eng_choose]:
+
+			playsound('lostFeather.mp3')
+			answer_button_social_eng.config(state = 'disabled')
+
+
+	counter_social_eng = -1
+	index_social_eng = list(range(44))
+	index_social_eng_choose = index_social_eng[counter_social_eng + 1]
+	img_social_eng = tk.PhotoImage(file = imagenes_ing_social[index_social_eng_choose])
+	varOption = tk.IntVar()
+
+	img_social_eng_label = tk.Button(fr0, image = img_social_eng, command = lambda:play_social_eng_audio())
+	img_social_eng_label.place(x = 30, y = 30)
+
+	rad_button1 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][0], variable = varOption, value = 0)
+	rad_button1.place(x = 500, y = 40)
+	rad_button1.config(font = ('Comic Sans MS', 8))
+
+	rad_button2 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][1], variable = varOption, value = 1)
+	rad_button2.place(x = 500, y = 80)
+	rad_button2.config(font = ('Comic Sans MS', 8))
+
+	rad_button3 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][2], variable = varOption, value = 2)
+	rad_button3.place(x = 500, y = 120)
+	rad_button3.config(font = ('Comic Sans MS', 8))
+
+	rad_button4 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][3], variable = varOption, value = 3)
+	rad_button4.place(x = 500, y = 160)
+	rad_button4.config(font = ('Comic Sans MS', 8))
+
+	answer_button_social_eng = tk.Button(fr0, text = 'Send answer', command = lambda:send_answer_social_eng())
+	answer_button_social_eng.place(x = 530, y = 200)
+	answer_button_social_eng.config(fg = 'green', font = ('Comic Sans MS', 8))
 	
 
+	# ---------------
 
+	
 	encryption_machine_logo = tk.PhotoImage(file = "Send Encrypted Message-logo.png")
 	generate_key_image = tk.PhotoImage(file = "Generate Key-logo.png")
 	encrypt_message_image = tk.PhotoImage(file = "Encrypt Message-logo1.png")
@@ -2090,9 +2163,9 @@ def GUI_BirdCipher_Machine():
 				message_sent_decrypt = dlt7[0][5]
 				key_sent_decrypt = dlt7[0][4]
 
-				cipher_text3.config(text = dlt7[0][5], justify = "left", wraplength = 600, font = ("Comic Sans MS", 9))
+				cipher_text3.config(text = dlt7[0][5], justify = "left", wraplength = 600, font = ("Comic Sans MS", 10))
 				
-				key_fernet_text2.config(text = dlt7[0][4], justify = 'center', wraplength = 300, font = ('Comic Sans MS', 9))
+				key_fernet_text2.config(text = dlt7[0][4], justify = 'center', wraplength = 700, font = ('Comic Sans MS', 10))
 
 		elif hash3 != dlt6[0][3]:
 
@@ -2126,7 +2199,7 @@ def GUI_BirdCipher_Machine():
 		k = Fernet(b)
 		token2 = k.decrypt(a)
 		token2 = token2.decode()
-		cipher_text2_encrp2.config(text = token2, justify = "left", wraplength = 600, font = ("Comic Sans MS", 9))
+		cipher_text2_encrp2.config(text = token2, justify = "left", wraplength = 700, font = ("Comic Sans MS", 10))
 
 		miConexion3.commit()
 		miConexion3.close()
@@ -2140,11 +2213,7 @@ def GUI_BirdCipher_Machine():
 
 attempts = 1
 
-
-
 End = False
-
-
 
 win_challenge2_info = 0
 
@@ -2244,9 +2313,6 @@ while End == False or lives > 0:
 		print("                                                    ", BirdCipher_sci_k[index], "                                      ")
 		print()
 		time.sleep(3)
-		print("                                               ", BirdCipher_english_k[index], "                                        ")
-		print()
-		time.sleep(3)
 		print("                                                 Caesar Cipher Algorithm                                                ")
 		time.sleep(3)
 		print()
@@ -2275,7 +2341,7 @@ while End == False or lives > 0:
 
 		if key == keys_k[index]:
 
-			updatePlayer_coins()
+			#updatePlayer_coins()
 			playsound("rightDecrypt.mp3")
 			#playsound("GoldCoin.mp3")
 			time.sleep(2)
@@ -2342,7 +2408,7 @@ while End == False or lives > 0:
 		print()
 		print("--------------------- BIRDCIPHER - NUMERICAL DATA GUESSING OF BIRD BIODIVERSITY. LETS PLAY NOW!!! ---------------------")
 		print()
-		print("   Guess the size in centimeters of: ", BirdCipher_english_k[index])
+		print("   Guess the total number of species in the bird order: ", BirdCipher_english_k[index])
 		attempts = 0
 		print()
 		playsound("try_guess.mp3")
@@ -2356,7 +2422,7 @@ while End == False or lives > 0:
 		print("--------------------------------------------------- RESULTS -----------------------------------------------------------")
 		print()
 		print()
-		print("   Congratulations!!! You guessed the size of the bird I was thinking of. You have earned 100 points!!!")
+		print("   Congratulations!!! You guessed the total number of species in the bird order I was thinking of. You have earned 100 points!!!")
 		playsound("Congratulations.mp3")
 		time.sleep(3)
 		playsound("End.mp3")
@@ -2365,7 +2431,7 @@ while End == False or lives > 0:
 		print("Now you have: ", points, " points.")
 		del BirdCipher_list_k[0]
 		print()
-		print("Congratulations!!! You have guessed all the sizes of the birds on the list. End of the game.")
+		print("Congratulations!!! You have guessed the complete set of number of species of the birds orders on the list. End of the game.")
 		print()
 		print()
 		print(" -------------------------------------------------------------------------------------------------------------------")
