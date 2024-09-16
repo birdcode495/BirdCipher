@@ -1385,7 +1385,7 @@ def GUI_BirdCipher_Machine():
 
 		key_encryption = Fernet.generate_key()
 		
-		key_fernet_text.config(text = key_encryption.decode())
+		key_fernet_text.config(text = key_encryption)
 		clipboard.copy(key_encryption)
 		key_encryption_test = True
 
@@ -1402,7 +1402,7 @@ def GUI_BirdCipher_Machine():
 			message_to_encrypt = message_to_encrypt.encode()
 			f = Fernet(key_encryption)
 			token = f.encrypt(message_to_encrypt)
-			token = token.decode()
+			#token = token.decode()
 			cipher_text2_encrp.config(text = token, justify = "left", wraplength = 600)
 			clipboard.copy(token)
 
@@ -1976,9 +1976,9 @@ def GUI_BirdCipher_Machine():
 
 					try:
 
-						key_encryption = key_encryption.decode()
+						#key_encryption = key_encryption.decode()
 						sql110 = 'insert into encryptedMessages(nickname, password, server, actual_message, key_b) values(%s,%s,%s,%s,%s)'
-						datos_sql110 = (nickname_db, hash2, target_person, token, key_encryption)
+						datos_sql110 = (nickname_db, hash2, target_person, token.decode(), key_encryption.decode())
 						miCursor2.execute(sql110, datos_sql110)
 						playsound('cartoon130.mp3')
 						playsound('message_sent_success.mp3')
@@ -1992,7 +1992,7 @@ def GUI_BirdCipher_Machine():
 					try:
 
 						sql111 = 'update encryptedMessages set (nickname, password, server, actual_message, key_b) = (%s,%s,%s,%s,%s) where (nickname = (%s) and server = (%s))'
-						datasql111 = (nickname_db, hash2, target_person, token, key_encryption, nickname_db, target_person)
+						datasql111 = (nickname_db, hash2, target_person, token.decode(), key_encryption.decode(), nickname_db, target_person)
 						miCursor2.execute(sql111, datasql111)
 						playsound('cartoon130.mp3')
 						playsound('message_sent_success.mp3')
@@ -2063,12 +2063,12 @@ def GUI_BirdCipher_Machine():
 
 			if len(dlt7) > 0:
 
-				message_sent_decrypt = dlt7[0][4]
-				key_sent_decrypt = dlt7[0][5]
+				message_sent_decrypt = dlt7[0][5]
+				key_sent_decrypt = dlt7[0][4]
 
-				cipher_text3.config(text = dlt7[0][4], justify = "left", wraplength = 600, font = ("Comic Sans MS", 8))
+				cipher_text3.config(text = dlt7[0][5], justify = "left", wraplength = 600, font = ("Comic Sans MS", 10))
 				
-				key_fernet_text2.config(text = dlt7[0][5])
+				key_fernet_text2.config(text = dlt7[0][4], justify = 'center', wraplength = 300, font = ('Comic Sans MS', 10))
 
 
 		miConexion3.commit()
@@ -2079,12 +2079,29 @@ def GUI_BirdCipher_Machine():
 
 		global message_sent_decrypt
 		global key_sent_decrypt
+		global nickname_db
+		global target_person_decrypt
 
-		#message_sent_decrypt = message_sent_decrypt.encode()
-		k = Fernet(key_sent_decrypt)
-		token2 = k.decrypt(message_sent_decrypt)
-		#token2 = token2.decode()
-		cipher_text2_encrp2.config(text = token2, justify = "left", wraplength = 600)
+		miConexion3 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+
+		miCursor3 = miConexion3.cursor()
+
+		sql555 = 'select * from encryptedMessages where server = (%s) and nickname = (%s)'
+		datasql555 = (nickname_db, target_person_decrypt)
+
+		miCursor3.execute(sql555, datasql555)
+		dlt555 = miCursor3.fetchall()
+
+		a = dlt555[0][5].encode()
+		b = dlt555[0][4].encode()
+		k = Fernet(b)
+		token2 = k.decrypt(a)
+		token2 = token2.decode()
+		cipher_text2_encrp2.config(text = token2, justify = "left", wraplength = 600, font = ("Comic Sans MS", 10))
+
+		miConexion3.commit()
+		miConexion3.close()
 
 
 
