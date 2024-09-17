@@ -1822,26 +1822,27 @@ def GUI_BirdCipher_Machine():
 
 	img_social_eng_label = tk.Button(fr0, image = img_social_eng, command = lambda:play_social_eng_audio())
 	img_social_eng_label.place(x = 30, y = 30)
+	img_social_eng_label.config(bg = '#20011c')
 
 	rad_button1 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][0], variable = varOption, value = 0)
-	rad_button1.place(x = 500, y = 40)
-	rad_button1.config(font = ('Comic Sans MS', 8), justify = 'left')
+	rad_button1.place(x = 550, y = 40)
+	rad_button1.config(font = ('Comic Sans MS', 9), justify = 'left')
 
 	rad_button2 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][1], variable = varOption, value = 1)
-	rad_button2.place(x = 500, y = 80)
-	rad_button2.config(font = ('Comic Sans MS', 8), justify = 'left')
+	rad_button2.place(x = 550, y = 80)
+	rad_button2.config(font = ('Comic Sans MS', 9), justify = 'left')
 
 	rad_button3 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][2], variable = varOption, value = 2)
-	rad_button3.place(x = 500, y = 120)
-	rad_button3.config(font = ('Comic Sans MS', 8), justify = 'left')
+	rad_button3.place(x = 550, y = 120)
+	rad_button3.config(font = ('Comic Sans MS', 9), justify = 'left')
 
 	rad_button4 = tk.Radiobutton(fr0, text = tests_ing_social[index_social_eng_choose][3], variable = varOption, value = 3)
-	rad_button4.place(x = 500, y = 160)
-	rad_button4.config(font = ('Comic Sans MS', 8), justify = 'left')
+	rad_button4.place(x = 550, y = 160)
+	rad_button4.config(font = ('Comic Sans MS', 9), justify = 'left')
 
 	answer_button_social_eng = tk.Button(fr0, text = 'Send answer', command = lambda:send_answer_social_eng())
-	answer_button_social_eng.place(x = 530, y = 200)
-	answer_button_social_eng.config(fg = 'green', font = ('Comic Sans MS', 8))
+	answer_button_social_eng.place(x = 600, y = 200)
+	answer_button_social_eng.config(fg = 'purple', font = ('Comic Sans MS', 9))
 	
 
 	# ---------------
