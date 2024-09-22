@@ -1642,6 +1642,7 @@ def GUI_BirdCipher_Machine():
 	player_message_encrypt = tk.StringVar()
 	passw_em = tk.StringVar()
 	password_for_decrypt = tk.StringVar()
+	password_for_ramson = tk.StringVar()
 
 	person1_var = tk.StringVar()
 	person2_var = tk.StringVar()
@@ -1671,6 +1672,14 @@ def GUI_BirdCipher_Machine():
 
 	decrypt_buttonImg = tk.PhotoImage(file = "Decrypt Message-logo1.png")
 	listen_buttonImg = tk.PhotoImage(file = "Listen to the message-logo1.png")
+	directory_browser = tk.PhotoImage(file = 'Browse directories.png')
+	ramson_instructions = tk.PhotoImage(file = 'Instructions.png')
+	generateRamsonKey_de = tk.PhotoImage(file = 'Generate RamsonBird Key.png')
+	bringRamsonKey_de = tk.PhotoImage(file = 'Bring RamsonBird key.png')
+	encryptFilesImage = tk.PhotoImage(file = 'Decrypt files.png')
+	decryptFilesImage = tk.PhotoImage(file = 'Encrypt files.png')
+
+
 
 	notebk = ttk.Notebook(decrypt)
 	notebk.pack(expand=True)
@@ -1683,6 +1692,10 @@ def GUI_BirdCipher_Machine():
 	fr0 = ttk.Frame(notebk, width = 1050, height = 540)
 	fr0.pack(fill = 'both', expand = True)
 	notebk.add(fr0, text = '     Cybersecurity and social engineering')
+
+	fr0a = ttk.Frame(notebk, width = 1050, height = 540)
+	fr0a.pack(fill = 'both', expand = True)
+	notebk.add(fr0a, text = '     RamsonBird Machine')
 
 	fr2 = ttk.Frame(notebk, width = 1150, height = 540)
 	fr2.pack(fill = 'both', expand = True)
@@ -1730,6 +1743,7 @@ def GUI_BirdCipher_Machine():
 	imageDiamonds = tk.PhotoImage(file = "Diamond-logo1.png")
 	imageLives = tk.PhotoImage(file = "Lives-logo1.png")
 	cryptoMachineImage = tk.PhotoImage(file = "Cryptographic Machine-logo1.png")
+	ramson_image = tk.PhotoImage(file = 'RamsonBird_MachineImage.png')
 
 	imagen_caesar_cipher_lab = tk.Label(fr, image = imagen_caesar_cipher)
 	#imagen_caesar_cipher_lab.config(bg = '#FFFFFF')
@@ -2040,6 +2054,76 @@ def GUI_BirdCipher_Machine():
 	closeMachineButton3 = tk.Button(fr3, text = "Close the BirdCipher Cryptographic Machine", font = ("Comic Sans MS", 12), command = lambda:closeMachine())
 	closeMachineButton3.place(x = 250, y = 460)
 	closeMachineButton3.config(fg = "#7e086c")
+
+	# ---------------------------
+
+	ramsonBird_message = tk.Text(fr0a, font = ("Comic Sans MS", 10), width = 72, height = 4)
+	ramsonBird_message.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
+	ramsonBird_message.place(x = 60, y = 40)
+
+	labelPlayerBCM3 = tk.Label(fr0a, text = "Welcome, {} ".format(nickname_db), font = ("Comic Sans MS", 11))
+	labelPlayerBCM3.config(fg = "#7e086c", bg = "#050005")
+	labelPlayerBCM3.place(x = 830, y = 20)
+
+	labelQuestionKey3 = tk.Label(fr0a, text = "Enter your password", font = ("Comic Sans MS", 13))
+	labelQuestionKey3.config(fg = "#7e086c")
+	labelQuestionKey3.place(x = 805, y = 60)
+
+	ramsonBird_password = tk.Entry(fr0a, textvariable=password_for_ramson, font = ("Comic Sans MS", 13), justify = "center")
+	ramsonBird_password.config(bg = '#050005', fg = '#7e086c')
+	ramsonBird_password.place(x = 790, y = 100)
+
+	ramsonBird_directory = tk.Button(fr0a, image = directory_browser, font = ("Comic Sans MS", 8), command = lambda:displayCiphertext())
+	ramsonBird_directory.config(fg = '#1af017')
+	ramsonBird_directory.place(x = 800, y = 150)
+	
+	ramsonBird_instructions = tk.Button(fr0a, image = ramson_instructions, font = ("Comic Sans MS", 8), command = lambda:listen_decrypt_text())
+	ramsonBird_instructions.config(fg = '#1af017')
+	ramsonBird_instructions.place(x = 930, y = 150)
+
+	ramsonBird_Image = tk.Label(fr0a, image = ramson_image)
+	ramsonBird_Image.config(bg = '#20011c')
+	ramsonBird_Image.place(x = 60, y = 280)
+
+	ramsonBirdMessageTitle = tk.Label(fr0a, text = "Enter your message for identifying the ramson action", font = ("Comic Sans MS", 12))
+	ramsonBirdMessageTitle.config(fg = "#7e086c")
+	ramsonBirdMessageTitle.place(x = 70, y = 8)
+
+	ramsonKeyTitle = tk.Label(fr0a, text = "Key for Fernet algorithm")
+	ramsonKeyTitle.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
+	ramsonKeyTitle.place(x = 65, y = 120)
+
+	ramsonKey = tk.Label(fr0a, text = "", font = ("Comic Sans MS", 10), width = 80)
+	ramsonKey.config(bg = "#050005", fg = "#FFFFFF")
+	ramsonKey.place(x = 60, y = 150)
+
+	ramsonDirectoryTitle = tk.Label(fr0a, text = "You have chosen the directory: ")
+	ramsonDirectoryTitle.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
+	ramsonDirectoryTitle.place(x = 65, y = 180)
+	
+	ramsonDirectoryUrl = tk.Label(fr0a, text = "", font = ("Comic Sans MS", 10), width = 80)
+	ramsonDirectoryUrl.config(bg = '#050005', fg = '#FFFFFF')
+	ramsonDirectoryUrl.place(x = 60, y = 210, height = 30)
+
+	buttonPoints3a = tk.Button(fr0a, image = imagePoints, command = lambda:pointsAudio())
+	buttonPoints3a.place(x = 360, y = 280)
+
+	generateKeyRamson = tk.Button(fr0a, image = generateRamsonKey_de)
+	generateKeyRamson.place(x = 480, y = 280)
+
+	bringKeyRamson = tk.Button(fr0a, image = bringRamsonKey_de)
+	bringKeyRamson.place(x = 480, y = 390)
+
+	encryptFilesButton = tk.Button(fr0a, image = decryptFilesImage)
+	encryptFilesButton.place(x = 830, y = 260)
+
+	decryptFilesButton = tk.Button(fr0a, image = encryptFilesImage)
+	decryptFilesButton.place(x = 830, y = 380)
+
+
+
+
+	# ---------------------------
 
 	def send_message():
 
