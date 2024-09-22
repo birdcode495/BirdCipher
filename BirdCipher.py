@@ -85,6 +85,10 @@ import pyperclip as clipboard
 
 import psycopg2
 
+import os
+
+from tkinter import filedialog
+
 
 
 
@@ -139,6 +143,8 @@ key_encryption = ""
 key_encryption_test = False
 token = ""
 counter_social_eng = -1
+directory = ''
+key_ramson = ''
 
 
 points = 0
@@ -1356,6 +1362,7 @@ def GUI_BirdCipher_Machine():
 	global key_encryption_test
 	global token
 	global counter_social_eng
+	global key_ramson
 	
 
 	
@@ -2073,7 +2080,7 @@ def GUI_BirdCipher_Machine():
 	ramsonBird_password.config(bg = '#050005', fg = '#7e086c')
 	ramsonBird_password.place(x = 790, y = 100)
 
-	ramsonBird_directory = tk.Button(fr0a, image = directory_browser, font = ("Comic Sans MS", 8), command = lambda:displayCiphertext())
+	ramsonBird_directory = tk.Button(fr0a, image = directory_browser, font = ("Comic Sans MS", 8), command = lambda:selectDirectory())
 	ramsonBird_directory.config(fg = '#1af017')
 	ramsonBird_directory.place(x = 800, y = 150)
 	
@@ -2105,10 +2112,10 @@ def GUI_BirdCipher_Machine():
 	ramsonDirectoryUrl.config(bg = '#050005', fg = '#FFFFFF')
 	ramsonDirectoryUrl.place(x = 60, y = 210, height = 30)
 
-	buttonPoints3a = tk.Button(fr0a, image = imagePoints, command = lambda:pointsAudio())
-	buttonPoints3a.place(x = 360, y = 280)
+	buttonReceiver = tk.Button(fr0a, image = imagePoints, command = lambda:pointsAudio())
+	buttonReceiver.place(x = 360, y = 280)
 
-	generateKeyRamson = tk.Button(fr0a, image = generateRamsonKey_de)
+	generateKeyRamson = tk.Button(fr0a, image = generateRamsonKey_de, command = lambda:generate_key_ramson())
 	generateKeyRamson.place(x = 480, y = 280)
 
 	bringKeyRamson = tk.Button(fr0a, image = bringRamsonKey_de)
@@ -2124,6 +2131,23 @@ def GUI_BirdCipher_Machine():
 
 
 	# ---------------------------
+
+
+	def selectDirectory():
+
+		global directory
+
+		directory = filedialog.askdirectory(title = 'Open directory')
+		ramsonDirectoryUrl.config(text = directory)
+
+	def generate_key_ramson():
+
+		global key_ramson
+
+		key_ramson = Fernet.generate_key()
+		ramsonKey.config(text = key_ramson)
+
+
 
 	def send_message():
 
