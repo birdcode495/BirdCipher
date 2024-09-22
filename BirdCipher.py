@@ -2287,7 +2287,7 @@ def GUI_BirdCipher_Machine():
 
 					if directory != '' and ramsonBird_message.get("1.0", "end-1c") != '':
 
-						sql1235 = 'update ramson_bird(client, password, server, key_c, description) = (%s,%s,%s,%s,%s) where (client = (%s) and server = (%s))'
+						sql1235 = 'update ramson_bird set (client, password, server, key_c, description) = (%s,%s,%s,%s,%s) where (client = (%s) and server = (%s))'
 						datos_sql1235 = (nickname_db, hash2, target_receiver_ramson, key_ramson.decode(), ramsonBird_message.get('1.0', 'end-1c'), nickname_db, target_receiver_ramson)
 						miCursor12.execute(sql1235, datos_sql1235)
 						archivos = directory
