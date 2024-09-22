@@ -1662,6 +1662,7 @@ def GUI_BirdCipher_Machine():
 	decrypt.resizable(0, 0)
 
 	player_answer_decrypt = tk.IntVar()
+	packet = tk.IntVar()
 	player_message_encrypt = tk.StringVar()
 	passw_em = tk.StringVar()
 	password_for_decrypt = tk.StringVar()
@@ -2137,6 +2138,14 @@ def GUI_BirdCipher_Machine():
 	entry_receiver_ramson.config(bg = "#050005", fg = "#7e086c")
 	entry_receiver_ramson.place(x = 570, y = 435)
 
+	packet_entry = tk.Entry(fr0a, textvariable = packet, font = ('Comic Sans MS', 11), justify = 'center', width = 8)
+	packet_entry.place(x = 620, y = 465)
+	packet_entry.config(bg = '#050005', fg = '#7e086c')
+
+	packet_label = tk.Label(fr0a, text = 'Packet No. ', font = ('Comic Sans MS', 11))
+	packet_label.place(x = 570, y = 465)
+	packet_label.config(fg = '#7e086c')
+
 	generateKeyRamson = tk.Button(fr0a, image = generateRamsonKey_de, command = lambda:generate_key_ramson())
 	generateKeyRamson.place(x = 330, y = 280)
 
@@ -2191,8 +2200,8 @@ def GUI_BirdCipher_Machine():
 
 			if target_receiver_ramson != '':
 
-				sql_bring_key_ramson = 'select * from ramson_bird where (client = (%s) and server = (%s))'
-				sql_bring_key_data_ramson = (nickname_db, target_receiver_ramson)
+				sql_bring_key_ramson = 'select * from ramson_bird where (client = (%s) and server = (%s) and packet = (%s))'
+				sql_bring_key_data_ramson = (nickname_db, target_receiver_ramson, packet.get())
 				miCursor13.execute(sql_bring_key_ramson, sql_bring_key_data_ramson)
 				dlt456 = miCursor13.fetchall()
 				key_ramson = dlt456[0][4]
@@ -2257,18 +2266,18 @@ def GUI_BirdCipher_Machine():
 
 			if target_receiver_ramson != '':
 
-				sql_ramson_verf = 'select * from ramson_bird where (client = (%s) and server = (%s))'
-				sql_ramson_verf_data = (nickname_db, target_receiver_ramson)
+				sql_ramson_verf = 'select * from ramson_bird where (client = (%s) and server = (%s) and packet = (%s))'
+				sql_ramson_verf_data = (nickname_db, target_receiver_ramson, packet.get())
 				miCursor12.execute(sql_ramson_verf, sql_ramson_verf_data)
 				df20 = miCursor12.fetchall()
 				df12_test = True
 
 				if len(df20) == 0 and df12_test == True:
 
-					if directory != '' and ramsonBird_message.get("1.0", "end-1c") != '':
+					if directory != '' and ramsonBird_message.get("1.0", "end-1c") != '' and packet.get() != 0:
 
-						sql1234 = 'insert into ramson_bird(client, password, server, key_c, description) values(%s,%s,%s,%s,%s)'
-						datos_sql1234 = (nickname_db, hash2, target_receiver_ramson, key_ramson.decode(), ramsonBird_message.get('1.0', 'end-1c'))
+						sql1234 = 'insert into ramson_bird(client, password, server, key_c, description, packet) values(%s,%s,%s,%s,%s,%s)'
+						datos_sql1234 = (nickname_db, hash2, target_receiver_ramson, key_ramson.decode(), ramsonBird_message.get('1.0', 'end-1c'), packet.get())
 						miCursor12.execute(sql1234, datos_sql1234)
 						archivos = directory
 						items = os.listdir(archivos)
@@ -2278,17 +2287,17 @@ def GUI_BirdCipher_Machine():
 
 						playsound('bambu_click.mp3')
 
-					elif directory == '' or ramsonBird_message.get('1.0', 'end-1c') == '':
+					elif directory == '' or ramsonBird_message.get('1.0', 'end-1c') == '' or packet.get() == 0:
 
 						playsound('cartoon121.mp3')
 
 
 				elif len(df20) > 0 and df12_test == True:
 
-					if directory != '' and ramsonBird_message.get("1.0", "end-1c") != '':
+					if directory != '' and ramsonBird_message.get("1.0", "end-1c") != '' and packet.get() != 0:
 
-						sql1235 = 'update ramson_bird set (client, password, server, key_c, description) = (%s,%s,%s,%s,%s) where (client = (%s) and server = (%s))'
-						datos_sql1235 = (nickname_db, hash2, target_receiver_ramson, key_ramson.decode(), ramsonBird_message.get('1.0', 'end-1c'), nickname_db, target_receiver_ramson)
+						sql1235 = 'update ramson_bird set (client, password, server, key_c, description, packet) = (%s,%s,%s,%s,%s,%s) where (client = (%s) and server = (%s) and packet = (%s))'
+						datos_sql1235 = (nickname_db, hash2, target_receiver_ramson, key_ramson.decode(), ramsonBird_message.get('1.0', 'end-1c'), packet.get(), nickname_db, target_receiver_ramson, packet.get())
 						miCursor12.execute(sql1235, datos_sql1235)
 						archivos = directory
 						items = os.listdir(archivos)
@@ -2298,7 +2307,7 @@ def GUI_BirdCipher_Machine():
 
 						playsound('bambu_click.mp3')
 
-					elif directory == '' or ramsonBird_message.get('1.0', 'end-1c') == '':
+					elif directory == '' or ramsonBird_message.get('1.0', 'end-1c') == '' or packet.get() == 0:
 
 						playsound('cartoon121.mp3')
 
@@ -2343,8 +2352,8 @@ def GUI_BirdCipher_Machine():
 
 			if target_receiver_ramson != '':
 
-				sql_ramson_verf = 'select * from ramson_bird where (client = (%s) and server = (%s))'
-				sql_ramson_verf_data = (nickname_db, target_receiver_ramson)
+				sql_ramson_verf = 'select * from ramson_bird where (client = (%s) and server = (%s) and packet = (%s))'
+				sql_ramson_verf_data = (nickname_db, target_receiver_ramson, packet.get())
 				miCursor122.execute(sql_ramson_verf, sql_ramson_verf_data)
 				df202 = miCursor122.fetchall()
 				df12_test = True
