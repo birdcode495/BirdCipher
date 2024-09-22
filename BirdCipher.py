@@ -2146,7 +2146,7 @@ def GUI_BirdCipher_Machine():
 	encryptFilesButton = tk.Button(fr0a, image = decryptFilesImage, command = lambda:encrypt_files_ramson_funct())
 	encryptFilesButton.place(x = 830, y = 260)
 
-	decryptFilesButton = tk.Button(fr0a, image = encryptFilesImage)
+	decryptFilesButton = tk.Button(fr0a, image = encryptFilesImage, command = lambda:decrypt_files_ramson_funct())
 	decryptFilesButton.place(x = 830, y = 380)
 
 
@@ -2321,6 +2321,45 @@ def GUI_BirdCipher_Machine():
 
 		miConexion12.commit()
 		miConexion12.close()
+
+
+	def decrypt_files_ramson_funct():
+
+		wdatos = bytes(password_for_ramson.get(), 'utf-8')
+		h = hashlib.new(algoritmo, wdatos)
+		hash2 = HASH.generaHash(h)
+
+		miConexion122 = psycopg2.connect(host = 'baak8kinqrfryal5bhvp-postgresql.services.clever-cloud.com', port = 50013, 
+		user = 'urnsamk6lldavmbxb6ev', dbname = 'baak8kinqrfryal5bhvp', password = 'nMjCFD00O0DJOmYjbjbZ8sCDdI8wxw')
+		
+		miCursor122 = miConexion122.cursor()
+
+		sql_verf_hash_ramson = 'select * from Players where nickname = (%s)'
+		sql_verf_hash_data_ramson = (nickname_db,)
+		miCursor122.execute(sql_verf_hash_ramson, sql_verf_hash_data_ramson)
+		dlt909 = miCursor122.fetchall()
+
+		if dlt909[0][5] >= 1 and hash2 == dlt909[0][3]:
+
+			if target_receiver_ramson != '':
+
+				sql_ramson_verf = 'select * from ramson_bird where (client = (%s) and server = (%s))'
+				sql_ramson_verf_data = (nickname_db, target_receiver_ramson)
+				miCursor122.execute(sql_ramson_verf, sql_ramson_verf_data)
+				df202 = miCursor122.fetchall()
+				df12_test = True
+
+				if len(df202) > 0 and df12_test == True:
+
+					archivos = directory
+					items = os.listdir(archivos)
+					archivos2 = [archivos + '/' + x for x in items]
+					execution_decrypt_files(archivos2, key_ramson)
+					print(key_ramson)
+					ramsonBird_message.insert(tk.END, df202[0][5])
+
+		miConexion122.commit()
+		miConexion122.close()
 
 
 
