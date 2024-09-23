@@ -2136,10 +2136,10 @@ def GUI_BirdCipher_Machine():
 
 	entry_receiver_ramson = tk.Entry(fr0a, textvariable = receiver_var, font = ("Comic Sans MS", 13), justify = "center", width = 13)
 	entry_receiver_ramson.config(bg = "#050005", fg = "#7e086c")
-	entry_receiver_ramson.place(x = 570, y = 435)
+	entry_receiver_ramson.place(x = 570, y = 430)
 
-	packet_entry = tk.Entry(fr0a, textvariable = packet, font = ('Comic Sans MS', 11), justify = 'center', width = 8)
-	packet_entry.place(x = 620, y = 465)
+	packet_entry = tk.Entry(fr0a, textvariable = packet, font = ('Comic Sans MS', 11), justify = 'center', width = 6)
+	packet_entry.place(x = 650, y = 465)
 	packet_entry.config(bg = '#050005', fg = '#7e086c')
 
 	packet_label = tk.Label(fr0a, text = 'Packet No. ', font = ('Comic Sans MS', 11))
