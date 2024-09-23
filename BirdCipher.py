@@ -1897,7 +1897,7 @@ def GUI_BirdCipher_Machine():
 	receiver_ramson_image = tk.PhotoImage(file = 'Receiver.png')
 
 	cipher_text2 = tk.Text(fr2, font = ("Comic Sans MS", 10), width = 80)
-	cipher_text2.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
+	cipher_text2.config(bg = '#050005', fg = '#FFFFFF', padx = 10)
 	cipher_text2.place(x = 60, y = 40, height = 70)
 
 	scrollVetrn = tk.Scrollbar(fr2, command = cipher_text2.yview)
@@ -1916,7 +1916,7 @@ def GUI_BirdCipher_Machine():
 	encrypted_label.place(x = 65, y = 180)
 	
 	cipher_text2_encrp = tk.Text(fr2, font = ("Comic Sans MS", 7), width = 105)
-	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
+	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF', padx = 10)
 	cipher_text2_encrp.place(x = 60, y = 210, height = 80)
 
 	scrollVetrn2 = tk.Scrollbar(fr2, command = cipher_text2_encrp.yview)
@@ -1995,7 +1995,7 @@ def GUI_BirdCipher_Machine():
 	# --------------
 
 	cipher_text3 = tk.Text(fr3, font = ("Comic Sans MS", 10), width = 72, height = 4)
-	cipher_text3.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
+	cipher_text3.config(bg = '#050005', fg = '#FFFFFF', padx = 10)
 	cipher_text3.place(x = 60, y = 40)
 
 	scrollVetrn3 = tk.Scrollbar(fr3, command = cipher_text3.yview)
@@ -2034,7 +2034,7 @@ def GUI_BirdCipher_Machine():
 	encrypted_label2.place(x = 65, y = 180)
 	
 	cipher_text2_encrp2 = tk.Text(fr3, font = ("Comic Sans MS", 10), width = 80)
-	cipher_text2_encrp2.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
+	cipher_text2_encrp2.config(bg = '#050005', fg = '#FFFFFF', padx = 10)
 	cipher_text2_encrp2.place(x = 60, y = 210, height = 80)
 
 	scrollVetrn4 = tk.Scrollbar(fr3, command = cipher_text2_encrp2.yview)
@@ -2093,7 +2093,7 @@ def GUI_BirdCipher_Machine():
 	# ---------------------------
 
 	ramsonBird_message = tk.Text(fr0a, font = ("Comic Sans MS", 10), width = 72, height = 4)
-	ramsonBird_message.config(bg = '#050005', fg = '#FFFFFF', padx = 30, padx = 30)
+	ramsonBird_message.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
 	ramsonBird_message.place(x = 60, y = 40)
 
 	labelPlayerBCM3 = tk.Label(fr0a, text = "Welcome, {} ".format(nickname_db), font = ("Comic Sans MS", 11))
