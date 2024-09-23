@@ -2353,7 +2353,7 @@ def GUI_BirdCipher_Machine():
 			if target_receiver_ramson != '':
 
 				sql_ramson_verf = 'select * from ramson_bird where (client = (%s) and server = (%s) and packet = (%s))'
-				sql_ramson_verf_data = (nickname_db, target_receiver_ramson, packet.get())
+				sql_ramson_verf_data = (target_receiver_ramson, nickname_db, packet.get())
 				miCursor122.execute(sql_ramson_verf, sql_ramson_verf_data)
 				df202 = miCursor122.fetchall()
 				df12_test = True
@@ -2366,6 +2366,10 @@ def GUI_BirdCipher_Machine():
 					execution_decrypt_files(archivos2, key_ramson)
 					print(key_ramson)
 					ramsonBird_message.insert(tk.END, df202[0][5])
+
+				elif len(df202) == 0:
+
+					playsound('cartoon121.mp3')
 
 		miConexion122.commit()
 		miConexion122.close()
