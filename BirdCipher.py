@@ -1435,7 +1435,7 @@ def GUI_BirdCipher_Machine():
 			f = Fernet(key_encryption)
 			token = f.encrypt(message_to_encrypt)
 			#token = token.decode()
-			cipher_text2_encrp.config(text = token, justify = "left", wraplength = 600)
+			cipher_text2_encrp.insert(tk.END, token)
 			clipboard.copy(token)
 
 		elif key_encryption_test == False:
@@ -1897,7 +1897,7 @@ def GUI_BirdCipher_Machine():
 	receiver_ramson_image = tk.PhotoImage(file = 'Receiver.png')
 
 	cipher_text2 = tk.Text(fr2, font = ("Comic Sans MS", 10), width = 80)
-	cipher_text2.config(bg = '#050005', fg = '#FFFFFF')
+	cipher_text2.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
 	cipher_text2.place(x = 60, y = 40, height = 70)
 
 	scrollVetrn = tk.Scrollbar(fr2, command = cipher_text2.yview)
@@ -1915,9 +1915,12 @@ def GUI_BirdCipher_Machine():
 	encrypted_label.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
 	encrypted_label.place(x = 65, y = 180)
 	
-	cipher_text2_encrp = tk.Label(fr2, text = "", font = ("Comic Sans MS", 7), width = 105)
-	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF')
+	cipher_text2_encrp = tk.Text(fr2, font = ("Comic Sans MS", 7), width = 105)
+	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
 	cipher_text2_encrp.place(x = 60, y = 210, height = 80)
+
+	scrollVetrn2 = tk.Scrollbar(fr2, command = cipher_text2_encrp.yview)
+	scrollVetrn2.place(x = 710, y = 210)
 
 	nicknameCuad2 = tk.Entry(fr2, textvariable = passw_em, font = ("Comic Sans MS", 13), justify = "center")
 	nicknameCuad2.config(bg = '#050005', fg = '#7e086c')
@@ -1991,9 +1994,12 @@ def GUI_BirdCipher_Machine():
 
 	# --------------
 
-	cipher_text3 = tk.Label(fr3, font = ("Comic Sans MS", 10), justify = 'center', width = 72, height = 4)
+	cipher_text3 = tk.Text(fr3, font = ("Comic Sans MS", 10), width = 72, height = 4)
 	cipher_text3.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
 	cipher_text3.place(x = 60, y = 40)
+
+	scrollVetrn3 = tk.Scrollbar(fr3, command = cipher_text3.yview)
+	scrollVetrn3.place(x = 710, y = 40)
 
 	nicknameCuad3 = tk.Entry(fr3, textvariable=password_for_decrypt, font = ("Comic Sans MS", 13), justify = "center")
 	nicknameCuad3.config(bg = '#050005', fg = '#7e086c')
@@ -2027,9 +2033,12 @@ def GUI_BirdCipher_Machine():
 	encrypted_label2.config(font = ("Comic Sans MS", 12), fg = "#7e086c")
 	encrypted_label2.place(x = 65, y = 180)
 	
-	cipher_text2_encrp2 = tk.Label(fr3, text = "", font = ("Comic Sans MS", 10), width = 80)
-	cipher_text2_encrp2.config(bg = '#050005', fg = '#FFFFFF')
+	cipher_text2_encrp2 = tk.Text(fr3, font = ("Comic Sans MS", 10), width = 80)
+	cipher_text2_encrp2.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
 	cipher_text2_encrp2.place(x = 60, y = 210, height = 80)
+
+	scrollVetrn4 = tk.Scrollbar(fr3, command = cipher_text2_encrp2.yview)
+	scrollVetrn4.place(x = 710, y = 210)
 
 	buttonPoints3 = tk.Button(fr3, image = imagePoints, command = lambda:pointsAudio())
 	buttonPoints3.place(x = 210, y = 300)
@@ -2084,7 +2093,7 @@ def GUI_BirdCipher_Machine():
 	# ---------------------------
 
 	ramsonBird_message = tk.Text(fr0a, font = ("Comic Sans MS", 10), width = 72, height = 4)
-	ramsonBird_message.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
+	ramsonBird_message.config(bg = '#050005', fg = '#FFFFFF', padx = 30, padx = 30)
 	ramsonBird_message.place(x = 60, y = 40)
 
 	labelPlayerBCM3 = tk.Label(fr0a, text = "Welcome, {} ".format(nickname_db), font = ("Comic Sans MS", 11))
@@ -2501,7 +2510,8 @@ def GUI_BirdCipher_Machine():
 				message_sent_decrypt = dlt7[0][5]
 				key_sent_decrypt = dlt7[0][4]
 
-				cipher_text3.config(text = dlt7[0][5], justify = "left", wraplength = 600, font = ("Comic Sans MS", 10))
+				cipher_text3.insert(tk.END, dlt7[0][5])
+				cipher_text3.config(font = ("Comic Sans MS", 10))
 				
 				key_fernet_text2.config(text = dlt7[0][4], justify = 'center', wraplength = 700, font = ('Comic Sans MS', 10))
 
@@ -2537,7 +2547,8 @@ def GUI_BirdCipher_Machine():
 		k = Fernet(b)
 		token2 = k.decrypt(a)
 		token2 = token2.decode()
-		cipher_text2_encrp2.config(text = token2, justify = "left", wraplength = 700, font = ("Comic Sans MS", 10))
+		cipher_text2_encrp2.insert(tk.END, token2)
+		cipher_text2_encrp2.config(font = ("Comic Sans MS", 10))
 
 		miConexion3.commit()
 		miConexion3.close()
