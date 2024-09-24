@@ -146,6 +146,7 @@ token = ""
 counter_social_eng = -1
 directory = ''
 key_ramson = ''
+say_level = True
 
 
 points = 0
@@ -598,6 +599,8 @@ print()
 print("              ****************************************************************************************************************  ")
 print()
 print(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+print()
+print()
 
 
 time.sleep(5)
@@ -735,9 +738,11 @@ index = 890
 def IndexCreation():
 
 	global index
+	global say_level
 
 	#index = random.randint(0, len(BirdCipher_list_k) - 1)
 	index = random.choice(prueba_list_present)
+	say_level = False
 	
 
 IndexCreation()
@@ -1224,6 +1229,31 @@ def info_display():
 	
 info_display()
 
+def levels():
+
+	global secretNumber
+	global say_level
+
+	if secretNumber >= 1 and secretNumber <= 100 and say_level == False:
+
+		playsound('EasyLevel.mp3')
+		say_level == True
+
+	elif secretNumber > 100 and secretNumber <= 500 and say_level == False:
+
+		playsound('IntermediateLevel.mp3')
+		say_level == True
+
+	elif secretNumber > 500 and secretNumber <= 1000 and say_level == False:
+
+		playsound('DifficultLevel.mp3')
+		say_level == True
+
+	elif secretNumber > 1000 and say_level == False:
+
+		playsound('VeryDifficultLevel.mp3')
+		say_level == True
+
 #Challenge_1()
 
 '''
@@ -1312,8 +1342,12 @@ print()
 
 playsound("WelcomeSecretNumbers.mp3")
 playsound("try_guess.mp3")
+time.sleep(2)
+
 
 print("   Guess the number of species of the group: ", BirdCipher_english_k[index])  # --- Trabaje en el RETO 2
+levels()
+time.sleep(2)
 
 guess = 0
 
@@ -1897,7 +1931,7 @@ def GUI_BirdCipher_Machine():
 	receiver_ramson_image = tk.PhotoImage(file = 'Receiver.png')
 
 	cipher_text2 = tk.Text(fr2, font = ("Comic Sans MS", 10), width = 80)
-	cipher_text2.config(bg = '#050005', fg = '#FFFFFF', padx = 10)
+	cipher_text2.config(bg = '#050005', fg = '#FFFFFF', padx = 30)
 	cipher_text2.place(x = 60, y = 40, height = 70)
 
 	scrollVetrn = tk.Scrollbar(fr2, command = cipher_text2.yview)
@@ -1916,7 +1950,7 @@ def GUI_BirdCipher_Machine():
 	encrypted_label.place(x = 65, y = 180)
 	
 	cipher_text2_encrp = tk.Text(fr2, font = ("Comic Sans MS", 7), width = 105)
-	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF', padx = 10)
+	cipher_text2_encrp.config(bg = '#050005', fg = '#FFFFFF', padx = 8)
 	cipher_text2_encrp.place(x = 60, y = 210, height = 80)
 
 	scrollVetrn2 = tk.Scrollbar(fr2, command = cipher_text2_encrp.yview)
@@ -1995,7 +2029,7 @@ def GUI_BirdCipher_Machine():
 	# --------------
 
 	cipher_text3 = tk.Text(fr3, font = ("Comic Sans MS", 10), width = 72, height = 4)
-	cipher_text3.config(bg = '#050005', fg = '#FFFFFF', padx = 10)
+	cipher_text3.config(bg = '#050005', fg = '#FFFFFF', padx = 8)
 	cipher_text3.place(x = 60, y = 40)
 
 	scrollVetrn3 = tk.Scrollbar(fr3, command = cipher_text3.yview)
@@ -2034,7 +2068,7 @@ def GUI_BirdCipher_Machine():
 	encrypted_label2.place(x = 65, y = 180)
 	
 	cipher_text2_encrp2 = tk.Text(fr3, font = ("Comic Sans MS", 10), width = 80)
-	cipher_text2_encrp2.config(bg = '#050005', fg = '#FFFFFF', padx = 10)
+	cipher_text2_encrp2.config(bg = '#050005', fg = '#FFFFFF', padx = 8)
 	cipher_text2_encrp2.place(x = 60, y = 210, height = 80)
 
 	scrollVetrn4 = tk.Scrollbar(fr3, command = cipher_text2_encrp2.yview)
@@ -2568,13 +2602,14 @@ win_challenge2_info = 0
 
 question()
 
-
 while End == False or lives > 0:
 
 	#if win_challenge2_info == 0:
 
 		#Challenge_2()
 		#win_challenge2_info = 1
+
+	
 
 	if guess != secretNumber and attempts == 7 and lives > 1:
 
@@ -2600,6 +2635,8 @@ while End == False or lives > 0:
 		print()
 		print("   Guess the number of species corresponding to the group: ", BirdCipher_english_k[index])
 		print()
+		levels()
+		time.sleep(2)
 		playsound("try_guess.mp3")
 		#guess = float(input("   Enter the number of species: "))
 		question()
@@ -2760,6 +2797,8 @@ while End == False or lives > 0:
 		print("   Guess the total number of species in the bird order: ", BirdCipher_english_k[index])
 		attempts = 0
 		print()
+		levels()
+		time.sleep(2)
 		playsound("try_guess.mp3")
 		question()
 		print()
